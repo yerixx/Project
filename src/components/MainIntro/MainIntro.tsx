@@ -1,20 +1,38 @@
-import { Wrapper, Inner } from "../../styles/common";
 import {
+  Wrapper,
+  Inner,
   MainTitleBox,
   MainTitle,
   SubTextBox,
   SubText,
 } from "./MainIntro.styles";
+import { ScrollYProps } from "../../styles/common.d";
 
-const MainIntro = () => {
+const MainIntro = ({ scrollY }: ScrollYProps) => {
   return (
     <Wrapper>
       <Inner>
         <MainTitleBox>
-          <MainTitle>Crafting scalable, </MainTitle>
-          <MainTitle>intuitive frontend solutions</MainTitle>
+          <MainTitle
+            style={{
+              transform: `translateX(-${scrollY * 0.5}px)`,
+              opacity: 1 - scrollY * 0.005,
+              transition: "all 0.3s ease-out",
+            }}
+          >
+            Crafting scalable intuitive
+          </MainTitle>
+          <MainTitle
+            style={{
+              transform: `translateX(${scrollY * 0.5}px)`,
+              opacity: 1 - scrollY * 0.005,
+              transition: "all 0.3s ease-out",
+            }}
+          >
+            frontend solutions
+          </MainTitle>
         </MainTitleBox>
-        <SubTextBox>
+        <SubTextBox style={{ filter: `blur(${scrollY * 0.1}px) ` }}>
           <SubText>
             사용자 <span>경험을 혁신</span>하고, <span>미래를 대비</span>한 확장
             가능한

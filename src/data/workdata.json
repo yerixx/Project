@@ -1,0 +1,92 @@
+{
+  "workdata": [
+    {
+      "id": 1,
+      "title": "project1",
+      "stack": "(React)",
+      "projectDetails": {
+        "teamOrIndividual": "Team",
+        "responsive": "반응형",
+        "projectType": "클론코딩"
+      },
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+    },
+    {
+      "id": 2,
+      "title": "project2",
+      "stack": "(React)",
+      "projectDetails": {
+        "teamOrIndividual": "Personal",
+        "responsive": "반응형",
+        "projectType": "클론코딩"
+      },
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+    },
+    {
+      "id": 3,
+      "title": "project3",
+      "stack": "(Html/Css)",
+      "projectDetails": {
+        "teamOrIndividual": "Team",
+        "responsive": "반응형",
+        "projectType": "클론코딩"
+      },
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+    },
+    {
+      "id": 4,
+      "title": "project4",
+      "stack": "(Html/Css)",
+      "projectDetails": {
+        "teamOrIndividual": "Personal",
+        "responsive": "반응형",
+        "projectType": "클론코딩"
+      },
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+    },
+    {
+      "id": 5,
+      "title": "project5",
+      "stack": "(Javascript)",
+      "projectDetails": {
+        "teamOrIndividual": "Team",
+        "responsive": "반응형",
+        "projectType": "클론코딩"
+      },
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+    },
+    {
+      "id": 6,
+      "title": "project6",
+      "stack": "(Javascript)",
+      "projectDetails": {
+        "teamOrIndividual": "Personal",
+        "responsive": "반응형",
+        "projectType": "클론코딩"
+      },
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+    },
+    {
+      "id": 7,
+      "title": "project7",
+      "stack": "(Typescript)",
+      "projectDetails": {
+        "teamOrIndividual": "Team",
+        "responsive": "반응형",
+        "projectType": "클론코딩"
+      },
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+    },
+    {
+      "id": 8,
+      "title": "project8",
+      "stack": "(Typescript)",
+      "projectDetails": {
+        "teamOrIndividual": "Personal",
+        "responsive": "반응형",
+        "projectType": "클론코딩"
+      },
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+    }
+  ]
+}

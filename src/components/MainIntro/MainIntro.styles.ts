@@ -1,22 +1,35 @@
 import styled from "styled-components";
-import { Title60, Desc14 } from "../../styles/common";
+import { Title70, Desc20 } from "../../styles/fontStyle";
+export const Wrapper = styled.main`
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: ${(props) => props.theme.mainColor};
+  z-index: -1;
+`;
+
+export const Inner = styled.section`
+  width: var(--desktop-width-1100);
+`;
 
 export const MainTitleBox = styled.article`
-  margin-top: 28%;
+  margin-top: 20%;
 `;
 export const MainTitle = styled.div`
-  color: ${(props) => props.theme.fontColor};
+  color: ${({ theme }) => theme.fontColor};
   text-align: center;
-  ${Title60};
+  ${Title70};
 `;
-export const SubTextBox = styled.p`
-  margin-top: 20px;
-  ${Desc14};
+export const SubTextBox = styled.article`
+  margin-top: 26px;
+  ${Desc20};
   text-align: center;
 `;
 export const SubText = styled.p`
-  color: ${(props) => props.theme.grayColor};
+  color: ${({ theme }) => theme.grayColor};
   span {
-    color: ${(props) => props.theme.fontColor};
+    color: ${({ theme }) => theme.fontColor};
   }
 `;
