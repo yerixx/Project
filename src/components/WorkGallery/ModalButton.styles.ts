@@ -8,6 +8,7 @@ export const ModalLinkButtonBox = styled.article`
   align-items: center;
   gap: 20px;
   right: 2.5%;
+
   cursor: pointer;
   .modalCloseBtn {
     display: flex;

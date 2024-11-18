@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { Title80 } from "../../styles/fontStyle";
+import { Title110 } from "../../styles/fontStyle";
 
 const fadeIn = keyframes`
   from {
@@ -54,7 +54,7 @@ export const ModalWrapper = styled.section<{ isClosing: boolean }>`
 
 export const ModalContainer = styled.section`
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   padding-bottom: 50px;
 `;
 
@@ -64,7 +64,7 @@ export const ModalContent = styled.article<{ isClosing: boolean }>`
   align-items: center;
   width: 85%;
   height: 100vh;
-  margin: 50px auto 0;
+  margin: 80px auto 0;
   padding: 60px 70px;
   border-radius: 40px 40px 0 0;
   background: ${({ theme }) => theme.subColor};
@@ -72,60 +72,152 @@ export const ModalContent = styled.article<{ isClosing: boolean }>`
 `;
 
 export const Title = styled.article`
-  ${Title80}
-  width:100%;
+  ${Title110}
+  width: 100%;
   height: fit-content;
-  padding-bottom: 10px;
   color: ${({ theme }) => theme.mainColor};
 `;
 
 export const Tags = styled.article`
   width: 100%;
   display: flex;
-  gap: 10px;
-  padding-bottom: 26px;
+  gap: 8px;
+  padding: 10px 0 20px;
   border-bottom: 1px solid #000;
 `;
 
 export const Tag = styled.div`
   width: fit-content;
   height: 30px;
-  line-height: 32px;
-  padding: 0 10px;
+  line-height: 26px;
+  padding: 4px 11px;
   background: ${({ theme }) => theme.mainColor};
   color: ${({ theme }) => theme.subColor};
   border-radius: 40px;
 `;
 
 export const WorkContainer = styled.article`
+  padding: 0 20px;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  margin-top: 20px;
-  padding-right: 10px;
 `;
 
-export const Desc = styled.article`
-  width: 100%;
-  padding: 20px 0 40px;
+export const OverviewBox = styled.article`
+  padding: 20px 0 60px;
+  display: flex;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      font-size: 14px;
+      font-family: "Inter", sans-serif;
+      font-weight: 300;
+    }
+    .title {
+      font-size: 16px;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+    }
+  }
 `;
 
 export const WorkContont = styled.article`
   width: 100%;
-  height: 300px;
-  margin-bottom: 20px;
   border-radius: 40px;
-  background: ${({ theme }) => theme.grayColor};
-  div {
+  border-bottom: 1px solid #000;
+`;
+
+export const ContontImg = styled.img`
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 40px;
+`;
+
+export const About = styled.div`
+  margin: 30px 0 120px;
+  h1 {
+    text-align: right;
+    padding: 18px 0;
+    font-size: 70px;
+    font-weight: 400;
+  }
+  p {
+    text-align: right;
+
+    font-size: 18px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+`;
+
+export const ContImg = styled.div`
+  width: 850px;
+  height: 560px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  img {
     width: 100%;
-    height: 700px;
-    overflow: hidden;
-    margin-bottom: 30px;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const Desc = styled.div`
+  margin: 30px 0 60px;
+  h2 {
+    padding: 18px 0;
+    font-size: 40px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 18px;
+  }
+`;
+
+export const ContentButtom = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  padding-top: 100px;
+  .leftCont {
+    width: 880px;
+    display: flex;
+    flex-direction: column;
     img {
-      border-radius: 40px;
       width: 100%;
-      height: 100%;
+      height: 600px;
+      border-radius: 40px;
       object-fit: cover;
+      box-shadow: var(--box-shadow);
     }
   }
+  .rightCont {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: 600px;
+      width: 100%;
+      border-radius: 40px;
+      object-fit: cover;
+      box-shadow: var(--box-shadow);
+    }
+  }
+`;
+
+export const Summary = styled.div`
+  width: 100%;
+  height: 300px;
+  background: #999;
+  margin: 40px 0;
+  border-radius: 40px;
 `;

@@ -9,11 +9,9 @@ import { IoCloseOutline } from "react-icons/io5";
 import { BsLink45Deg } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
 
-interface CloseButton {
-  onClose: () => void;
-}
+import { WorkModalProps } from "../../styles/common";
 
-const ModalButton = ({ onClose }: CloseButton) => {
+const Button = ({ onClose, projectData }: WorkModalProps) => {
   return (
     <ModalLinkButtonBox>
       <div className="modalCloseBtn" onClick={onClose}>
@@ -21,7 +19,7 @@ const ModalButton = ({ onClose }: CloseButton) => {
       </div>
       <ModalLinkBtn>
         <ModalLink
-          href="https://www.naver.com/"
+          href={projectData.link.deploy}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -31,7 +29,7 @@ const ModalButton = ({ onClose }: CloseButton) => {
       </ModalLinkBtn>
       <ModalLinkBtn>
         <ModalLink
-          href="https://www.naver.com/"
+          href={projectData.link.github}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -43,4 +41,4 @@ const ModalButton = ({ onClose }: CloseButton) => {
   );
 };
 
-export default ModalButton;
+export default Button;

@@ -26,7 +26,6 @@ export const AboutMeTitle = styled.article`
   display: flex;
   flex-direction: column;
   font-size: 70px;
-  font-weight: bold;
   padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid #000;

@@ -39,59 +39,46 @@ export const GalleryBox = styled(SwiperSlide)`
   cursor: pointer;
 `;
 export const GallerySmallBox = styled.article`
-  width: 40vw;
+  width: 36vw;
   .gallerySmall {
-    height: 30vh;
+    width: 100%;
+    height: 33vh;
     border-radius: 20px;
-    background: #999;
+    object-fit: cover;
   }
 `;
 export const GalleryLargeBox = styled.article`
-  width: 100%;
-  height: 100%;
+  width: 50vw;
+
   .galleryLarge {
+    width: 50vw;
     height: 50vh;
     background: #999;
     border-radius: 20px;
   }
 `;
-export const SmallBoxInnerText = styled.div`
+export const InnerTextBox = styled.div`
   width: 100%;
+  padding: 0 6px;
   .textBox {
-    padding: 8px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .title {
+      font-size: 18px;
     }
     .stact {
       font-size: 14px;
-
       color: ${(props) => props.theme.grayColor};
     }
   }
   .desc {
     font-size: 14px;
     color: ${(props) => props.theme.grayColor};
-  }
-`;
-export const LargeBoxInnerText = styled.div`
-  width: 100%;
-  .textBox {
-    padding: 8px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .title {
-    }
-    .stact {
-      font-size: 14px;
-
-      color: ${(props) => props.theme.grayColor};
-    }
-  }
-  .desc {
-    font-size: 14px;
-    color: ${(props) => props.theme.grayColor};
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
   }
 `;

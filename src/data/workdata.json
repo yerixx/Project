@@ -2,91 +2,42 @@
   "workdata": [
     {
       "id": 1,
-      "title": "project1",
-      "stack": "(React)",
-      "projectDetails": {
-        "teamOrIndividual": "Team",
-        "responsive": "반응형",
-        "projectType": "클론코딩"
-      },
-      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
-    },
-    {
-      "id": 2,
-      "title": "project2",
-      "stack": "(React)",
+      "title": "OELD ART +",
+      "desc": "디지털 아트와 인터랙티브 아트 관련 정보를 제공하는 클론코딩 웹사이트로, 반응형 디자인과 다양한 사용자 경험 기능을 구현하였습니다. Google 번역 API를 통해 다국어 지원이 가능하며, Slick Slider와 스크롤 애니메이션으로 직관적이고 생동감 있는 인터페이스를 제공합니다.",
+      "img": "/img/oeldart1.png",
+      "stack": "(Html/CSS)",
       "projectDetails": {
         "teamOrIndividual": "Personal",
         "responsive": "반응형",
-        "projectType": "클론코딩"
+        "projectType": "클론코딩",
+        "apiUsage": "API"
       },
-      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
-    },
-    {
-      "id": 3,
-      "title": "project3",
-      "stack": "(Html/Css)",
-      "projectDetails": {
-        "teamOrIndividual": "Team",
-        "responsive": "반응형",
-        "projectType": "클론코딩"
+      "frontend": {
+        "html": "HTML5",
+        "styling": "SCSS",
+        "javascript": "ES6+",
+        "framework": null,
+        "stateManagement": null,
+        "apiIntegration": "Google Translate API"
       },
-      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
-    },
-    {
-      "id": 4,
-      "title": "project4",
-      "stack": "(Html/Css)",
-      "projectDetails": {
-        "teamOrIndividual": "Personal",
-        "responsive": "반응형",
-        "projectType": "클론코딩"
+      "backend": {
+        "language": null,
+        "framework": null,
+        "database": null,
+        "authentication": null
       },
-      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
-    },
-    {
-      "id": 5,
-      "title": "project5",
-      "stack": "(Javascript)",
-      "projectDetails": {
-        "teamOrIndividual": "Team",
-        "responsive": "반응형",
-        "projectType": "클론코딩"
+      "devTools": {
+        "buildTool": "Webpack",
+        "packageManager": null,
+        "versionControl": "Git"
       },
-      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
-    },
-    {
-      "id": 6,
-      "title": "project6",
-      "stack": "(Javascript)",
-      "projectDetails": {
-        "teamOrIndividual": "Personal",
-        "responsive": "반응형",
-        "projectType": "클론코딩"
+      "cloud": {
+        "hosting": "Netlify"
       },
-      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
-    },
-    {
-      "id": 7,
-      "title": "project7",
-      "stack": "(Typescript)",
-      "projectDetails": {
-        "teamOrIndividual": "Team",
-        "responsive": "반응형",
-        "projectType": "클론코딩"
-      },
-      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
-    },
-    {
-      "id": 8,
-      "title": "project8",
-      "stack": "(Typescript)",
-      "projectDetails": {
-        "teamOrIndividual": "Personal",
-        "responsive": "반응형",
-        "projectType": "클론코딩"
-      },
-      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quam, dolorum corrupti deleniti fugit soluta doloribus ipsum labore sunt enim, hic nesciunt dolorem eveniet impedit temporibus. Minus dolorum eaque velit?"
+      "link": {
+        "deploy": "https://lgoledart.netlify.app",
+        "github": "https://github.com/yerixx/OLEDART.git"
+      }
     }
   ]
 }

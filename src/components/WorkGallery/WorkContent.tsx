@@ -16,8 +16,7 @@ import {
   GalleryBox,
   GallerySmallBox,
   GalleryLargeBox,
-  SmallBoxInnerText,
-  LargeBoxInnerText,
+  InnerTextBox,
 } from "./WorkContent.styles";
 
 import WorkModal from "./WorkModal";
@@ -27,7 +26,7 @@ interface WorkContentProps {
 }
 
 const WorkContent = ({ selectedStack }: WorkContentProps) => {
-  const [selectedId, setSelectedId] = useState(false);
+  const [selectedId, setSelectedId] = useState<number | null>(null);
 
   const filteredData =
     selectedStack === "All"
@@ -39,12 +38,12 @@ const WorkContent = ({ selectedStack }: WorkContentProps) => {
     pairs.push(filteredData.slice(i, i + 2));
   }
 
-  const handlemodal = () => {
-    setSelectedId(true);
+  const handlemodal = (id: number) => {
+    setSelectedId(id);
   };
 
   const closeModal = () => {
-    setSelectedId(false);
+    setSelectedId(null);
   };
 
   useEffect(() => {
@@ -79,35 +78,35 @@ const WorkContent = ({ selectedStack }: WorkContentProps) => {
         {pairs.map((pair, index) => (
           <GalleryBox key={index}>
             <div>
-              <GallerySmallBox onClick={handlemodal}>
-                <div className="gallerySmall"></div>
-                <SmallBoxInnerText>
+              <GallerySmallBox onClick={() => handlemodal(pair[0].id)}>
+                <img className="gallerySmall" src={pair[0]?.img} />
+                <InnerTextBox>
                   <div className="textBox">
                     <p className="title">{pair[0].title}</p>
                     <p className="stact">{pair[0].stack}</p>
                   </div>
                   <div className="desc">{pair[0].desc}</div>
-                </SmallBoxInnerText>
+                </InnerTextBox>
               </GallerySmallBox>
             </div>
             {pair[1] && (
               <div>
-                <GalleryLargeBox onClick={handlemodal}>
-                  <div className="galleryLarge"></div>
-                  <LargeBoxInnerText>
+                <GalleryLargeBox onClick={() => handlemodal(pair[1].id)}>
+                  <img className="galleryLarge" src={pair[1]?.img} />
+                  <InnerTextBox>
                     <div className="textBox">
                       <p className="title">{pair[1].title}</p>
                       <p className="stact">{pair[1].stack}</p>
                     </div>
                     <div className="desc">{pair[1].desc}</div>
-                  </LargeBoxInnerText>
+                  </InnerTextBox>
                 </GalleryLargeBox>
               </div>
             )}
           </GalleryBox>
         ))}
       </GalleryBoxes>
-      {selectedId && <WorkModal onClose={closeModal} />}
+      {selectedId && <WorkModal onClose={closeModal} projectId={selectedId} />}
       {/* {<WorkModal onClose={closeModal} />} */}
     </GalleryWrapper>
   );

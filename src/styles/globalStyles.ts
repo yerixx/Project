@@ -18,8 +18,8 @@ const globalStyles = createGlobalStyle`
 
   body {
     /* font-family: 'Noto Sans KR', sans-serif; */
-    /* font-family: "Inter", sans-serif; */
-    font-family: "Neue Haas Grotesk",sans-serif;
+    font-family: "Inter", sans-serif;
+    /* font-family: "Neue Haas Grotesk",sans-serif; */
     background: ${(props) => props.theme.mainColor};
   }
   :root {
@@ -27,8 +27,7 @@ const globalStyles = createGlobalStyle`
     --border-radius-08: 8px;
     --border-radius-30: 30px;
     /* box-shadow */
-    --box-shadow-01: 0px 0px 8px rgba(0, 0, 0, 0.1);
-    --box-shadow-02: 3px 8px 10px 0px rgba(15, 22, 30, 0.11);
+    --box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
      /* width size */
     --desktop-width-1400: 1400px;
     --desktop-width-1100: 1100px;
