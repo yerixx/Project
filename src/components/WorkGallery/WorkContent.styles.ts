@@ -55,6 +55,7 @@ export const GalleryLargeBox = styled.article`
     height: 50vh;
     background: #999;
     border-radius: 20px;
+    object-fit: cover;
   }
 `;
 export const InnerTextBox = styled.div`

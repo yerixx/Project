@@ -139,20 +139,62 @@ export const ContontImg = styled.img`
 `;
 
 export const About = styled.div`
-  margin: 30px 0 120px;
-  h1 {
-    text-align: right;
-    padding: 18px 0;
-    font-size: 70px;
-    font-weight: 400;
+  margin: 40px 0 120px;
+  .aboutTitle {
+    display: flex;
+    align-items: center;
+    h1 {
+      padding: 18px 0;
+      padding-right: 30px;
+      font-size: 70px;
+      font-weight: 400;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+      border-left: 1px solid #000;
+      font-size: 20px;
+      font-weight: 300;
+      span {
+        b {
+          font-size: 28px;
+        }
+      }
+    }
   }
-  p {
-    text-align: right;
-
-    font-size: 18px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-all;
+  .aboutContent {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    .aboutText {
+      display: flex;
+      font-size: 20px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid #ddd;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      word-break: break-all;
+      div:nth-of-type(1) {
+        display: flex;
+        flex: 1;
+        gap: 10px;
+        font-size: 30px;
+        font-weight: 300px;
+      }
+      div:nth-of-type(2) {
+        display: flex;
+        flex: 2;
+        font-size: 18px;
+        line-height: 1.8;
+        letter-spacing: -1px;
+        font-weight: 300px;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
   }
 `;
 
@@ -177,7 +219,7 @@ export const Desc = styled.div`
     font-weight: 400;
   }
   p {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -185,7 +227,6 @@ export const ContentButtom = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #000;
   padding-top: 100px;
   .leftCont {
     width: 880px;
@@ -214,10 +255,46 @@ export const ContentButtom = styled.div`
   }
 `;
 
-export const Summary = styled.div`
+export const Highlights = styled.div`
   width: 100%;
-  height: 300px;
-  background: #999;
-  margin: 40px 0;
-  border-radius: 40px;
+  margin-top: 100px;
+
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #000;
+  .highlightsTitle {
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  .highlightsCont {
+    padding: 60px;
+    display: flex;
+    gap: 40px;
+    .highlightsLeft {
+      flex: 1;
+      img {
+        width: 350px;
+        height: 200px;
+        border-radius: 20px;
+        box-shadow: var(--box-shadow);
+      }
+      & > div {
+        font-size: 25px;
+      }
+    }
+    .highlightsRight {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      div:nth-of-type(1) {
+        font-size: 20px;
+      }
+      div:nth-of-type(2) {
+        font-size: 16px;
+      }
+    }
+  }
 `;

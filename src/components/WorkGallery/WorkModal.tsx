@@ -17,7 +17,7 @@ import {
   ContImg,
   Desc,
   ContentButtom,
-  Summary,
+  Highlights,
 } from "./WorkModal.styls";
 
 import { WorkModalProps } from "../../styles/common";
@@ -84,14 +84,36 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
             <WorkContont>
               <ContontImg src="/img/oeldart1.png" />
               <About>
-                <h1>ABOUT</h1>
-                <p>
-                  웹사이트의 구조와 기능을 구현한 클론코딩 프로젝트입니다.
-                  디지털 아트와 인터랙티브 아트에 관련된 정보를 제공하고,
-                  <br />
-                  사용자 경험을 향상시키기 위한 다양한 기능들이 포함되어
-                  있습니다.
-                </p>
+                <div className="aboutTitle">
+                  <h1>ABOUT</h1>
+                  <div>
+                    <span>Duration</span>
+                    <span>
+                      <b>{projectData.about.duration} </b>
+                      day
+                    </span>
+                  </div>
+                </div>
+                <div className="aboutContent">
+                  <div className="aboutText">
+                    <div>
+                      <b>(01) </b>Intro
+                    </div>
+                    <div> {projectData.about.intro}</div>
+                  </div>
+                  <div className="aboutText">
+                    <div>
+                      <b>(02)</b>KeyFeatures
+                    </div>
+                    <div> {projectData.about.keyFeatures}</div>
+                  </div>
+                  <div className="aboutText">
+                    <div>
+                      <b>(03)</b>Impact
+                    </div>
+                    <div>{projectData.about.impact}</div>
+                  </div>
+                </div>
               </About>
               <ContImg>
                 <img src="/img/oeldart2.png" />
@@ -130,9 +152,18 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
                   </Desc>
                 </div>
               </ContentButtom>
-              <Summary>
-                <div></div>
-              </Summary>
+              <Highlights>
+                <div className="highlightsTitle">Highlights</div>
+                <div className="highlightsCont">
+                  <div className="highlightsLeft">
+                    <img src="/img/oeldart5.png" alt="oeldart" />
+                  </div>
+                  <div className="highlightsRight">
+                    <div>{projectData.title}</div>
+                    <div>{projectData.desc}</div>
+                  </div>
+                </div>
+              </Highlights>
             </WorkContont>
           </WorkContainer>
         </ModalContent>

@@ -4,6 +4,57 @@
       "id": 1,
       "title": "OELD ART +",
       "desc": "디지털 아트와 인터랙티브 아트 관련 정보를 제공하는 클론코딩 웹사이트로, 반응형 디자인과 다양한 사용자 경험 기능을 구현하였습니다. Google 번역 API를 통해 다국어 지원이 가능하며, Slick Slider와 스크롤 애니메이션으로 직관적이고 생동감 있는 인터페이스를 제공합니다.",
+      "about": {
+        "duration": "2",
+        "intro": "웹사이트의 구조와 기능을 구현한 클론코딩 프로젝트입니다. OELD ART +는 사용자 친화적인 반응형 웹사이트로, 디지털 아트를 쉽게 탐색하고 예술가와 작품을 소개하며, Google Translate API를 활용해 글로벌 사용자를 지원합니다.",
+        "keyFeatures": "직관적인 네비게이션과 인터랙티브 콘텐츠는 사용자가 쉽고 빠르게 정보를 찾을 수 있도록 돕습니다. 작품과 예술가에 대한 상세한 정보 제공을 통해 문화적 깊이를 더하며, 다국어 번역 지원을 통해 글로벌 사용자가 편리하게 접근할 수 있도록 합니다. 실시간 업데이트와 슬라이더를 활용한 동적인 UI/UX는 사용자에게 생동감 넘치는 경험을 선사합니다.",
+        "impact": "OELD ART +는 예술을 보다 친근하게 만들고, 디지털 아트 생태계를 확장함으로써 예술가와 사용자를 연결하는 가교 역할을 합니다."
+      },
+      "img": "/img/oeldart1.png",
+      "stack": "(Html/CSS)",
+      "projectDetails": {
+        "teamOrIndividual": "Personal",
+        "responsive": "반응형",
+        "projectType": "클론코딩",
+        "apiUsage": "API"
+      },
+      "frontend": {
+        "html": "HTML5",
+        "styling": "SCSS",
+        "javascript": "ES6+",
+        "framework": null,
+        "stateManagement": null,
+        "apiIntegration": "Google Translate API"
+      },
+      "backend": {
+        "language": null,
+        "framework": null,
+        "database": null,
+        "authentication": null
+      },
+      "devTools": {
+        "buildTool": "Webpack",
+        "packageManager": null,
+        "versionControl": "Git"
+      },
+      "cloud": {
+        "hosting": "Netlify"
+      },
+      "link": {
+        "deploy": "https://lgoledart.netlify.app",
+        "github": "https://github.com/yerixx/OLEDART.git"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Cyworld",
+      "desc": "디지털 아트와 인터랙티브 아트 관련 정보를 제공하는 클론코딩 웹사이트로, 반응형 디자인과 다양한 사용자 경험 기능을 구현하였습니다. Google 번역 API를 통해 다국어 지원이 가능하며, Slick Slider와 스크롤 애니메이션으로 직관적이고 생동감 있는 인터페이스를 제공합니다.",
+      "about": {
+        "duration": "2",
+        "intro": "웹사이트의 구조와 기능을 구현한 클론코딩 프로젝트입니다. OELD ART +는 사용자 친화적인 반응형 웹사이트로, 디지털 아트를 쉽게 탐색하고 예술가와 작품을 소개하며, Google Translate API를 활용해 글로벌 사용자를 지원합니다.",
+        "keyFeatures": "직관적인 네비게이션과 인터랙티브 콘텐츠는 사용자가 쉽고 빠르게 정보를 찾을 수 있도록 돕습니다. 작품과 예술가에 대한 상세한 정보 제공을 통해 문화적 깊이를 더하며, 다국어 번역 지원을 통해 글로벌 사용자가 편리하게 접근할 수 있도록 합니다. 실시간 업데이트와 슬라이더를 활용한 동적인 UI/UX는 사용자에게 생동감 넘치는 경험을 선사합니다.",
+        "impact": "OELD ART +는 예술을 보다 친근하게 만들고, 디지털 아트 생태계를 확장함으로써 예술가와 사용자를 연결하는 가교 역할을 합니다."
+      },
       "img": "/img/oeldart1.png",
       "stack": "(Html/CSS)",
       "projectDetails": {
