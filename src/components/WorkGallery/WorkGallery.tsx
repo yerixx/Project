@@ -22,7 +22,7 @@ const WorkGallery = () => {
   const [selectedStack, setSelectedStack] = useState("All");
 
   return (
-    <Wrapper>
+    <Wrapper id="workGallery">
       <Inner>
         <WorkGalleryTitleBox>
           <WorkGalleryTitle>

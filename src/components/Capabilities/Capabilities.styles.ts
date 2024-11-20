@@ -9,6 +9,7 @@ export const Wrapper = styled.main`
   width: 100%;
   height: 100vh;
   padding-top: 7%;
+  transition: all 1s;
 `;
 export const Inner = styled.section`
   width: 90%;
@@ -23,6 +24,7 @@ export const CapabilitiesTitleBox = styled.section`
   height: fit-content;
   color: ${(props) => props.theme.subColor};
   margin-bottom: 40px;
+  opacity: 0;
 `;
 export const CapabilitiesTitle = styled.article`
   width: 100%;
@@ -39,6 +41,7 @@ export const Desc = styled.article`
 export const CapabilitiesWrapper = styled.section`
   display: flex;
   gap: 60px;
+  opacity: 0;
 `;
 export const CapabilitiesLeftBox = styled.section`
   position: relative;

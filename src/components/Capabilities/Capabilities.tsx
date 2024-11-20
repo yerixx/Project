@@ -13,18 +13,22 @@ import {
   CapabilitiesStackBox,
 } from "./Capabilities.styles";
 
-const Capabilities = () => {
+interface CapabilitiesProps {
+  style?: React.CSSProperties; // style 속성 타입 추가
+}
+
+const Capabilities: React.FC<CapabilitiesProps> = ({ style }) => {
   return (
-    <Wrapper>
+    <Wrapper id="capabilities" style={style}>
       <Inner>
-        <CapabilitiesTitleBox>
+        <CapabilitiesTitleBox className="capability-tag">
           <CapabilitiesTitle>
             <Title>Crafting My Path </Title>
             <Title>Skills, Experience, and Growth</Title>
           </CapabilitiesTitle>
           <Desc>기술, 경험, 그리고 배움의 여정</Desc>
         </CapabilitiesTitleBox>
-        <CapabilitiesWrapper>
+        <CapabilitiesWrapper className="capability-tag">
           <CapabilitiesLeftBox>
             <CapabilitiesTabBox>
               <li className="capabilitiesTab active">{`<Language />`}</li>

@@ -2,10 +2,14 @@ import styled from "styled-components";
 import { Title50, Paragraph18 } from "../../styles/fontStyle";
 
 export const WorkGalleryContainer = styled.article`
+  position: sticky;
+  top: 0;
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: 80%;
   z-index: 2;
+  background: #fff;
   transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 `;
 

@@ -21,6 +21,7 @@ const globalStyles = createGlobalStyle`
     font-family: "Inter", sans-serif;
     /* font-family: "Neue Haas Grotesk",sans-serif; */
     background: ${(props) => props.theme.mainColor};
+    transition: all 1s;
   }
   :root {
    /* Border Radius */
