@@ -1,5 +1,17 @@
 import styled, { keyframes } from "styled-components";
-import { Title110 } from "../../styles/fontStyle";
+import {
+  Desc20,
+  Paragraph14,
+  Paragraph16,
+  Paragraph18,
+  Title110,
+  Title22,
+  Title26,
+  Title28,
+  Title30,
+  Title40,
+  Title70,
+} from "../../styles/fontStyle";
 
 const fadeIn = keyframes`
   from {
@@ -106,19 +118,20 @@ export const WorkContainer = styled.article`
 export const OverviewBox = styled.article`
   padding: 20px 0 60px;
   display: flex;
-  font-size: 14px;
+  ${Paragraph14}
   display: flex;
   justify-content: space-between;
   ul {
     display: flex;
     flex-direction: column;
     li {
-      font-size: 14px;
+      ${Paragraph14}
+
       font-family: "Inter", sans-serif;
       font-weight: 300;
     }
     .title {
-      font-size: 16px;
+      ${Paragraph16}
       padding-bottom: 10px;
       text-transform: uppercase;
     }
@@ -146,7 +159,7 @@ export const About = styled.div`
     h1 {
       padding: 18px 0;
       padding-right: 30px;
-      font-size: 70px;
+      ${Title70}
       font-weight: 400;
     }
     div {
@@ -154,11 +167,11 @@ export const About = styled.div`
       flex-direction: column;
       padding: 0 30px;
       border-left: 1px solid #000;
-      font-size: 20px;
+      ${Desc20}
       font-weight: 300;
       span {
         b {
-          font-size: 28px;
+          ${Title28}
         }
       }
     }
@@ -170,7 +183,7 @@ export const About = styled.div`
     gap: 80px;
     .aboutText {
       display: flex;
-      font-size: 20px;
+      ${Desc20}
       padding-bottom: 60px;
       border-bottom: 1px solid #ddd;
       white-space: pre-wrap;
@@ -180,15 +193,13 @@ export const About = styled.div`
         display: flex;
         flex: 1;
         gap: 10px;
-        font-size: 30px;
+        ${Title30}
         font-weight: 300px;
       }
       div:nth-of-type(2) {
         display: flex;
         flex: 2;
-        font-size: 18px;
-        line-height: 1.8;
-        letter-spacing: -1px;
+        ${Paragraph18}
         font-weight: 300px;
       }
       &:last-child {
@@ -215,11 +226,11 @@ export const Desc = styled.div`
   margin: 30px 0 60px;
   h2 {
     padding: 18px 0;
-    font-size: 40px;
+    ${Title40}
     font-weight: 400;
   }
   p {
-    font-size: 16px;
+    ${Paragraph16}
   }
 `;
 
@@ -264,7 +275,7 @@ export const Highlights = styled.div`
   flex-direction: column;
   border-top: 1px solid #000;
   .highlightsTitle {
-    font-size: 22px;
+    ${Title22}
     text-transform: uppercase;
   }
   .highlightsCont {
@@ -280,7 +291,7 @@ export const Highlights = styled.div`
         box-shadow: var(--box-shadow);
       }
       & > div {
-        font-size: 25px;
+        ${Title26}/* font-size: 25px; */
       }
     }
     .highlightsRight {
@@ -290,10 +301,10 @@ export const Highlights = styled.div`
       justify-content: center;
       gap: 14px;
       div:nth-of-type(1) {
-        font-size: 20px;
+        ${Desc20}
       }
       div:nth-of-type(2) {
-        font-size: 16px;
+        ${Paragraph16}
       }
     }
   }

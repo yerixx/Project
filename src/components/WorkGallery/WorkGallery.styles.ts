@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Title50, Paragraph18 } from "../../styles/fontStyle";
+import { Title50, Paragraph18, Title40 } from "../../styles/fontStyle";
 
 export const WorkGalleryContainer = styled.article`
   position: sticky;
@@ -45,8 +45,7 @@ export const Title = styled.article`
   font-weight: bold;
 `;
 export const Year = styled.article`
-  font-size: 40px;
-  font-family: "Inter", sans-serif;
+  ${Title40}
 `;
 
 export const WorkTabBox = styled.section`

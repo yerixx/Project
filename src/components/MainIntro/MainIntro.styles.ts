@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Title70, Desc20 } from "../../styles/fontStyle";
+import { MainTitle70, Desc20 } from "../../styles/fontStyle";
 export const Wrapper = styled.main`
   position: relative;
   width: 100%;
@@ -20,7 +20,7 @@ export const MainTitleBox = styled.article`
 export const MainTitle = styled.div`
   color: ${({ theme }) => theme.fontColor};
   text-align: center;
-  ${Title70};
+  ${MainTitle70};
 `;
 export const SubTextBox = styled.article`
   margin-top: 26px;

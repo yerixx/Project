@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Title22 } from "../../styles/fontStyle";
+import { Paragraph14, Paragraph18, Title22 } from "../../styles/fontStyle";
 
 export const GalleryWrapper = styled.section``;
 export const NavBox = styled.article`
@@ -67,15 +67,15 @@ export const InnerTextBox = styled.div`
     justify-content: space-between;
     align-items: center;
     .title {
-      font-size: 18px;
+      ${Paragraph18}
     }
     .stact {
-      font-size: 14px;
+      ${Paragraph14}
       color: ${(props) => props.theme.grayColor};
     }
   }
   .desc {
-    font-size: 14px;
+    ${Paragraph14}
     color: ${(props) => props.theme.grayColor};
     white-space: normal;
     word-wrap: break-word;

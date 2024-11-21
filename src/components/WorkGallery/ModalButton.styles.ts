@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Desc20 } from "../../styles/fontStyle";
 
 export const ModalLinkButtonBox = styled.article`
   position: absolute;
@@ -22,7 +23,7 @@ export const ModalLinkButtonBox = styled.article`
     color: #fff;
     background: #333;
     border-radius: 50%;
-    font-size: 20px;
+    ${Desc20}
   }
 `;
 
@@ -43,7 +44,7 @@ export const ModalLink = styled.a`
   color: #333;
   background: #fff;
   border-radius: 50%;
-  font-size: 20px;
+  ${Desc20}
 `;
 
 export const ModalLinkText = styled.article`

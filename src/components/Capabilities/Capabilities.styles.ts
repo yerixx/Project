@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Title60, Title50, Title26 } from "../../styles/fontStyle";
+import { Title60, Title50, Title26, Paragraph16 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
   display: flex;
@@ -75,13 +75,15 @@ export const CapabilitiesContBox = styled.div`
   padding: 60px 40px;
   background: ${(props) => props.theme.subColor};
   h1 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
     padding: 16px 0 22px;
     ${Title60}
     font-weight: 500;
   }
   p {
-    font-size: 16.5px;
-    letter-spacing: -1px;
+    ${Paragraph16}
     font-weight: 400;
     line-height: 1.8;
   }
@@ -102,6 +104,7 @@ export const CapabilitiesStackBox = styled.ul`
   display: flex;
   gap: 20px;
   color: #d2d2d2;
+  cursor: pointer;
   .stackNum {
     height: 35px;
     font-size: 16px;

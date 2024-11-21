@@ -12,12 +12,74 @@ import {
   CapabilitiesRightBox,
   CapabilitiesStackBox,
 } from "./Capabilities.styles";
+import capabilities from "../../data/Capabilities.json";
+import { useState } from "react";
+
+import { IoArrowForward } from "react-icons/io5";
 
 interface CapabilitiesProps {
-  style?: React.CSSProperties; // style 속성 타입 추가
+  style?: React.CSSProperties;
 }
 
 const Capabilities: React.FC<CapabilitiesProps> = ({ style }) => {
+  // 현재 선택된 탭 상태
+  const [activeTab, setActiveTab] = useState("FrontEnd");
+  const [selectedStack, setSelectedStack] = useState<{
+    title: string;
+    desc: string;
+  } | null>(null);
+
+  const handleTabClick = (tab: string) => {
+    setActiveTab(tab);
+    setSelectedStack(null); // 탭 변경 시 선택된 스택 초기화
+  };
+
+  // Stack 클릭 핸들러
+  const onStackClick = (stack: any) => {
+    setSelectedStack(stack);
+  };
+
+  const getCurrentData = () => {
+    if (activeTab === "FrontEnd") return capabilities.frontEnd;
+    if (activeTab === "DevTools") return capabilities.devTools;
+    if (activeTab === "Experience") return capabilities.experience;
+    return [];
+  };
+
+  const data = getCurrentData();
+
+  const renderContent = () => {
+    return data.map((it) => (
+      <CapabilitiesStackBox key={it.id} onClick={() => onStackClick(it.stack)}>
+        <li className="stackNum">{it.stack.num}</li>
+        <li className="stackText">
+          <div className="stackTitle">{it.stack.title}</div>
+          <div className="stackDesc">{it.stack.desc}</div>
+        </li>
+      </CapabilitiesStackBox>
+    ));
+  };
+
+  // CapabilitiesContBox 콘텐츠 렌더링
+  const innerRenderContent = () => {
+    if (!selectedStack) {
+      return (
+        <CapabilitiesContBox>
+          <h1>
+            Click me <IoArrowForward />
+          </h1>
+          <p>왼쪽 목록을 클릭하여 자세한 내용을 확인하세요.</p>
+        </CapabilitiesContBox>
+      );
+    }
+    return (
+      <CapabilitiesContBox>
+        <h1>{selectedStack.title}</h1>
+        <p>{selectedStack.desc}</p>
+      </CapabilitiesContBox>
+    );
+  };
+
   return (
     <Wrapper id="capabilities" style={style}>
       <Inner>
@@ -31,70 +93,34 @@ const Capabilities: React.FC<CapabilitiesProps> = ({ style }) => {
         <CapabilitiesWrapper className="capability-tag">
           <CapabilitiesLeftBox>
             <CapabilitiesTabBox>
-              <li className="capabilitiesTab active">{`<Language />`}</li>
-              <li className="capabilitiesTab">{`<FrontEnd />`}</li>
-              <li className="capabilitiesTab">{`<Experience/>`}</li>
+              <li
+                className={`capabilitiesTab ${
+                  activeTab === "FrontEnd" ? "active" : ""
+                }`}
+                onClick={() => handleTabClick("FrontEnd")}
+              >
+                {"<FrontEnd />"}
+              </li>
+              <li
+                className={`capabilitiesTab ${
+                  activeTab === "DevTools" ? "active" : ""
+                }`}
+                onClick={() => handleTabClick("DevTools")}
+              >
+                {"<DevTools />"}
+              </li>
+              <li
+                className={`capabilitiesTab ${
+                  activeTab === "Experience" ? "active" : ""
+                }`}
+                onClick={() => handleTabClick("Experience")}
+              >
+                {"<Experience />"}
+              </li>
             </CapabilitiesTabBox>
-            <CapabilitiesContBox>
-              <h1>HTML5</h1>
-              <p>
-                Atomic한 단위의 컴포넌트 개발을 좋아하며, 재사용성과 확장성을
-                고려합니다. 재사용성이 높은 공통 비즈니스 로직의 경우 Hook을
-                이용하여 공통 Hooks로 만들어 모듈화 합니다. 컴포넌트의 불필요한
-                리렌더링이 발생하지 않도록 개발하려 노력합니다.
-              </p>
-            </CapabilitiesContBox>
+            {innerRenderContent()}
           </CapabilitiesLeftBox>
-          <CapabilitiesRightBox>
-            <CapabilitiesStackBox>
-              <li className="stackNum">001</li>
-              <li className="stackText">
-                <div className="stackTitle">HTML5</div>
-                <div className="stackDesc">
-                  Atomic한 단위의 컴포넌트 개발을 좋아하며, 재사용성과 확장성을
-                  고려합니다. 재사용성이 높은 공통 비즈니스 로직의 경우 Hook을
-                  이용하여 공통 Hooks로 만들어 모듈화 합니다. 컴포넌트의
-                  불필요한 리렌더링이 발생하지 않도록 개발하려 노력합니다.
-                </div>
-              </li>
-            </CapabilitiesStackBox>
-            <CapabilitiesStackBox>
-              <li className="stackNum">002</li>
-              <li className="stackText">
-                <div className="stackTitle">HTML5</div>
-                <div className="stackDesc">
-                  Atomic한 단위의 컴포넌트 개발을 좋아하며, 재사용성과 확장성을
-                  고려합니다. 재사용성이 높은 공통 비즈니스 로직의 경우 Hook을
-                  이용하여 공통 Hooks로 만들어 모듈화 합니다. 컴포넌트의
-                  불필요한 리렌더링이 발생하지 않도록 개발하려 노력합니다.
-                </div>
-              </li>
-            </CapabilitiesStackBox>
-            <CapabilitiesStackBox>
-              <li className="stackNum">003</li>
-              <li className="stackText">
-                <div className="stackTitle">HTML5</div>
-                <div className="stackDesc">
-                  Atomic한 단위의 컴포넌트 개발을 좋아하며, 재사용성과 확장성을
-                  고려합니다. 재사용성이 높은 공통 비즈니스 로직의 경우 Hook을
-                  이용하여 공통 Hooks로 만들어 모듈화 합니다. 컴포넌트의
-                  불필요한 리렌더링이 발생하지 않도록 개발하려 노력합니다.
-                </div>
-              </li>
-            </CapabilitiesStackBox>
-            <CapabilitiesStackBox>
-              <li className="stackNum">004</li>
-              <li className="stackText">
-                <div className="stackTitle">HTML5</div>
-                <div className="stackDesc">
-                  Atomic한 단위의 컴포넌트 개발을 좋아하며, 재사용성과 확장성을
-                  고려합니다. 재사용성이 높은 공통 비즈니스 로직의 경우 Hook을
-                  이용하여 공통 Hooks로 만들어 모듈화 합니다. 컴포넌트의
-                  불필요한 리렌더링이 발생하지 않도록 개발하려 노력합니다.
-                </div>
-              </li>
-            </CapabilitiesStackBox>
-          </CapabilitiesRightBox>
+          <CapabilitiesRightBox>{renderContent()}</CapabilitiesRightBox>
         </CapabilitiesWrapper>
       </Inner>
     </Wrapper>
