@@ -149,6 +149,8 @@ export const ContontImg = styled.img`
   height: 650px;
   object-fit: cover;
   border-radius: 40px;
+  /* border: inherit; */
+  border: none;
 `;
 
 export const About = styled.div`
@@ -201,6 +203,11 @@ export const About = styled.div`
         flex: 2;
         ${Paragraph18}
         font-weight: 300px;
+        color: #999;
+        transition: all 0.5s;
+        &:hover {
+          color: ${({ theme }) => theme.mainColor};
+        }
       }
       &:last-child {
         border-bottom: none;

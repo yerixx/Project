@@ -90,13 +90,6 @@ const Root: React.FC = () => {
         <Capabilities
           style={{
             background: handleScrollY > 700 ? "#000" : "#fff",
-            // opacity: handleScrollY > 1500 ? "0" : "1",
-            // background:
-            //   handleScrollY > 1500
-            //     ? "#fff" // 1500 이상이면 흰색
-            //     : handleScrollY > 700
-            //     ? "#000" // 700 이상 1500 미만이면 검은색
-            //     : "#fff", // 700 미만이면 흰색
           }}
         />
         <AboutMe />

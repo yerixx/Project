@@ -42,7 +42,8 @@ const AboutMe = () => {
           <AboutMeContTop>
             <AboutMeTextBox className="aboutMe-tag">
               <li className="AboutMeText">
-                <div className="AboutMeTitle">프론트엔드로 전향한 이유</div>
+                {/* <div className="AboutMeTitle">프론트엔드로 전향한 이유</div> */}
+                <div className="AboutMeTitle">열정걸</div>
                 <div className="AboutMeDesc">
                   저는 항상 새로운 도전과 학습을 통해 스스로를 발전시키는 것을
                   중요하게 생각해 왔습니다. 내가 진정으로 몰입하고 성취감을 느낄

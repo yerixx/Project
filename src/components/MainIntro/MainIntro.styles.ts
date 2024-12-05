@@ -21,6 +21,9 @@ export const MainTitle = styled.div`
   color: ${({ theme }) => theme.fontColor};
   text-align: center;
   ${MainTitle70};
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
 `;
 export const SubTextBox = styled.article`
   margin-top: 26px;

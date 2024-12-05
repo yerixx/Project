@@ -49,11 +49,9 @@ export const GallerySmallBox = styled.article`
 `;
 export const GalleryLargeBox = styled.article`
   width: 50vw;
-
   .galleryLarge {
     width: 50vw;
     height: 50vh;
-    background: #999;
     border-radius: 20px;
     object-fit: cover;
   }

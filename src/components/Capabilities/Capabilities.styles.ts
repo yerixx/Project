@@ -117,10 +117,15 @@ export const CapabilitiesStackBox = styled.ul`
     .stackTitle {
       padding-bottom: 10px;
       ${Title26}
-      border-bottom:1px solid #d2d2d2;
+      border-bottom: 1px solid #999;
     }
     .stackDesc {
       padding: 20px 0;
+      color: #999;
+      transition: all 0.5s;
+      &:hover {
+        color: ${({ theme }) => theme.subColor};
+      }
     }
   }
 `;

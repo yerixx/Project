@@ -39,7 +39,11 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
   return (
     <ModalWrapper isClosing={isClosing}>
       <ModalContainer>
-        <Button onClose={handleClose} projectData={projectData} />
+        <Button
+          onClose={handleClose}
+          projectData={projectData}
+          projectId={projectId}
+        />
         <ModalContent isClosing={isClosing}>
           <WorkContainer>
             <Title>{projectData.title}</Title>
@@ -51,10 +55,10 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
             <OverviewBox>
               <ul>
                 <li className="title">Frontend</li>
-                <li>{projectData.frontend?.html}</li>
-                <li>{projectData.frontend?.styling}</li>
-                <li>{projectData.frontend?.javascript}</li>
                 <li>{projectData.frontend?.framework}</li>
+                <li>{projectData.frontend?.html}</li>
+                <li>{projectData.frontend?.javascript}</li>
+                <li>{projectData.frontend?.styling}</li>
                 <li>{projectData.frontend?.stateManagement}</li>
                 <li>{projectData.frontend?.apiIntegration}</li>
               </ul>
@@ -82,7 +86,7 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
               </ul>
             </OverviewBox>
             <WorkContont>
-              <ContontImg src="/img/oeldart1.png" />
+              <ContontImg src={projectData.img} />
               <About>
                 <div className="aboutTitle">
                   <h1>ABOUT</h1>
@@ -105,7 +109,7 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
                     <div>
                       <b>(02)</b>KeyFeatures
                     </div>
-                    <div> {projectData.about.keyFeatures}</div>
+                    <div>{projectData.about.keyFeatures}</div>
                   </div>
                   <div className="aboutText">
                     <div>
