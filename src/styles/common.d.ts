@@ -5,13 +5,14 @@ export interface ScrollYProps {
 export interface WorkModalProps {
   onClose: () => void;
   projectId: number;
-  projectData: {
+  projectData?: {
     link: {
       deploy: string;
       github: string;
     };
   };
 }
+
 export interface Props {
   id: number;
   title: string;

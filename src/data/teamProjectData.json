@@ -1,0 +1,209 @@
+{
+  "teamProjectData": [
+    {
+      "id": 1,
+      "title": "Facebook",
+      "desc": "사용자가 직접 디자인할 수 있는 미니홈피를 통해 감성을 공유하고 개성을 표현할 수 있는 공간을 제공합니다. \n사용자는 하루의 감정을 기록하거나, 자신의 프로필 메시지와 홈피 제목을 즉시 편집하며 \n커스터마이징할 수 있습니다. \n또한, 간단한 내비게이션으로 홈, 게임, 쥬크박스를 탐색하며 콘텐츠를 즐길 수 있습니다. \n이 모든 경험은 HTML, CSS, JavaScript로 구현되어 직관적이고 레트로한 인터페이스를 제공합니다.",
+      "about": {
+        "duration": "4",
+        "intro": "2000년대 초반 당시 사용자들이 일상과 추억을 기록하며 관계를 유지하는 데 큰 역할을 했던 소셜 네트워크 서비스인 \n싸이월드의 레트로 감성을 현대적인 웹 기술과 접목해, 사용자가 과거의 따뜻한 추억을 새롭게 경험하게 하고자 만들었습니다",
+        "keyFeatures": "• 프로필 사진과 메시지를 커스터마이징 할 수 있습니다\n• 실시간 수정 기능을 통해 즉각적인 변화를 적용할 수 있습니다. \n• 제목 편집 인터페이스를 제공하며, 저장 및 취소 버튼으로 사용자 실수를 방지합니다. \n• ifreme 기능을 활용해 홈, 게임, 쥬크박스 등 세 가지 주요 화면을 간단한 클릭으로 전환할 수 있습니다. \n• 오늘의 기분을 기록하고 공유할 수 있는 감정 선택 기능이 제공됩니다. \n• 직관적인 인터페이스와 사용성을 고려한 인터랙션을 통해 높은 사용자 경험을 제공합니다.",
+        "impact": "• 사용자에게 과거의 향수를 제공하며, 자신만의 디지털 공간을 소유하고 관리할 수 있는 즐거움을 선사합니다.\n • 파일 업로드, DOM 조작, 사용자 인터랙션 설계 등 실무적인 기술을 경험할 기회가 되었습니다. \n• 이 프로젝트는 단순한 클론 코딩을 넘어, 사용자와 개발자 모두에게 감성과 기술을 잇는 가치를 제공합니다."
+      },
+      "imgBox": {
+        "imgA": "/img/cyworld1.png",
+        "imgB": "/img/cyworld1.png",
+        "imgC": "/img/cyworld1.png"
+      },
+      "stack": "(Html/CSS)",
+      "projectDetails": {
+        "teamOrIndividual": "Team",
+        "responsive": "반응형",
+        "projectType": "클론코딩",
+        "apiUsage": "API"
+      },
+      "frontend": {
+        "html": "HTML5",
+        "styling": "SCSS",
+        "javascript": "ES6+",
+        "framework": null,
+        "library": null,
+        "stateManagement": null,
+        "apiIntegration": null
+      },
+      "backend": {
+        "language": null,
+        "framework": null,
+        "database": null,
+        "authentication": null
+      },
+      "devTools": {
+        "buildTool": "Webpack",
+        "packageManager": null,
+        "versionControl": "Git"
+      },
+      "cloud": {
+        "hosting": "Netlify"
+      },
+      "link": {
+        "deploy": "https://cyword.netlify.app/",
+        "github": "https://github.com/yerixx/cyworld.git"
+      },
+      "modalMainImg": "/img/cyworld3.mp4",
+      "keyTechs": {
+        "keyTechA": {
+          "img": null,
+          "title": null,
+          "desc": null
+        },
+        "keyTechB": {
+          "img": null,
+          "title": null,
+          "desc": null
+        },
+        "keyTechC": {
+          "img": null,
+          "title": null,
+          "desc": null
+        }
+      },
+      "highlights": {
+        "img": "/img/cyworld5.png"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Moving",
+      "desc": "사용자가 직접 디자인할 수 있는 미니홈피를 통해 감성을 공유하고 개성을 표현할 수 있는 공간을 제공합니다. \n사용자는 하루의 감정을 기록하거나, 자신의 프로필 메시지와 홈피 제목을 즉시 편집하며 \n커스터마이징할 수 있습니다. \n또한, 간단한 내비게이션으로 홈, 게임, 쥬크박스를 탐색하며 콘텐츠를 즐길 수 있습니다. \n이 모든 경험은 HTML, CSS, JavaScript로 구현되어 직관적이고 레트로한 인터페이스를 제공합니다.",
+      "about": {
+        "duration": "4",
+        "intro": "2000년대 초반 당시 사용자들이 일상과 추억을 기록하며 관계를 유지하는 데 큰 역할을 했던 소셜 네트워크 서비스인 \n싸이월드의 레트로 감성을 현대적인 웹 기술과 접목해, 사용자가 과거의 따뜻한 추억을 새롭게 경험하게 하고자 만들었습니다",
+        "keyFeatures": "• 프로필 사진과 메시지를 커스터마이징 할 수 있습니다\n• 실시간 수정 기능을 통해 즉각적인 변화를 적용할 수 있습니다. \n• 제목 편집 인터페이스를 제공하며, 저장 및 취소 버튼으로 사용자 실수를 방지합니다. \n• ifreme 기능을 활용해 홈, 게임, 쥬크박스 등 세 가지 주요 화면을 간단한 클릭으로 전환할 수 있습니다. \n• 오늘의 기분을 기록하고 공유할 수 있는 감정 선택 기능이 제공됩니다. \n• 직관적인 인터페이스와 사용성을 고려한 인터랙션을 통해 높은 사용자 경험을 제공합니다.",
+        "impact": "• 사용자에게 과거의 향수를 제공하며, 자신만의 디지털 공간을 소유하고 관리할 수 있는 즐거움을 선사합니다.\n • 파일 업로드, DOM 조작, 사용자 인터랙션 설계 등 실무적인 기술을 경험할 기회가 되었습니다. \n• 이 프로젝트는 단순한 클론 코딩을 넘어, 사용자와 개발자 모두에게 감성과 기술을 잇는 가치를 제공합니다."
+      },
+      "mainImg": "/img/cyworld1.png",
+      "stack": "(Html/CSS)",
+      "projectDetails": {
+        "teamOrIndividual": "Team",
+        "responsive": "반응형",
+        "projectType": "클론코딩",
+        "apiUsage": "API"
+      },
+      "frontend": {
+        "html": "HTML5",
+        "styling": "SCSS",
+        "javascript": "ES6+",
+        "framework": null,
+        "library": null,
+        "stateManagement": null,
+        "apiIntegration": null
+      },
+      "backend": {
+        "language": null,
+        "framework": null,
+        "database": null,
+        "authentication": null
+      },
+      "devTools": {
+        "buildTool": "Webpack",
+        "packageManager": null,
+        "versionControl": "Git"
+      },
+      "cloud": {
+        "hosting": "Netlify"
+      },
+      "link": {
+        "deploy": "https://cyword.netlify.app/",
+        "github": "https://github.com/yerixx/cyworld.git"
+      },
+      "modalMainImg": "/img/cyworld3.mp4",
+      "keyTechs": {
+        "keyTechA": {
+          "img": null,
+          "title": null,
+          "desc": null
+        },
+        "keyTechB": {
+          "img": null,
+          "title": null,
+          "desc": null
+        },
+        "keyTechC": {
+          "img": null,
+          "title": null,
+          "desc": null
+        }
+      },
+      "highlights": {
+        "img": "/img/cyworld5.png"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Aliexpress",
+      "desc": "사용자가 직접 디자인할 수 있는 미니홈피를 통해 감성을 공유하고 개성을 표현할 수 있는 공간을 제공합니다. \n사용자는 하루의 감정을 기록하거나, 자신의 프로필 메시지와 홈피 제목을 즉시 편집하며 \n커스터마이징할 수 있습니다. \n또한, 간단한 내비게이션으로 홈, 게임, 쥬크박스를 탐색하며 콘텐츠를 즐길 수 있습니다. \n이 모든 경험은 HTML, CSS, JavaScript로 구현되어 직관적이고 레트로한 인터페이스를 제공합니다.",
+      "about": {
+        "duration": "4",
+        "intro": "2000년대 초반 당시 사용자들이 일상과 추억을 기록하며 관계를 유지하는 데 큰 역할을 했던 소셜 네트워크 서비스인 \n싸이월드의 레트로 감성을 현대적인 웹 기술과 접목해, 사용자가 과거의 따뜻한 추억을 새롭게 경험하게 하고자 만들었습니다",
+        "keyFeatures": "• 프로필 사진과 메시지를 커스터마이징 할 수 있습니다\n• 실시간 수정 기능을 통해 즉각적인 변화를 적용할 수 있습니다. \n• 제목 편집 인터페이스를 제공하며, 저장 및 취소 버튼으로 사용자 실수를 방지합니다. \n• ifreme 기능을 활용해 홈, 게임, 쥬크박스 등 세 가지 주요 화면을 간단한 클릭으로 전환할 수 있습니다. \n• 오늘의 기분을 기록하고 공유할 수 있는 감정 선택 기능이 제공됩니다. \n• 직관적인 인터페이스와 사용성을 고려한 인터랙션을 통해 높은 사용자 경험을 제공합니다.",
+        "impact": "• 사용자에게 과거의 향수를 제공하며, 자신만의 디지털 공간을 소유하고 관리할 수 있는 즐거움을 선사합니다.\n • 파일 업로드, DOM 조작, 사용자 인터랙션 설계 등 실무적인 기술을 경험할 기회가 되었습니다. \n• 이 프로젝트는 단순한 클론 코딩을 넘어, 사용자와 개발자 모두에게 감성과 기술을 잇는 가치를 제공합니다."
+      },
+      "mainImg": "/img/cyworld1.png",
+      "stack": "(Html/CSS)",
+      "projectDetails": {
+        "teamOrIndividual": "Team",
+        "responsive": "반응형",
+        "projectType": "클론코딩",
+        "apiUsage": "API"
+      },
+      "frontend": {
+        "html": "HTML5",
+        "styling": "SCSS",
+        "javascript": "ES6+",
+        "framework": null,
+        "library": null,
+        "stateManagement": null,
+        "apiIntegration": null
+      },
+      "backend": {
+        "language": null,
+        "framework": null,
+        "database": null,
+        "authentication": null
+      },
+      "devTools": {
+        "buildTool": "Webpack",
+        "packageManager": null,
+        "versionControl": "Git"
+      },
+      "cloud": {
+        "hosting": "Netlify"
+      },
+      "link": {
+        "deploy": "https://cyword.netlify.app/",
+        "github": "https://github.com/yerixx/cyworld.git"
+      },
+      "modalMainImg": "/img/cyworld3.mp4",
+      "keyTechs": {
+        "keyTechA": {
+          "img": null,
+          "title": null,
+          "desc": null
+        },
+        "keyTechB": {
+          "img": null,
+          "title": null,
+          "desc": null
+        },
+        "keyTechC": {
+          "img": null,
+          "title": null,
+          "desc": null
+        }
+      },
+      "highlights": {
+        "img": "/img/cyworld5.png"
+      }
+    }
+  ]
+}

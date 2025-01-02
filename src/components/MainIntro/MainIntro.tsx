@@ -20,7 +20,9 @@ const MainIntro = ({ scrollY }: ScrollYProps) => {
               transition: "all 0.3s ease-out",
             }}
           >
-            Crafting scalable intuitive
+            <div>Crafting</div>
+            <div>scalable</div>
+            <div>intuitive</div>
           </MainTitle>
           <MainTitle
             style={{
@@ -29,7 +31,7 @@ const MainIntro = ({ scrollY }: ScrollYProps) => {
               transition: "all 0.3s ease-out",
             }}
           >
-            frontend solutions
+            <div>frontend</div> <div>solutions</div>
           </MainTitle>
         </MainTitleBox>
         <SubTextBox style={{ filter: `blur(${scrollY * 0.1}px) ` }}>

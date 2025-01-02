@@ -1,4 +1,4 @@
-import { workdata } from "../../data/workdata.json";
+import { personalProjectData } from "../../../data/personalProjectData.json";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,16 +13,22 @@ import {
   Year,
   WorkTabBox,
   WorkTabs,
-} from "./WorkGallery.styles";
-import WorkContent from "./WorkContent";
+} from "./PersonalProjectContainer.styles";
+import WorkContent from "./PersonalProjectContent";
 
 import { useState } from "react";
 
-const WorkGallery = () => {
+interface MainProjectProps {
+  style?: React.CSSProperties;
+}
+
+const WorkGalleryContainer: React.FC<MainProjectProps> = ({
+  style,
+}: MainProjectProps) => {
   const [selectedStack, setSelectedStack] = useState("All");
 
   return (
-    <Wrapper id="workGallery">
+    <Wrapper id="workGallery" style={style}>
       <Inner>
         <WorkGalleryTitleBox>
           <WorkGalleryTitle>
@@ -39,14 +45,16 @@ const WorkGallery = () => {
             >
               All
             </div>
-            {[...new Set(workdata.map((data) => data.stack))].map((stack) => (
-              <div
-                className={`workTab ${selectedStack === stack ? "on" : ""}`}
-                onClick={() => setSelectedStack(stack)}
-              >
-                {stack.replace(/[()]/g, "")}
-              </div>
-            ))}
+            {[...new Set(personalProjectData.map((data) => data.stack))].map(
+              (stack) => (
+                <div
+                  className={`workTab ${selectedStack === stack ? "on" : ""}`}
+                  onClick={() => setSelectedStack(stack)}
+                >
+                  {stack.replace(/[()]/g, "")}
+                </div>
+              )
+            )}
           </WorkTabs>
         </WorkTabBox>
         <WorkContent selectedStack={selectedStack} />
@@ -54,4 +62,4 @@ const WorkGallery = () => {
     </Wrapper>
   );
 };
-export default WorkGallery;
+export default WorkGalleryContainer;

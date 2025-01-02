@@ -1,0 +1,205 @@
+{
+  "personalProjectData": [
+    {
+      "id": 1,
+      "title": "Cyworld",
+      "desc": "사용자가 직접 디자인할 수 있는 미니홈피를 통해 감성을 공유하고 개성을 표현할 수 있는 공간을 제공합니다. \n사용자는 하루의 감정을 기록하거나, 자신의 프로필 메시지와 홈피 제목을 즉시 편집하며 \n커스터마이징할 수 있습니다. \n또한, 간단한 내비게이션으로 홈, 게임, 쥬크박스를 탐색하며 콘텐츠를 즐길 수 있습니다. \n이 모든 경험은 HTML, CSS, JavaScript로 구현되어 직관적이고 레트로한 인터페이스를 제공합니다.",
+      "about": {
+        "duration": "4",
+        "intro": "2000년대 초반 당시 사용자들이 일상과 추억을 기록하며 관계를 유지하는 데 큰 역할을 했던 소셜 네트워크 서비스인 \n싸이월드의 레트로 감성을 현대적인 웹 기술과 접목해, 사용자가 과거의 따뜻한 추억을 새롭게 경험하게 하고자 만들었습니다",
+        "keyFeatures": "• 프로필 사진과 메시지를 커스터마이징 할 수 있습니다\n• 실시간 수정 기능을 통해 즉각적인 변화를 적용할 수 있습니다. \n• 제목 편집 인터페이스를 제공하며, 저장 및 취소 버튼으로 사용자 실수를 방지합니다. \n• ifreme 기능을 활용해 홈, 게임, 쥬크박스 등 세 가지 주요 화면을 간단한 클릭으로 전환할 수 있습니다. \n• 오늘의 기분을 기록하고 공유할 수 있는 감정 선택 기능이 제공됩니다. \n• 직관적인 인터페이스와 사용성을 고려한 인터랙션을 통해 높은 사용자 경험을 제공합니다.",
+        "impact": "• 사용자에게 과거의 향수를 제공하며, 자신만의 디지털 공간을 소유하고 관리할 수 있는 즐거움을 선사합니다.\n • 파일 업로드, DOM 조작, 사용자 인터랙션 설계 등 실무적인 기술을 경험할 기회가 되었습니다. \n• 이 프로젝트는 단순한 클론 코딩을 넘어, 사용자와 개발자 모두에게 감성과 기술을 잇는 가치를 제공합니다."
+      },
+      "mainImg": "/img/cyworld1.png",
+      "stack": "(Html/CSS)",
+      "projectDetails": {
+        "teamOrIndividual": "Personal",
+        "responsive": "고정형",
+        "projectType": "클론코딩",
+        "apiUsage": "API"
+      },
+      "frontend": {
+        "html": "HTML5",
+        "styling": "SCSS",
+        "javascript": "ES6+",
+        "framework": null,
+        "library": null,
+        "stateManagement": null,
+        "apiIntegration": null
+      },
+      "backend": {
+        "language": null,
+        "framework": null,
+        "database": null,
+        "authentication": null
+      },
+      "devTools": {
+        "buildTool": "Webpack",
+        "packageManager": null,
+        "versionControl": "Git"
+      },
+      "cloud": {
+        "hosting": "Netlify"
+      },
+      "link": {
+        "deploy": "https://cyword.netlify.app/",
+        "github": "https://github.com/yerixx/cyworld.git"
+      },
+      "modalMainImg": "/img/cyworld3.mp4",
+      "keyTechs": {
+        "keyTechA": {
+          "img": null,
+          "title": null,
+          "desc": null
+        },
+        "keyTechB": {
+          "img": null,
+          "title": null,
+          "desc": null
+        },
+        "keyTechC": {
+          "img": null,
+          "title": null,
+          "desc": null
+        }
+      },
+      "highlights": {
+        "img": "/img/cyworld5.png"
+      }
+    },
+    {
+      "id": 2,
+      "title": "OELD ART +",
+      "desc": "디지털 아트와 인터랙티브 아트 관련 정보를 제공하는 클론코딩 웹사이트로, \n반응형 디자인과 다양한 사용자 경험 기능을 구현하였습니다. Google 번역 API를 통해 다국어 지원이 가능하며, \nSlick Slider와 스크롤 애니메이션으로 직관적이고 생동감 있는 인터페이스를 제공합니다.",
+      "about": {
+        "duration": "5",
+        "intro": "웹사이트의 구조와 기능을 구현한 클론코딩 프로젝트입니다. OELD ART +는 사용자 친화적인 반응형 웹사이트로, \n디지털 아트를 쉽게 탐색하고 예술가와 작품을 소개하며, Google Translate API를 활용해 글로벌 사용자를 지원합니다.",
+        "keyFeatures": "• 직관적인 네비게이션과 인터랙티브 콘텐츠는 사용자가 쉽고 빠르게 정보를 찾을 수 있도록 돕습니다. \n• 작품과 예술가에 대한 상세한 정보 제공을 통해 문화적 깊이를 더해줍니다 \n• 다국어 번역 지원을 통해 글로벌 사용자가 편리하게 접근할 수 있도록 합니다. \n• 실시간 업데이트와 슬라이더를 활용한 동적인 UI/UX는 사용자에게 생동감 넘치는 경험을 선사합니다.",
+        "impact": "OELD ART +는 예술을 보다 친근하게 만들고, \n디지털 아트 생태계를 확장함으로써 예술가와 사용자를 연결하는 가교 역할을 합니다."
+      },
+      "mainImg": "/img/oeldart.png",
+      "stack": "(Html/CSS)",
+      "projectDetails": {
+        "teamOrIndividual": "Personal",
+        "responsive": "반응형",
+        "projectType": "클론코딩",
+        "apiUsage": "API"
+      },
+      "frontend": {
+        "html": "HTML5",
+        "styling": "SCSS",
+        "javascript": "ES6+",
+        "framework": null,
+        "library": null,
+        "stateManagement": null,
+        "apiIntegration": "Google Translate API"
+      },
+      "backend": {
+        "language": null,
+        "framework": null,
+        "database": null,
+        "authentication": null
+      },
+      "devTools": {
+        "buildTool": "Webpack",
+        "packageManager": null,
+        "versionControl": "Git"
+      },
+      "cloud": {
+        "hosting": "Netlify"
+      },
+      "link": {
+        "deploy": "https://oledart.netlify.app/",
+        "github": "https://github.com/yerixx/OLEDART.git"
+      },
+      "modalMainImg": "/img/oeldart.png",
+      "keyTechs": {
+        "keyTechA": {
+          "img": "/img/oeldart2.png",
+          "title": "Google Translate API",
+          "desc": "Google Translate API를 통해 다양한 언어로 웹사이트 콘텐츠를 번역할 수 있는 기능.\n언어 선택 버튼을 클릭하면 언어 모달이 열리고, 사용자가 원하는 언어로 웹사이트를 변경할 수 있습니다."
+        },
+        "keyTechB": {
+          "img": "/img/oeldart3.png",
+          "title": "Slick Slider",
+          "desc": "Slick Slider 라이브러리를 사용하여 아티스트와 작품 이미지 슬라이더 기능을 구현.\n반응형으로 동작하며, 화면 크기에 따라 슬라이드 항목 수가 달라지도록 설정했습니다."
+        },
+        "keyTechC": {
+          "img": "/img/oeldart4.png",
+          "title": "Media Query",
+          "desc": " CSS 미디어 쿼리를 사용하여 화면 크기에 맞게 사이트 레이아웃이 조정되도록 구현 했습니다."
+        }
+      },
+      "highlights": {
+        "img": "/img/oeldart5.png"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Todo List",
+      "desc": "디지털 아트와 인터랙티브 아트 관련 정보를 제공하는 클론코딩 웹사이트로, 반응형 디자인과 다양한 사용자 경험 기능을 구현하였습니다. Google 번역 API를 통해 다국어 지원이 가능하며, Slick Slider와 스크롤 애니메이션으로 직관적이고 생동감 있는 인터페이스를 제공합니다.",
+      "about": {
+        "duration": "2",
+        "intro": "웹사이트의 구조와 기능을 구현한 클론코딩 프로젝트입니다. OELD ART +는 사용자 친화적인 반응형 웹사이트로, 디지털 아트를 쉽게 탐색하고 예술가와 작품을 소개하며, Google Translate API를 활용해 글로벌 사용자를 지원합니다.",
+        "keyFeatures": "직관적인 네비게이션과 인터랙티브 콘텐츠는 사용자가 쉽고 빠르게 정보를 찾을 수 있도록 돕습니다. 작품과 예술가에 대한 상세한 정보 제공을 통해 문화적 깊이를 더하며, 다국어 번역 지원을 통해 글로벌 사용자가 편리하게 접근할 수 있도록 합니다. 실시간 업데이트와 슬라이더를 활용한 동적인 UI/UX는 사용자에게 생동감 넘치는 경험을 선사합니다.",
+        "impact": "OELD ART +는 예술을 보다 친근하게 만들고, 디지털 아트 생태계를 확장함으로써 예술가와 사용자를 연결하는 가교 역할을 합니다."
+      },
+      "mainImg": "/img/todolist1.png",
+      "stack": "(React)",
+      "projectDetails": {
+        "teamOrIndividual": "Personal",
+        "responsive": "반응형",
+        "projectType": "Custom",
+        "apiUsage": null
+      },
+      "frontend": {
+        "html": null,
+        "styling": "Styled-Components",
+        "javascript": null,
+        "framework": "React",
+        "libraries": "motion",
+        "stateManagement": "useReducer",
+        "apiIntegration": null
+      },
+      "backend": {
+        "language": null,
+        "framework": null,
+        "database": "Firebase Firestore",
+        "authentication": null
+      },
+      "devTools": {
+        "buildTool": "React-Scripts",
+        "packageManager": "npm",
+        "versionControl": "Git"
+      },
+      "cloud": {
+        "hosting": "Firebase"
+      },
+      "link": {
+        "deploy": "https://todolist-aac99.web.app/",
+        "github": "https://github.com/yerixx/todolist.git"
+      },
+      "modalMainImg": "/img/todolist1.png",
+      "keyTechs": {
+        "keyTechA": {
+          "mp4": "/img/todolist3.mp4",
+          "title": null,
+          "desc": null
+        },
+        "keyTechB": {
+          "mp4": "/img/todolist3.mp4",
+          "title": null,
+          "desc": null
+        },
+        "keyTechC": {
+          "mp4": "/img/todolist3.mp4",
+          "title": null,
+          "desc": null
+        }
+      },
+      "highlights": {
+        "img": "/img/oeldart5.png"
+      }
+    }
+  ]
+}

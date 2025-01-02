@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Paragraph14, Paragraph18, Title22 } from "../../styles/fontStyle";
+import {
+  Desc20,
+  Paragraph14,
+  Paragraph16,
+  Paragraph18,
+  Title22,
+} from "../../../styles/fontStyle";
 
 export const GalleryWrapper = styled.section``;
 export const NavBox = styled.article`
@@ -10,6 +16,9 @@ export const NavBox = styled.article`
   padding: 1.5% 0 1%;
   .navTitle {
     ${Title22}
+    @media (max-width: 768px) {
+      ${Desc20}
+    }
   }
   .navArrows {
     cursor: pointer;
@@ -35,25 +44,42 @@ export const GalleryBox = styled(SwiperSlide)`
   width: 100%;
   height: fit-content;
   gap: 30px;
-  justify-content: space-between;
   cursor: pointer;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
+
 export const GallerySmallBox = styled.article`
   width: 36vw;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   .gallerySmall {
     width: 100%;
     height: 33vh;
     border-radius: 20px;
     object-fit: cover;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+    }
   }
 `;
 export const GalleryLargeBox = styled.article`
   width: 50vw;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   .galleryLarge {
     width: 50vw;
     height: 50vh;
     border-radius: 20px;
     object-fit: cover;
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+    }
   }
 `;
 export const InnerTextBox = styled.div`
@@ -64,8 +90,13 @@ export const InnerTextBox = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: start;
+    }
     .title {
       ${Paragraph18}
+      font-weight:bold;
     }
     .stact {
       ${Paragraph14}
@@ -73,11 +104,13 @@ export const InnerTextBox = styled.div`
     }
   }
   .desc {
-    ${Paragraph14}
+    ${Paragraph16}
     color: ${(props) => props.theme.grayColor};
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    white-space: break-spaces;
+    letter-spacing: -1.5px;
     line-height: 1.5;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 `;

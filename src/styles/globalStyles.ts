@@ -28,7 +28,7 @@ const globalStyles = createGlobalStyle`
     --border-radius-08: 8px;
     --border-radius-30: 30px;
     /* box-shadow */
-    --box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    --box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
      /* width size */
     --desktop-width-1400: 1400px;
     --desktop-width-1100: 1100px;

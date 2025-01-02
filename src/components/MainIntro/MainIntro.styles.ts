@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MainTitle70, Desc20 } from "../../styles/fontStyle";
+
 export const Wrapper = styled.main`
   position: relative;
   width: 100%;
@@ -8,6 +9,11 @@ export const Wrapper = styled.main`
   justify-content: center;
   background: ${(props) => props.theme.mainColor};
   z-index: -1;
+  margin-bottom: 9%;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 
 export const Inner = styled.section`
@@ -15,20 +21,31 @@ export const Inner = styled.section`
 `;
 
 export const MainTitleBox = styled.article`
-  margin-top: 20%;
+  margin-top: 18%;
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 export const MainTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 24px;
   color: ${({ theme }) => theme.fontColor};
   text-align: center;
   ${MainTitle70};
   @media (max-width: 768px) {
-    font-size: 26px;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 50px;
   }
 `;
 export const SubTextBox = styled.article`
   margin-top: 26px;
   ${Desc20};
   text-align: center;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 export const SubText = styled.p`
   color: ${({ theme }) => theme.grayColor};

@@ -6,7 +6,7 @@ import {
   Title22,
   Title26,
   Title70,
-} from "../../styles/fontStyle";
+} from "../../../styles/fontStyle";
 
 export const Wrapper = styled.main`
   display: flex;
@@ -14,6 +14,10 @@ export const Wrapper = styled.main`
   width: 100%;
   height: 100vh;
   background: ${(props) => props.theme.mainColor};
+  @media (max-width: 768px) {
+    border: 1px solid #f00;
+    margin-top: 300px;
+  }
 `;
 export const Inner = styled.section`
   display: flex;
@@ -22,12 +26,18 @@ export const Inner = styled.section`
   height: 100%;
   padding: 50px 100px;
   color: ${(props) => props.theme.subColor};
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const AboutMeTitle = styled.section`
   ${Title70}
   width: 100%;
   margin-bottom: 30px;
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 export const AboutContainer = styled.section`
@@ -40,6 +50,9 @@ export const AboutMeContTop = styled.article`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const AboutMeTextBox = styled.ul`
@@ -48,11 +61,15 @@ export const AboutMeTextBox = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   .AboutMeText {
     width: 100%;
     background: #333;
     padding: 30px;
     border-radius: 30px;
+
     .AboutMeTitle {
       ${Title22}
       font-weight: bold;
@@ -71,31 +88,27 @@ export const AboutMeTextBox = styled.ul`
 `;
 
 export const AboutMeCardContainer = styled.div`
-  perspective: 1000px; /* 3D 효과를 위한 원근감 */
+  perspective: 1000px;
   width: 30%;
   height: 100%;
   position: relative;
 
-  /* 카드 */
   .aboutMeCard {
     width: 100%;
     height: 100%;
     position: absolute;
-    transform-style: preserve-3d; /* 3D 회전 */
-    transition: transform 0.6s; /* 회전 애니메이션 속도 */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
   }
-  /* 카드가 회전될 때 */
   .aboutMeCard.flipped {
     transform: rotateY(180deg);
   }
-
-  /* 카드 앞면 */
   .aboutMeCardFront,
   .aboutMeCardBack {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; /* 뒷면이 보이지 않도록 */
+    backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +116,6 @@ export const AboutMeCardContainer = styled.div`
     border-radius: 8px;
   }
 
-  /* 앞면 스타일 */
   .aboutMeCardFront {
     width: 100%;
     height: 100%;
@@ -130,14 +142,13 @@ export const AboutMeCardContainer = styled.div`
     }
   }
 
-  /* 뒷면 스타일 */
   .aboutMeCardBack {
     width: 100%;
     height: 100%;
     border-radius: 30px;
     color: ${({ theme }) => theme.mainColor};
     background: ${({ theme }) => theme.subColor};
-    transform: rotateY(180deg); /* 뒷면을 180도 회전 */
+    transform: rotateY(180deg);
     .aboutMeCardBackBox {
       display: flex;
       flex-direction: column;
@@ -170,13 +181,6 @@ export const AboutMeCardContainer = styled.div`
         flex-direction: column;
         gap: 20px;
         ${Paragraph18}
-        /* .followHoverMessage {
-          font-size: 14px;
-          padding-left: 10px;
-          color: #999;
-          opacity: 0;
-          transition: opacity 0.3s;
-        } */
         .contactIcons {
           position: relative;
           display: flex;

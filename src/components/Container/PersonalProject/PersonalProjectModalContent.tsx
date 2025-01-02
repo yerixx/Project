@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { workdata } from "../../data/workdata.json";
+import { personalProjectData } from "../../../data/personalProjectData.json";
 
-import Button from "./ModalButton";
+import Button from "./PersonalProjectModalButton";
 import {
   ModalWrapper,
   ModalContainer,
@@ -16,16 +16,16 @@ import {
   About,
   ContImg,
   Desc,
-  ContentButtom,
+  ContentBottom,
   Highlights,
-} from "./WorkModal.styls";
+} from "./PersonalProjectModalContent.styls";
 
-import { WorkModalProps } from "../../styles/common";
+import { WorkModalProps } from "../../../styles/common";
 
 const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
   const [isClosing, setIsClosing] = useState(false);
 
-  const projectData = workdata.find((data) => data.id === projectId);
+  const projectData = personalProjectData.find((data) => data.id === projectId);
 
   const handleClose = () => {
     setIsClosing(true);
@@ -48,9 +48,9 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
           <WorkContainer>
             <Title>{projectData.title}</Title>
             <Tags>
-              <Tag>{projectData.projectDetails.teamOrIndividual}</Tag>
-              <Tag>{projectData.projectDetails.responsive}</Tag>
-              <Tag>{projectData.projectDetails.projectType}</Tag>
+              <Tag>{projectData.projectDetails?.teamOrIndividual}</Tag>
+              <Tag>{projectData.projectDetails?.projectType}</Tag>
+              <Tag>{projectData.projectDetails?.responsive}</Tag>
             </Tags>
             <OverviewBox>
               <ul>
@@ -86,7 +86,13 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
               </ul>
             </OverviewBox>
             <WorkContont>
-              <ContontImg src={projectData.img} />
+              <ContontImg>
+                {projectData.modalMainImg?.endsWith(".mp4") ? (
+                  <video autoPlay muted loop src={projectData.modalMainImg} />
+                ) : (
+                  <img src={projectData.modalMainImg} alt={projectData.title} />
+                )}
+              </ContontImg>
               <About>
                 <div className="aboutTitle">
                   <h1>ABOUT</h1>
@@ -103,7 +109,7 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
                     <div>
                       <b>(01) </b>Intro
                     </div>
-                    <div> {projectData.about.intro}</div>
+                    <div>{projectData.about.intro}</div>
                   </div>
                   <div className="aboutText">
                     <div>
@@ -120,47 +126,57 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
                 </div>
               </About>
               <ContImg>
-                <img src="/img/oeldart2.png" />
+                {projectData.keyTechs?.keyTechA?.mp4 ? (
+                  <video
+                    src={projectData.keyTechs.keyTechA.mp4}
+                    loop
+                    muted
+                    autoPlay
+                  />
+                ) : null}
               </ContImg>
               <Desc>
-                <h2>Google Translate API</h2>
-                <p>
-                  Google Translate API를 통해 다양한 언어로 웹사이트 콘텐츠를
-                  번역할 수 있는 기능.
-                  <br /> 언어 선택 버튼을 클릭하면 언어 모달이 열리고, 사용자가
-                  원하는 언어로 웹사이트를 변경할 수 있습니다.
-                </p>
+                <h2>{projectData.keyTechs?.keyTechA?.title}</h2>
+                <p>{projectData.keyTechs?.keyTechA?.desc}</p>
               </Desc>
-              <ContentButtom>
+              <ContentBottom>
                 <div className="leftCont">
-                  <img src="/img/oeldart3.png" />
+                  {projectData.keyTechs?.keyTechB?.mp4 ? (
+                    <video
+                      src={projectData.keyTechs.keyTechB.mp4}
+                      loop
+                      muted
+                      autoPlay
+                    />
+                  ) : null}
                   <Desc>
-                    <h2>Slick Slider</h2>
-                    <p>
-                      Slick Slider 라이브러리를 사용하여 아티스트와 작품 이미지
-                      슬라이더 기능을 구현.
-                      <br />
-                      반응형으로 동작하며, 화면 크기에 따라 슬라이드 항목 수가
-                      달라지도록 설정했습니다.
-                    </p>
+                    <h2>{projectData.keyTechs?.keyTechB?.title}</h2>
+                    <p>{projectData.keyTechs?.keyTechB.desc}</p>
                   </Desc>
                 </div>
                 <div className="rightCont">
-                  <img src="/img/oeldart4.png" />
+                  {projectData.keyTechs?.keyTechC?.mp4 ? (
+                    <video
+                      src={projectData.keyTechs.keyTechC.mp4}
+                      loop
+                      muted
+                      autoPlay
+                    />
+                  ) : null}
                   <Desc>
-                    <h2>Media Query</h2>
-                    <p>
-                      CSS 미디어 쿼리를 사용하여 화면 크기에 맞게 사이트
-                      레이아웃이 조정되도록 구현 했습니다.
-                    </p>
+                    <h2>{projectData.keyTechs?.keyTechC.title}</h2>
+                    <p>{projectData.keyTechs?.keyTechC.desc}</p>
                   </Desc>
                 </div>
-              </ContentButtom>
+              </ContentBottom>
               <Highlights>
                 <div className="highlightsTitle">Highlights</div>
                 <div className="highlightsCont">
                   <div className="highlightsLeft">
-                    <img src="/img/oeldart5.png" alt="oeldart" />
+                    <img
+                      src={projectData.highlights?.img}
+                      alt={projectData.title}
+                    />
                   </div>
                   <div className="highlightsRight">
                     <div>{projectData.title}</div>
