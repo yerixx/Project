@@ -1,9 +1,10 @@
-import { MdArrowBack } from "react-icons/md";
-import { MdArrowForward } from "react-icons/md";
 import { useEffect, useState } from "react";
 
 import { personalProjectData } from "../../../data/personalProjectData.json";
 import { Pagination, Navigation } from "swiper/modules";
+
+import { MdArrowBack } from "react-icons/md";
+import { MdArrowForward } from "react-icons/md";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -19,7 +20,7 @@ import {
   InnerTextBox,
 } from "./PersonalProjectContent.styles";
 
-import WorkModal from "./PersonalProjectModalContent";
+import ProjectModalView from "../ProjectModalView/ProjectModalView";
 
 interface WorkGalleryContentProps {
   selectedStack: string;
@@ -123,7 +124,9 @@ const WorkGalleryContent = ({ selectedStack }: WorkGalleryContentProps) => {
               </GalleryBox>
             ))}
       </GalleryBoxes>
-      {selectedId && <WorkModal onClose={closeModal} projectId={selectedId} />}
+      {selectedId && (
+        <ProjectModalView onClose={closeModal} projectId={selectedId} />
+      )}
     </GalleryWrapper>
   );
 };

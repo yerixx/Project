@@ -24,7 +24,7 @@ export const Inner = styled.section`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 50px 100px;
+  padding: 0px 5%;
   color: ${(props) => props.theme.subColor};
   @media (max-width: 768px) {
     padding: 0;
@@ -56,7 +56,7 @@ export const AboutMeContTop = styled.article`
 `;
 
 export const AboutMeTextBox = styled.ul`
-  width: 65%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@ export const AboutMeTextBox = styled.ul`
 
 export const AboutMeCardContainer = styled.div`
   perspective: 1000px;
-  width: 30%;
+  width: 37%;
   height: 100%;
   position: relative;
 
@@ -154,7 +154,7 @@ export const AboutMeCardContainer = styled.div`
       flex-direction: column;
       width: 100%;
       padding: 10%;
-      gap: 40px;
+      gap: 50px;
       .aboutMeName {
         display: flex;
         flex-direction: column;

@@ -48,17 +48,17 @@
       "modalMainImg": "/img/cyworld3.mp4",
       "keyTechs": {
         "keyTechA": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         },
         "keyTechB": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         },
         "keyTechC": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         }
@@ -115,17 +115,17 @@
       "modalMainImg": "/img/oeldart.png",
       "keyTechs": {
         "keyTechA": {
-          "img": "/img/oeldart2.png",
+          "mp4": "/img/oeldart2.png",
           "title": "Google Translate API",
           "desc": "Google Translate API를 통해 다양한 언어로 웹사이트 콘텐츠를 번역할 수 있는 기능.\n언어 선택 버튼을 클릭하면 언어 모달이 열리고, 사용자가 원하는 언어로 웹사이트를 변경할 수 있습니다."
         },
         "keyTechB": {
-          "img": "/img/oeldart3.png",
+          "mp4": "/img/oeldart3.png",
           "title": "Slick Slider",
           "desc": "Slick Slider 라이브러리를 사용하여 아티스트와 작품 이미지 슬라이더 기능을 구현.\n반응형으로 동작하며, 화면 크기에 따라 슬라이드 항목 수가 달라지도록 설정했습니다."
         },
         "keyTechC": {
-          "img": "/img/oeldart4.png",
+          "mp4": "/img/oeldart4.png",
           "title": "Media Query",
           "desc": " CSS 미디어 쿼리를 사용하여 화면 크기에 맞게 사이트 레이아웃이 조정되도록 구현 했습니다."
         }

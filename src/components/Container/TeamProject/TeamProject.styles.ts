@@ -4,10 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Title60,
   Title42,
-  Paragraph18,
   Desc20,
-  Paragraph16,
   Title40,
+  Paragraph16,
+  Paragraph14,
+  Title26,
 } from "../../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -15,16 +16,22 @@ export const Wrapper = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* height: 100vh; */
   transition: all 1s;
+  margin-bottom: 15%;
 `;
 export const Inner = styled.section`
   width: 90%;
   height: 100vh;
+  .swiper-pagination {
+    bottom: var(--swiper-pagination-bottom, 30px);
+  }
+  .swiper-pagination-bullet-active {
+    background: #000;
+  }
 `;
 
 export const SwiperBox = styled(Swiper)``;
-export const MainProjectTitleBox = styled.section`
+export const TeamProjectTitleBox = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -37,7 +44,7 @@ export const MainProjectTitleBox = styled.section`
     padding: 0 10px;
   }
 `;
-export const MainProjectTitle = styled.article`
+export const TeamProjectTitle = styled.article`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -54,7 +61,7 @@ export const Title = styled.article`
 export const Desc = styled.article`
   color: ${(props) => props.theme.grayColor};
 `;
-export const MainProjectWrapper = styled.section`
+export const TeamProjectWrapper = styled.section`
   display: flex;
   gap: 60px;
   opacity: 0;
@@ -63,26 +70,23 @@ export const MainProjectWrapper = styled.section`
     flex-direction: column;
   }
 `;
-export const MainProjectBox = styled(SwiperSlide)`
+export const TeamProjectBox = styled(SwiperSlide)`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 600px;
+  height: 80vh;
   background: ${({ theme }) => theme.subColor};
   border-radius: 40px;
-  padding: 40px;
+  padding: 50px;
   @media (max-width: 768px) {
     padding: 10px;
     width: 100%;
-
-    height: 90vh;
     border-radius: 0px;
-
     background: ${({ theme }) => theme.mainColor};
     color: ${(props) => props.theme.subColor};
   }
 `;
-export const MainProjectTabBox = styled.ul`
+export const TeamProjectTabBox = styled.ul`
   display: flex;
   gap: 6px;
   cursor: pointer;
@@ -101,11 +105,13 @@ export const Tab = styled.li`
 `;
 
 export const InnerContents = styled.section`
-  display: flex;
-  gap: 100px;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 30px;
+
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 0;
   }
 `;
 export const InnerContent = styled.section`
@@ -114,31 +120,55 @@ export const InnerContent = styled.section`
   justify-content: space-between;
 `;
 
-export const InnerText = styled.article``;
-export const InnerTitle = styled.article`
-  ${Title60}
-  padding:20px 0;
+export const InnerTextBox = styled.article`
+  width: 100%;
+  height: 100%;
+  max-height: 550px;
+`;
+
+export const Duration = styled.article`
+  ${Paragraph14}
+  padding-top:10px;
   @media (max-width: 768px) {
     ${Title40}
   }
 `;
+export const InnerTitle = styled.article`
+  ${Title60}
+  @media (max-width: 768px) {
+    ${Title40}
+  }
+`;
+
 export const InnerDesc = styled.article`
   ${Paragraph16}
+  /* color: #555; */
+  line-height: 1.7;
+  white-space: break-spaces;
+  padding: 10px 0 30px;
+
   @media (max-width: 768px) {
-    ${Paragraph16}
+  }
+`;
+export const SubTitle = styled.b`
+  ${Title26}
+  white-space: break-spaces;
+  @media (max-width: 768px) {
   }
 `;
 
 export const LinkBtnBox = styled.article`
   display: flex;
-  gap: 16px;
+  gap: 10px;
 `;
 
 export const LinkBtn = styled.article`
+  width: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  cursor: pointer;
 `;
 export const Links = styled.a`
   display: flex;
@@ -157,6 +187,35 @@ export const Links = styled.a`
     border: 1px solid #d2d2d2;
   }
 `;
+export const MoreTag = styled.article`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #333;
+  background: #fff;
+  border: 1px solid #d2d2d2;
+  border-radius: 50%;
+  ${Desc20}
+  animation: blink-shadow 1.5s infinite;
+  @keyframes blink-shadow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 transparent;
+      scale: 1;
+    }
+    50% {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+      scale: 1.1;
+    }
+  }
+  @media (max-width: 768px) {
+    border: 1px solid #d2d2d2;
+  }
+`;
 
 export const LinkText = styled.article`
   font-size: 13px;
@@ -167,26 +226,58 @@ export const LinkText = styled.article`
 
 export const InnerImgView = styled(Swiper)`
   width: 100%;
-  height: 400px;
+  height: fit-content;
+  margin: auto 0;
   border-radius: 40px;
+
   @media (max-width: 768px) {
-    height: 200px;
   }
 `;
+export const InnerImgBox = styled.article``;
 export const InnerImg = styled(SwiperSlide)`
   width: 100%;
-  height: 400px;
+  height: 600px;
   border-radius: 40px;
   img {
     width: 100%;
-    height: 100%;
+    height: 550px;
     border-radius: 40px;
+    object-fit: cover;
+    object-position: top;
   }
   @media (max-width: 768px) {
     height: 200px;
   }
 `;
+export const NavArrows = styled.article`
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  color: #000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  z-index: 1;
+  .img-prev-button,
+  .img-next-button {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      scale: 1.1;
+    }
+  }
 
+  @media (max-width: 768px) {
+  }
+`;
 export const Trigger = styled.ul`
   margin-top: 30px;
   display: flex;

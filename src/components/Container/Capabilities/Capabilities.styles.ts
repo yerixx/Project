@@ -15,7 +15,6 @@ import {
 } from "../../../styles/fontStyle";
 
 export const Wrapper = styled.section`
-  margin-bottom: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +22,7 @@ export const Wrapper = styled.section`
   height: 100vh;
   transition: all 1s;
   background: ${(props) => props.theme.mainColor};
+  margin-bottom: 25%;
   @media (max-width: 768px) {
     margin-top: 20%;
   }

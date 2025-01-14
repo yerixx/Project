@@ -34,6 +34,13 @@ const AboutMe = () => {
     });
   };
 
+  const handleCopy = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => alert(`복사되었습니다:) 연락기다리겠습니다 감사합니다!`))
+      .catch((err) => console.error("복사실패:", err));
+  };
+
   return (
     <Wrapper id="aboutMe">
       <Inner>
@@ -42,7 +49,6 @@ const AboutMe = () => {
           <AboutMeContTop>
             <AboutMeTextBox className="aboutMe-tag">
               <ul className="AboutMeText">
-                {/* <div className="AboutMeTitle">프론트엔드로 전향한 이유</div> */}
                 <li className="AboutMeTitle">프론트엔드로 전향한 이유</li>
                 <li className="AboutMeDesc">
                   저는 항상 새로운 도전과 학습을 통해 스스로를 발전시키는 것을
@@ -110,16 +116,7 @@ const AboutMe = () => {
                         </li>
                         <li className="contactIcon">
                           <a
-                            href="https://naver.com"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            <AiFillInstagram />
-                          </a>
-                        </li>
-                        <li className="contactIcon">
-                          <a
-                            href="https://naver.com"
+                            href="https://www.notion.so/Web-developer-1304f2189a388047900ef6f0f7242815?pvs=4"
                             target="_blank"
                             rel="noopener"
                           >
@@ -128,11 +125,20 @@ const AboutMe = () => {
                         </li>
                         <li className="contactIcon">
                           <a
-                            href="https://naver.com"
+                            href="https://open.kakao.com/o/syYn158g"
                             target="_blank"
                             rel="noopener"
                           >
-                            <SiTistory />
+                            <RiKakaoTalkFill />
+                          </a>
+                        </li>
+                        <li className="contactIcon">
+                          <a
+                            href="https://www.instagram.com/yerixxp/profilecard/?igsh=dHU2dTYwaXlrMHJo"
+                            target="_blank"
+                            rel="noopener"
+                          >
+                            <AiFillInstagram />
                           </a>
                         </li>
                         <div className="followHoverMessage">
@@ -143,21 +149,30 @@ const AboutMe = () => {
                     <div className="contactBox">
                       <div>Contat Me:</div>
                       <ul className="contactIcons">
-                        <li className="contactIcon">
+                        <li
+                          className="contactIcon"
+                          onClick={() => handleCopy("01055081689")}
+                        >
                           <div>
                             <IoCall />
                           </div>
                         </li>
-                        <li className="contactIcon">
+                        <li
+                          className="contactIcon"
+                          onClick={() => handleCopy("yerixxz@gmail.com")}
+                        >
                           <div>
                             <LuMail />
                           </div>
                         </li>
-                        <li className="contactIcon">
+                        {/* <li
+                          className="contactIcon"
+                          onClick={() => handleCopy("yerixxz@gmail.com")}
+                        >
                           <div>
                             <RiKakaoTalkFill />
                           </div>
-                        </li>
+                        </li> */}
                         <div className="followHoverMessage">
                           아이콘을 클릭하면 컨텐츠가 복사됩니다.
                         </div>

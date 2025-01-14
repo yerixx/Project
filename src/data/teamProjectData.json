@@ -1,21 +1,21 @@
 {
   "teamProjectData": [
     {
-      "id": 1,
+      "id": 100,
       "title": "Facebook",
-      "desc": "사용자가 직접 디자인할 수 있는 미니홈피를 통해 감성을 공유하고 개성을 표현할 수 있는 공간을 제공합니다. \n사용자는 하루의 감정을 기록하거나, 자신의 프로필 메시지와 홈피 제목을 즉시 편집하며 \n커스터마이징할 수 있습니다. \n또한, 간단한 내비게이션으로 홈, 게임, 쥬크박스를 탐색하며 콘텐츠를 즐길 수 있습니다. \n이 모든 경험은 HTML, CSS, JavaScript로 구현되어 직관적이고 레트로한 인터페이스를 제공합니다.",
+      "desc": "소셜 커머스가 주도하는 디지털 환경 변화 속에서 2030 소비자들을 타겟으로 커머스와 \n개인화 비중을 높이는 전략을 구현한 클론 코딩 프로젝트입니다. \n소셜 미디어와 이커머스의 융합을 통해 개인화된 소비 경험과 커뮤니티 기반 소비를 강화하며, \n신뢰 형성의 새로운 패턴을 만들어가는 방법을 탐구했습니다.",
       "about": {
-        "duration": "4",
-        "intro": "2000년대 초반 당시 사용자들이 일상과 추억을 기록하며 관계를 유지하는 데 큰 역할을 했던 소셜 네트워크 서비스인 \n싸이월드의 레트로 감성을 현대적인 웹 기술과 접목해, 사용자가 과거의 따뜻한 추억을 새롭게 경험하게 하고자 만들었습니다",
-        "keyFeatures": "• 프로필 사진과 메시지를 커스터마이징 할 수 있습니다\n• 실시간 수정 기능을 통해 즉각적인 변화를 적용할 수 있습니다. \n• 제목 편집 인터페이스를 제공하며, 저장 및 취소 버튼으로 사용자 실수를 방지합니다. \n• ifreme 기능을 활용해 홈, 게임, 쥬크박스 등 세 가지 주요 화면을 간단한 클릭으로 전환할 수 있습니다. \n• 오늘의 기분을 기록하고 공유할 수 있는 감정 선택 기능이 제공됩니다. \n• 직관적인 인터페이스와 사용성을 고려한 인터랙션을 통해 높은 사용자 경험을 제공합니다.",
-        "impact": "• 사용자에게 과거의 향수를 제공하며, 자신만의 디지털 공간을 소유하고 관리할 수 있는 즐거움을 선사합니다.\n • 파일 업로드, DOM 조작, 사용자 인터랙션 설계 등 실무적인 기술을 경험할 기회가 되었습니다. \n• 이 프로젝트는 단순한 클론 코딩을 넘어, 사용자와 개발자 모두에게 감성과 기술을 잇는 가치를 제공합니다."
+        "duration": "2024.09.09 - 2024.10.18",
+        "intro": null,
+        "keyFeatures": "• 회원가입 시 사용자의 관심사에 맞춘 맞춤형 그룹 추천 기능을 통해, \n 개인화된 경험을 제공하고 사용자의 취향에 최적화된 커뮤니티와 연결합니다 \n• 페이스북 데이터를 기반으로 사용자의 관심사를 반영한 쇼핑 경험을 제공하고,\n 사용자 점유시간에 따른 포인트 지급으로 사용자의 앱 이용 시간을 늘리고자 했습니다 \n• 마이페이지 UX/UI를 탭 형태로 구성하고, 라이브 커머스에서 적립한 포인트를 관리할 수 있는 \n 지갑 기능을 추가했습니다 ",
+        "impact": null
       },
       "imgBox": {
-        "imgA": "/img/cyworld1.png",
-        "imgB": "/img/cyworld1.png",
-        "imgC": "/img/cyworld1.png"
+        "imgA": "/img/facebook1.png",
+        "imgB": "/img/facebook2.png",
+        "imgC": "/img/facebook3.png"
       },
-      "stack": "(Html/CSS)",
+      "stack": "(typescript)",
       "projectDetails": {
         "teamOrIndividual": "Team",
         "responsive": "반응형",
@@ -24,8 +24,8 @@
       },
       "frontend": {
         "html": "HTML5",
-        "styling": "SCSS",
-        "javascript": "ES6+",
+        "styling": "Styled Components",
+        "javascript": "TypeScript",
         "framework": null,
         "library": null,
         "stateManagement": null,
@@ -38,51 +38,55 @@
         "authentication": null
       },
       "devTools": {
-        "buildTool": "Webpack",
+        "buildTool": "Vite",
         "packageManager": null,
         "versionControl": "Git"
       },
       "cloud": {
-        "hosting": "Netlify"
+        "hosting": "Firebase"
       },
       "link": {
-        "deploy": "https://cyword.netlify.app/",
-        "github": "https://github.com/yerixx/cyworld.git"
+        "deploy": "https://facebook-ez.web.app/",
+        "github": "https://github.com/yerixx/Teamproject_Facebook_EZ.git"
       },
-      "modalMainImg": "/img/cyworld3.mp4",
+      "modalMainImg": "/pdf/facebook.pdf",
       "keyTechs": {
         "keyTechA": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         },
         "keyTechB": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         },
         "keyTechC": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         }
       },
       "highlights": {
-        "img": "/img/cyworld5.png"
+        "img": "/img/facebook3.png"
       }
     },
     {
-      "id": 2,
+      "id": 200,
       "title": "Moving",
-      "desc": "사용자가 직접 디자인할 수 있는 미니홈피를 통해 감성을 공유하고 개성을 표현할 수 있는 공간을 제공합니다. \n사용자는 하루의 감정을 기록하거나, 자신의 프로필 메시지와 홈피 제목을 즉시 편집하며 \n커스터마이징할 수 있습니다. \n또한, 간단한 내비게이션으로 홈, 게임, 쥬크박스를 탐색하며 콘텐츠를 즐길 수 있습니다. \n이 모든 경험은 HTML, CSS, JavaScript로 구현되어 직관적이고 레트로한 인터페이스를 제공합니다.",
+      "desc": "사용자 친화적인 인터페이스와 강력한 검색 기능을 제공하여 영화와 TV 프로그램을 \n한곳에서 탐색하고, 검색하며, 리뷰를 확인할 수 있는 통합 콘텐츠 플랫폼으로, \n기존 OTT 플랫폼(TVING)의 문제점을 분석하여 주요 개선 사항을 정리하고 \n이를 반영한 서비스를 기획했습니다. ",
       "about": {
-        "duration": "4",
-        "intro": "2000년대 초반 당시 사용자들이 일상과 추억을 기록하며 관계를 유지하는 데 큰 역할을 했던 소셜 네트워크 서비스인 \n싸이월드의 레트로 감성을 현대적인 웹 기술과 접목해, 사용자가 과거의 따뜻한 추억을 새롭게 경험하게 하고자 만들었습니다",
-        "keyFeatures": "• 프로필 사진과 메시지를 커스터마이징 할 수 있습니다\n• 실시간 수정 기능을 통해 즉각적인 변화를 적용할 수 있습니다. \n• 제목 편집 인터페이스를 제공하며, 저장 및 취소 버튼으로 사용자 실수를 방지합니다. \n• ifreme 기능을 활용해 홈, 게임, 쥬크박스 등 세 가지 주요 화면을 간단한 클릭으로 전환할 수 있습니다. \n• 오늘의 기분을 기록하고 공유할 수 있는 감정 선택 기능이 제공됩니다. \n• 직관적인 인터페이스와 사용성을 고려한 인터랙션을 통해 높은 사용자 경험을 제공합니다.",
-        "impact": "• 사용자에게 과거의 향수를 제공하며, 자신만의 디지털 공간을 소유하고 관리할 수 있는 즐거움을 선사합니다.\n • 파일 업로드, DOM 조작, 사용자 인터랙션 설계 등 실무적인 기술을 경험할 기회가 되었습니다. \n• 이 프로젝트는 단순한 클론 코딩을 넘어, 사용자와 개발자 모두에게 감성과 기술을 잇는 가치를 제공합니다."
+        "duration": "2024.11.09 - 2024.12.08",
+        "intro": null,
+        "keyFeatures": "• mongo DB api를 활용하여 인기, 평점 높은, 최신 프로그램을 가져왔습니다. \n• 검색 기능을 통해 관련 영화와 TV 프로그램을 제공하며, 사용자가 자신만의 맞춤형 콘텐츠를 \n  빠르게 탐색할 수 있도록 지원합니다.\n• TypeScript와 Recoil을 활용하여 시스템의 안정성과 확장성을 보장하여 유지보수성을 강화하고 \n 장기적으로 플랫폼의 지속적인 발전을 위한 기반을 마련했습니다.",
+        "impact": null
       },
-      "mainImg": "/img/cyworld1.png",
-      "stack": "(Html/CSS)",
+      "imgBox": {
+        "imgA": "/img/moving1.png",
+        "imgB": "/img/moving2.png",
+        "imgC": "/img/moving3.png"
+      },
+      "stack": "(typescript)",
       "projectDetails": {
         "teamOrIndividual": "Team",
         "responsive": "반응형",
@@ -91,11 +95,11 @@
       },
       "frontend": {
         "html": "HTML5",
-        "styling": "SCSS",
-        "javascript": "ES6+",
+        "styling": "Styled Components",
+        "javascript": "TypeScript",
         "framework": null,
         "library": null,
-        "stateManagement": null,
+        "stateManagement": "Recoil",
         "apiIntegration": null
       },
       "backend": {
@@ -105,7 +109,7 @@
         "authentication": null
       },
       "devTools": {
-        "buildTool": "Webpack",
+        "buildTool": "Vite",
         "packageManager": null,
         "versionControl": "Git"
       },
@@ -113,42 +117,46 @@
         "hosting": "Netlify"
       },
       "link": {
-        "deploy": "https://cyword.netlify.app/",
-        "github": "https://github.com/yerixx/cyworld.git"
+        "deploy": "https://movingott.netlify.app/",
+        "github": "https://github.com/yerixx/Moving.git"
       },
-      "modalMainImg": "/img/cyworld3.mp4",
+      "modalMainImg": "/pdf/facebook.pdf",
       "keyTechs": {
         "keyTechA": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         },
         "keyTechB": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         },
         "keyTechC": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         }
       },
       "highlights": {
-        "img": "/img/cyworld5.png"
+        "img": "/img/moving1.png"
       }
     },
     {
-      "id": 3,
-      "title": "Aliexpress",
-      "desc": "사용자가 직접 디자인할 수 있는 미니홈피를 통해 감성을 공유하고 개성을 표현할 수 있는 공간을 제공합니다. \n사용자는 하루의 감정을 기록하거나, 자신의 프로필 메시지와 홈피 제목을 즉시 편집하며 \n커스터마이징할 수 있습니다. \n또한, 간단한 내비게이션으로 홈, 게임, 쥬크박스를 탐색하며 콘텐츠를 즐길 수 있습니다. \n이 모든 경험은 HTML, CSS, JavaScript로 구현되어 직관적이고 레트로한 인터페이스를 제공합니다.",
+      "id": 300,
+      "title": "AliExpress",
+      "desc": "글로벌 커머스 사이트의 복잡한 UI를 개선하고, 한국 사용자에게 친숙한 디자인을 적용하였습니다. \n주요 컨셉인 빠른 로그인 기능을 구현하고, 직관적이고 편리한 쇼핑 경험을 제공하고자 하였습니다. 이 프로젝트를 통해 HTML5, CSS, JavaScript 등 웹 개발 기술을 실무와 유사한 환경에서 익히고, UI/UX 개선을 통해 실무와 유사한 환경에서 웹 개발 기술을 학습하고 협업 능력을 강화했습니다.",
       "about": {
-        "duration": "4",
-        "intro": "2000년대 초반 당시 사용자들이 일상과 추억을 기록하며 관계를 유지하는 데 큰 역할을 했던 소셜 네트워크 서비스인 \n싸이월드의 레트로 감성을 현대적인 웹 기술과 접목해, 사용자가 과거의 따뜻한 추억을 새롭게 경험하게 하고자 만들었습니다",
-        "keyFeatures": "• 프로필 사진과 메시지를 커스터마이징 할 수 있습니다\n• 실시간 수정 기능을 통해 즉각적인 변화를 적용할 수 있습니다. \n• 제목 편집 인터페이스를 제공하며, 저장 및 취소 버튼으로 사용자 실수를 방지합니다. \n• ifreme 기능을 활용해 홈, 게임, 쥬크박스 등 세 가지 주요 화면을 간단한 클릭으로 전환할 수 있습니다. \n• 오늘의 기분을 기록하고 공유할 수 있는 감정 선택 기능이 제공됩니다. \n• 직관적인 인터페이스와 사용성을 고려한 인터랙션을 통해 높은 사용자 경험을 제공합니다.",
-        "impact": "• 사용자에게 과거의 향수를 제공하며, 자신만의 디지털 공간을 소유하고 관리할 수 있는 즐거움을 선사합니다.\n • 파일 업로드, DOM 조작, 사용자 인터랙션 설계 등 실무적인 기술을 경험할 기회가 되었습니다. \n• 이 프로젝트는 단순한 클론 코딩을 넘어, 사용자와 개발자 모두에게 감성과 기술을 잇는 가치를 제공합니다."
+        "duration": "2024.07.15 - 2024.09.06",
+        "intro": null,
+        "keyFeatures": "• 알리익스프레스의 주요 컨셉인 빠른 로그인 기능을 구현했습니다 \n• 기존 uxui를 변경하여 사용자에게 친숙한 인터페이스와 직관적인 쇼핑 경험을 제공했습니다. \n• 글로벌 커머스 사이트의 복잡한 UI를 간소화하고 사용자 편의성을 극대화하였습니다.",
+        "impact": null
       },
-      "mainImg": "/img/cyworld1.png",
+      "imgBox": {
+        "imgA": "/img/aliExpress1.png",
+        "imgB": "/img/aliExpress2.png",
+        "imgC": "/img/aliExpress3.png"
+      },
       "stack": "(Html/CSS)",
       "projectDetails": {
         "teamOrIndividual": "Team",
@@ -172,37 +180,37 @@
         "authentication": null
       },
       "devTools": {
-        "buildTool": "Webpack",
+        "buildTool": null,
         "packageManager": null,
         "versionControl": "Git"
       },
       "cloud": {
-        "hosting": "Netlify"
+        "hosting": "Firebase"
       },
       "link": {
-        "deploy": "https://cyword.netlify.app/",
-        "github": "https://github.com/yerixx/cyworld.git"
+        "deploy": "https://aliexpress-fc895.web.app/index.html",
+        "github": "https://github.com/HarinWon/Aliexpress-ezen"
       },
-      "modalMainImg": "/img/cyworld3.mp4",
+      "modalMainImg": "/pdf/aliExpress.pdf",
       "keyTechs": {
         "keyTechA": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         },
         "keyTechB": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         },
         "keyTechC": {
-          "img": null,
+          "mp4": null,
           "title": null,
           "desc": null
         }
       },
       "highlights": {
-        "img": "/img/cyworld5.png"
+        "img": "/img/aliExpress1.png"
       }
     }
   ]
