@@ -352,9 +352,9 @@ export const ContentBottom = styled.div`
     padding-top: 0;
   }
   .leftCont {
-    flex: 3.5;
+    flex: 3;
     width: 100%;
-    height: 100%;
+    height: 750px;
     display: flex;
     flex-direction: column;
     @media (max-width: 768px) {
@@ -375,7 +375,7 @@ export const ContentBottom = styled.div`
   .rightCont {
     flex: 1;
     width: 100%;
-    height: 100%;
+    height: 750px;
     display: flex;
     flex-direction: column;
     @media (max-width: 768px) {
@@ -428,8 +428,8 @@ export const Highlights = styled.div`
     .highlightsLeft {
       flex: 1;
       img {
-        width: 350px;
-        height: 200px;
+        width: 100%;
+        height: 220px;
         border-radius: 20px;
         box-shadow: var(--box-shadow);
         @media (max-width: 768px) {
@@ -439,6 +439,7 @@ export const Highlights = styled.div`
       }
       & > div {
         ${Title26}
+        width:90%;
       }
     }
     .highlightsRight {
@@ -454,6 +455,7 @@ export const Highlights = styled.div`
         ${Paragraph16}
         line-height:180%;
         color: #555;
+        width: 90%;
         @media (max-width: 768px) {
           font-size: 14px;
           line-height: 150%;

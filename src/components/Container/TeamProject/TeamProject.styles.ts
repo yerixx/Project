@@ -19,6 +19,7 @@ export const Wrapper = styled.main`
   transition: all 1s;
   margin-bottom: 15%;
 `;
+
 export const Inner = styled.section`
   width: 90%;
   height: 100vh;
@@ -233,7 +234,9 @@ export const InnerImgView = styled(Swiper)`
   @media (max-width: 768px) {
   }
 `;
-export const InnerImgBox = styled.article``;
+export const InnerImgBox = styled.article`
+  border-radius: 40px;
+`;
 export const InnerImg = styled(SwiperSlide)`
   width: 100%;
   height: 600px;
