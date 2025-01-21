@@ -13,7 +13,6 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoLogoGithub } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
 import { PiNotionLogoFill } from "react-icons/pi";
-import { SiTistory } from "react-icons/si";
 import { IoCall } from "react-icons/io5";
 import { LuMail } from "react-icons/lu";
 import { RiKakaoTalkFill } from "react-icons/ri";

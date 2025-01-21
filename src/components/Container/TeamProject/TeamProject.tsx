@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import ProjectModalView from "../ProjectModalView/ProjectModalView";
 import { teamProjectData } from "../../../data/teamProjectData.json";
-import { WorkModalProps } from "../../../styles/common";
 
 import {
   Wrapper,
@@ -49,10 +48,7 @@ interface TeamProjectProps {
   style?: React.CSSProperties;
 }
 
-const TeamProject: React.FC<TeamProjectProps> = (
-  { style },
-  { projectData }: WorkModalProps
-) => {
+const TeamProject = ({ style }: TeamProjectProps) => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const handlemodal = (id: number | undefined) => {
     setSelectedId(id !== undefined ? id : null);

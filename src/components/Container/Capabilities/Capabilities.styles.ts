@@ -135,10 +135,8 @@ export const CapabilitiesStackBox = styled(SwiperSlide)<TitleBoxProps>`
   transition: all 0.3s;
   .stackText {
     display: flex;
+    align-items: center;
     gap: 10px;
-
-    .stackIcon {
-    }
     .stackTitle {
       ${Title22}
     }

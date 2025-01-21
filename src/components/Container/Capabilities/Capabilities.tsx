@@ -14,6 +14,9 @@ import capabilities from "../../../data/Capabilities.json";
 import { useState } from "react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
+import IconComponent from "../../IconComponent";
+import { iconGroups } from "../../../assets/icons";
+
 interface CapabilitiesProps {
   style?: React.CSSProperties;
 }
@@ -71,7 +74,9 @@ const Capabilities = ({ style }: CapabilitiesProps) => {
             {capabilities.frontEnd.map((it) => (
               <CapabilitiesStackBox key={it.id} active={activeFrontend}>
                 <li className="stackText">
-                  <li className="stackIcon">O</li>
+                  <IconComponent
+                    iconName={it.stack.icon as keyof typeof iconGroups}
+                  />
                   <div className="stackTitle">{it.stack.title}</div>
                 </li>
                 <li className="stackDesc">{it.stack.desc}</li>
@@ -103,7 +108,9 @@ const Capabilities = ({ style }: CapabilitiesProps) => {
             {capabilities.devTools.map((it) => (
               <CapabilitiesStackBox key={it.id} active={activeDevTools}>
                 <li className="stackText">
-                  <li className="stackIcon">O</li>
+                  <IconComponent
+                    iconName={it.stack.icon as keyof typeof iconGroups}
+                  />
                   <div className="stackTitle">{it.stack.title}</div>
                 </li>
                 <li className="stackDesc">{it.stack.desc}</li>
@@ -135,7 +142,9 @@ const Capabilities = ({ style }: CapabilitiesProps) => {
             {capabilities.experience.map((it) => (
               <CapabilitiesStackBox key={it.id} active={activeExperience}>
                 <li className="stackText">
-                  <li className="stackIcon">O</li>
+                  <IconComponent
+                    iconName={it.stack.icon as keyof typeof iconGroups}
+                  />
                   <div className="stackTitle">{it.stack.title}</div>
                 </li>
                 <li className="stackDesc">{it.stack.desc}</li>
