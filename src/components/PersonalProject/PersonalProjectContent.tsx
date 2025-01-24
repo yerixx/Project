@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { personalProjectData } from "../../../data/personalProjectData.json";
+import { personalProjectData } from "../../data/personalProjectData.json";
 import { Pagination, Navigation } from "swiper/modules";
 
 import { MdArrowBack } from "react-icons/md";
@@ -20,13 +20,15 @@ import {
   InnerTextBox,
 } from "./PersonalProjectContent.styles";
 
-import ProjectModalView from "../ProjectModalView/ProjectModalView";
+import ProjectModalView from "../ProjectModal";
 
-interface WorkGalleryContentProps {
+interface PersonalProjectContentProps {
   selectedStack: string;
 }
 
-const WorkGalleryContent = ({ selectedStack }: WorkGalleryContentProps) => {
+const PersonalProjectContent = ({
+  selectedStack,
+}: PersonalProjectContentProps) => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   const filteredData =
@@ -130,4 +132,4 @@ const WorkGalleryContent = ({ selectedStack }: WorkGalleryContentProps) => {
     </GalleryWrapper>
   );
 };
-export default WorkGalleryContent;
+export default PersonalProjectContent;

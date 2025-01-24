@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Desc20 } from "../../../styles/fontStyle";
+import { Desc20 } from "../../styles/fontStyle";
 
 export const ModalLinkButtonBox = styled.article`
   position: absolute;

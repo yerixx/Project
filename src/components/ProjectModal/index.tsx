@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { personalProjectData } from "../../../data/personalProjectData.json";
-import { teamProjectData } from "../../../data/teamProjectData.json";
+import { personalProjectData } from "../../data/personalProjectData.json";
+import { teamProjectData } from "../../data/teamProjectData.json";
 
 import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -8,7 +8,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-import Button from "../PersonalProject/PersonalProjectModalButton";
+import ModalButton from "../ModalButton/index";
+
 import {
   ModalWrapper,
   ModalContainer,
@@ -26,11 +27,11 @@ import {
   ContentBottom,
   Highlights,
   PdfView,
-} from "./ProjectModalView.styls";
+} from "./styls";
 
-import { WorkModalProps } from "../../../styles/common";
+import { WorkModalProps } from "../../styles/common";
 
-const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
+const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
   const [isClosing, setIsClosing] = useState(false);
 
   const allProjectData = [...personalProjectData, ...teamProjectData];
@@ -55,7 +56,7 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
   return (
     <ModalWrapper isClosing={isClosing}>
       <ModalContainer>
-        <Button
+        <ModalButton
           onClose={handleClose}
           projectData={projectData}
           projectId={projectId}
@@ -224,4 +225,4 @@ const WorkModal = ({ onClose, projectId }: WorkModalProps) => {
   );
 };
 
-export default WorkModal;
+export default ProjectModal;

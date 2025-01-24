@@ -6,9 +6,9 @@ import {
   Title22,
   Desc20,
   Paragraph14,
-} from "../../../styles/fontStyle";
+} from "../../styles/fontStyle";
 
-export const ContainerWrapper = styled.article`
+export const ContentsWrapper = styled.article`
   position: sticky;
   top: 0;
   display: flex;
@@ -29,7 +29,8 @@ export const Wrapper = styled.main`
   /* height: 100vh; */
   padding: 5% 0;
   border-radius: 40px 40px 0 0;
-  background: ${(props) => props.theme.subColor};
+  background: inherit;
+  /* background: ${(props) => props.theme.subColor}; */
   @media (max-width: 768px) {
     height: fit-content;
   }

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Wrapper,
   Inner,
@@ -9,13 +11,13 @@ import {
   CapabilitiesBox,
   CapabilitiesStackBox,
   TitleBox,
-} from "./Capabilities.styles";
-import capabilities from "../../../data/Capabilities.json";
-import { useState } from "react";
+} from "./styles";
+import capabilities from "../../data/capabilities.json";
+
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
-import IconComponent from "../../IconComponent";
-import { iconGroups } from "../../../assets/icons";
+import IconComponent from "../../utils/IconComponent";
+import { iconGroups } from "../../utils/icons";
 
 interface CapabilitiesProps {
   style?: React.CSSProperties;

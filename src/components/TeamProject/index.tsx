@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import ProjectModalView from "../ProjectModalView/ProjectModalView";
-import { teamProjectData } from "../../../data/teamProjectData.json";
+import ProjectModalView from "../ProjectModal";
+import { teamProjectData } from "../../data/teamProjectData.json";
 
 import {
   Wrapper,
@@ -31,7 +31,8 @@ import {
   InnerImgBox,
   SubTitle,
   Duration,
-} from "./TeamProject.styles";
+  SubDesc,
+} from "./styles";
 
 import { BsLink45Deg } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
@@ -48,7 +49,11 @@ interface TeamProjectProps {
   style?: React.CSSProperties;
 }
 
-const TeamProject = ({ style }: TeamProjectProps) => {
+const TeamProjectView = ({ style }: TeamProjectProps) => {
+  const [mobile, setMobile] = useState(window.innerWidth <= 768);
+  const [descView, setDescView] = useState(false);
+  const [subDescView, setSubDescView] = useState(false);
+
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const handlemodal = (id: number | undefined) => {
     setSelectedId(id !== undefined ? id : null);
@@ -56,6 +61,13 @@ const TeamProject = ({ style }: TeamProjectProps) => {
   const closeModal = () => {
     setSelectedId(null);
   };
+  const handleClick = () => {
+    setDescView((prev) => !prev);
+  };
+  const handleClickSub = () => {
+    setSubDescView((prev) => !prev);
+  };
+
   useEffect(() => {
     if (selectedId) {
       document.body.style.overflow = "hidden";
@@ -96,10 +108,20 @@ const TeamProject = ({ style }: TeamProjectProps) => {
                   <InnerContent>
                     <InnerTextBox>
                       <Duration>{data.about.duration}</Duration>
-                      <InnerTitle>{data.title}</InnerTitle>
-                      <InnerDesc>{data.desc}</InnerDesc>
-                      <SubTitle>KeyFeatures</SubTitle>
-                      <InnerDesc>{data.about.keyFeatures}</InnerDesc>
+                      <InnerTitle>
+                        {data.title}
+                        {mobile && <div onClick={handleClick}>+</div>}
+                      </InnerTitle>
+                      <InnerDesc className={descView ? "active" : ""}>
+                        {data.desc}
+                      </InnerDesc>
+                      <SubTitle>
+                        KeyFeatures
+                        {mobile && <div onClick={handleClickSub}>+</div>}
+                      </SubTitle>
+                      <SubDesc className={subDescView ? "subActive" : ""}>
+                        {data.about.keyFeatures}
+                      </SubDesc>
                     </InnerTextBox>
                     <LinkBtnBox>
                       <LinkBtn>
@@ -122,7 +144,6 @@ const TeamProject = ({ style }: TeamProjectProps) => {
                         </Links>
                         <LinkText>GitHub</LinkText>
                       </LinkBtn>
-
                       <LinkBtn>
                         <MoreTag onClick={() => handlemodal(data.id)}>
                           <AiOutlineFullscreen />
@@ -170,4 +191,4 @@ const TeamProject = ({ style }: TeamProjectProps) => {
     </Wrapper>
   );
 };
-export default TeamProject;
+export default TeamProjectView;

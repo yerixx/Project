@@ -9,7 +9,7 @@ import {
   Title30,
   Title50,
   Title70,
-} from "../../../styles/fontStyle";
+} from "../../styles/fontStyle";
 
 const fadeIn = keyframes`
   from {

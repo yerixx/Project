@@ -5,8 +5,8 @@ import {
   MainTitle,
   SubTextBox,
   SubText,
-} from "./MainIntro.styles";
-import { ScrollYProps } from "../../styles/common.d";
+} from "./styles";
+import { ScrollYProps } from "../../styles/common";
 
 const MainIntro = ({ scrollY }: ScrollYProps) => {
   return (

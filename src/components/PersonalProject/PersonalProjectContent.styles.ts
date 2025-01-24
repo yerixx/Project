@@ -6,7 +6,7 @@ import {
   Paragraph16,
   Paragraph18,
   Title22,
-} from "../../../styles/fontStyle";
+} from "../../styles/fontStyle";
 
 export const GalleryWrapper = styled.section``;
 export const NavBox = styled.article`

@@ -1,4 +1,4 @@
-import { iconGroups } from "../assets/icons";
+import { iconGroups } from "./icons";
 interface IconComponentProps {
   iconName: keyof typeof iconGroups;
 }

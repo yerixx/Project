@@ -8,7 +8,7 @@ import {
   AboutMeCardContainer,
   AboutMeTextBox,
   AboutContBottom,
-} from "./AboutMe.styles";
+} from "./styles";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoLogoGithub } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
@@ -20,7 +20,6 @@ import { IoArrowUp } from "react-icons/io5";
 
 const AboutMe = () => {
   const [isCard, setIsCard] = useState(false);
-  // const [isLink, setIsLink] = useState(false);
 
   const handleCard = () => {
     setIsCard((prev) => !prev);

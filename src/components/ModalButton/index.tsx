@@ -4,15 +4,15 @@ import {
   ModalLinkBtn,
   ModalLinkText,
   ModalCloseBtn,
-} from "./PersonalProjectModalButton.styles";
+} from "../ModalButton/styles";
 
 import { IoCloseOutline } from "react-icons/io5";
 import { BsLink45Deg } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
 
-import { WorkModalProps } from "../../../styles/common";
+import { WorkModalProps } from "../../styles/common";
 
-const Button = ({ onClose, projectData }: WorkModalProps) => {
+const ModalButton = ({ onClose, projectData }: WorkModalProps) => {
   return (
     <ModalLinkButtonBox>
       <ModalCloseBtn onClick={onClose}>
@@ -44,4 +44,4 @@ const Button = ({ onClose, projectData }: WorkModalProps) => {
   );
 };
 
-export default Button;
+export default ModalButton;

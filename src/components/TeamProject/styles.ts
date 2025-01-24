@@ -5,11 +5,11 @@ import {
   Title60,
   Title42,
   Desc20,
-  Title40,
   Paragraph16,
   Paragraph14,
   Title26,
-} from "../../../styles/fontStyle";
+  Title30,
+} from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
   display: flex;
@@ -66,10 +66,6 @@ export const TeamProjectWrapper = styled.section`
   display: flex;
   gap: 60px;
   opacity: 0;
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
 `;
 export const TeamProjectBox = styled(SwiperSlide)`
   display: flex;
@@ -82,6 +78,7 @@ export const TeamProjectBox = styled(SwiperSlide)`
   @media (max-width: 768px) {
     padding: 10px;
     width: 100%;
+    height: 100vh;
     border-radius: 0px;
     background: ${({ theme }) => theme.mainColor};
     color: ${(props) => props.theme.subColor};
@@ -100,6 +97,7 @@ export const Tab = styled.li`
   color: ${({ theme }) => theme.subColor};
   border-radius: 40px;
   @media (max-width: 768px) {
+    ${Paragraph14}
     background: ${({ theme }) => theme.subColor};
     color: ${({ theme }) => theme.mainColor};
   }
@@ -111,14 +109,18 @@ export const InnerContents = styled.section`
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 30px;
-
   @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 export const InnerContent = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    gap: 30px;
+  }
 `;
 
 export const InnerTextBox = styled.article`
@@ -131,30 +133,65 @@ export const Duration = styled.article`
   ${Paragraph14}
   padding-top:10px;
   @media (max-width: 768px) {
-    ${Title40}
+    ${Paragraph16}
   }
 `;
 export const InnerTitle = styled.article`
   ${Title60}
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   @media (max-width: 768px) {
-    ${Title40}
+    margin-top: 10px;
+    ${Title30}
   }
 `;
 
 export const InnerDesc = styled.article`
   ${Paragraph16}
-  /* color: #555; */
   line-height: 1.7;
   white-space: break-spaces;
   padding: 10px 0 30px;
-
   @media (max-width: 768px) {
+    max-height: 400px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    &.active {
+      max-height: 0px;
+      display: block;
+    }
   }
 `;
+
 export const SubTitle = styled.b`
   ${Title26}
   white-space: break-spaces;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   @media (max-width: 768px) {
+    ${Title30}
+    margin-top: 10px;
+
+    font-weight: normal;
+  }
+`;
+
+export const SubDesc = styled.article`
+  ${Paragraph16}
+  line-height: 1.7;
+  white-space: break-spaces;
+  padding: 10px 0 30px;
+  @media (max-width: 768px) {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    &.subActive {
+      max-height: 400px;
+      display: block;
+    }
   }
 `;
 
@@ -170,6 +207,9 @@ export const LinkBtn = styled.article`
   align-items: center;
   gap: 16px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    width: fit-content;
+  }
 `;
 export const Links = styled.a`
   display: flex;
@@ -230,7 +270,6 @@ export const InnerImgView = styled(Swiper)`
   height: fit-content;
   margin: auto 0;
   border-radius: 40px;
-
   @media (max-width: 768px) {
   }
 `;
@@ -249,7 +288,16 @@ export const InnerImg = styled(SwiperSlide)`
     object-position: top;
   }
   @media (max-width: 768px) {
+    /* border: 1px solid #f00; */
+    border-radius: 0px;
+    width: 100%;
     height: 200px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0px;
+      object-fit: cover;
+    }
   }
 `;
 export const NavArrows = styled.article`

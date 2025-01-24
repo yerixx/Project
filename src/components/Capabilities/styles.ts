@@ -12,7 +12,7 @@ import {
   Paragraph16,
   Title30,
   Title22,
-} from "../../../styles/fontStyle";
+} from "../../styles/fontStyle";
 
 export const Wrapper = styled.section`
   display: flex;

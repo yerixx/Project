@@ -6,7 +6,7 @@ import {
   Title22,
   Title26,
   Title70,
-} from "../../../styles/fontStyle";
+} from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
   display: flex;
@@ -50,13 +50,15 @@ export const AboutMeContTop = styled.article`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 30px;
   @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
 
 export const AboutMeTextBox = styled.ul`
-  width: 60%;
+  flex: 3;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -89,7 +91,8 @@ export const AboutMeTextBox = styled.ul`
 
 export const AboutMeCardContainer = styled.div`
   perspective: 1000px;
-  width: 37%;
+  flex: 1;
+  width: 100%;
   height: 100%;
   position: relative;
 

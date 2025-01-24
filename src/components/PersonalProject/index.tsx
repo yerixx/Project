@@ -1,8 +1,4 @@
-import { personalProjectData } from "../../../data/personalProjectData.json";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { useState } from "react";
 
 import {
   Wrapper,
@@ -13,16 +9,19 @@ import {
   Year,
   WorkTabBox,
   WorkTabs,
-} from "./PersonalProjectContainer.styles";
-import WorkContent from "./PersonalProjectContent";
+} from "./styles";
+import PersonalProjectContent from "./PersonalProjectContent";
+import { personalProjectData } from "../../data/personalProjectData.json";
 
-import { useState } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 interface MainProjectProps {
   style?: React.CSSProperties;
 }
 
-const WorkGalleryContainer: React.FC<MainProjectProps> = ({
+const PersonalProjectContainer: React.FC<MainProjectProps> = ({
   style,
 }: MainProjectProps) => {
   const [selectedStack, setSelectedStack] = useState("All");
@@ -57,9 +56,9 @@ const WorkGalleryContainer: React.FC<MainProjectProps> = ({
             )}
           </WorkTabs>
         </WorkTabBox>
-        <WorkContent selectedStack={selectedStack} />
+        <PersonalProjectContent selectedStack={selectedStack} />
       </Inner>
     </Wrapper>
   );
 };
-export default WorkGalleryContainer;
+export default PersonalProjectContainer;
