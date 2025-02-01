@@ -5,7 +5,7 @@ interface TitleBoxProps {
   active?: boolean;
 }
 
-import { Title42, Paragraph16, Title30 } from "../../styles/fontStyle";
+import { Title42, Paragraph16, Title30, Title26 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.section`
   display: flex;
@@ -25,6 +25,9 @@ export const Inner = styled.section`
   .swiper-slide {
     height: 300px;
     justify-content: start;
+    @media (max-width: 768px) {
+      height: 520px;
+    }
   }
 `;
 
@@ -39,6 +42,7 @@ export const CapabilitiesTitleBox = styled.section`
   opacity: 0;
   @media (max-width: 768px) {
     width: 100%;
+    margin-bottom: 40px;
   }
 `;
 
@@ -46,8 +50,8 @@ export const Title = styled.article`
   ${Title42}
   margin: 100px 0 16px;
   @media (max-width: 768px) {
-    font-size: 30px;
-    margin-bottom: 10px;
+    ${Title30}
+    margin: 0px 0 10px;
   }
 `;
 export const Desc = styled.article`
@@ -65,6 +69,9 @@ export const CapabilitiesWrapper = styled(SwiperSlide)`
   background: #333;
   color: ${(props) => props.theme.subColor};
   transition: transform 0.5s ease-in-out;
+  @media (max-width: 768px) {
+    padding: 16px 24px;
+  }
 `;
 
 export const TitleBox = styled.article<TitleBoxProps>`
@@ -73,12 +80,18 @@ export const TitleBox = styled.article<TitleBoxProps>`
   ${Title30}
   padding-bottom:30px;
   transition: all 0.3s;
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+  }
 `;
 
 export const SkillTitle = styled.article<TitleBoxProps>`
   ${Title30}
   font-weight:bold;
   color: ${(props) => props.theme.subColor};
+  @media (max-width: 768px) {
+    ${Title26}
+  }
 `;
 
 export const StackBoxes = styled.div`
@@ -106,6 +119,9 @@ export const StackIcon = styled.div<TitleBoxProps>`
     border-radius: 50px;
     opacity: 0.7;
     background: #3f3f3f;
+    @media (max-width: 768px) {
+      padding: 10px 18px;
+    }
     .stackTitle {
       ${Paragraph16}
     }

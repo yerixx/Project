@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import {
-  Desc20,
-  Paragraph16,
-  Paragraph18,
-  Title22,
-  Title26,
   Title42,
+  Title30,
+  Title26,
+  Title22,
+  Desc20,
+  Paragraph18,
+  Paragraph16,
 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -14,10 +15,6 @@ export const Wrapper = styled.main`
   width: 100%;
   height: 100vh;
   background: ${(props) => props.theme.mainColor};
-  @media (max-width: 768px) {
-    border: 1px solid #f00;
-    margin-top: 300px;
-  }
 `;
 export const Inner = styled.section`
   display: flex;
@@ -27,7 +24,7 @@ export const Inner = styled.section`
   padding: 0px 5%;
   color: ${(props) => props.theme.subColor};
   @media (max-width: 768px) {
-    padding: 0;
+    padding: 0px 16px;
   }
 `;
 
@@ -36,7 +33,7 @@ export const AboutMeTitle = styled.section`
   width: 100%;
   margin-bottom: 30px;
   @media (max-width: 768px) {
-    font-size: 28px;
+    ${Title30}
   }
 `;
 
@@ -44,7 +41,10 @@ export const AboutContainer = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  @media (max-width: 768px) {
+    height: 200vh;
+  }
 `;
 export const AboutMeContTop = styled.article`
   display: flex;
@@ -96,13 +96,18 @@ export const AboutMeCardContainer = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-
   .aboutMeCard {
     width: 100%;
     height: 100%;
     position: absolute;
     transform-style: preserve-3d;
     transition: transform 0.6s;
+    @media (max-width: 768px) {
+      /* margin-top: 100px; */
+      width: 100%;
+      height: auto;
+      min-height: 550px;
+    }
   }
   .aboutMeCard.flipped {
     transform: rotateY(180deg);
@@ -239,6 +244,9 @@ export const AboutContBottom = styled.article`
   align-items: center;
   justify-content: space-between;
   padding: 30px 0;
+  @media (max-width: 768px) {
+    margin-top: 550px;
+  }
   .gototop {
     display: flex;
     justify-content: center;

@@ -21,7 +21,7 @@ export const NavBox = styled.article`
     }
   }
   .navArrows {
-    cursor: pointer;
+    align-items: center;
     display: flex;
     gap: 10px;
     scale: 1.1;
@@ -91,16 +91,20 @@ export const InnerTextBox = styled.div`
     justify-content: space-between;
     align-items: center;
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: start;
     }
     .title {
       ${Paragraph18}
       font-weight:bold;
+      @media (max-width: 768px) {
+        ${Desc20}
+      }
     }
     .stact {
       ${Paragraph14}
       color: ${(props) => props.theme.grayColor};
+      @media (max-width: 768px) {
+        ${Paragraph14}
+      }
     }
   }
   .desc {
@@ -110,7 +114,7 @@ export const InnerTextBox = styled.div`
     letter-spacing: -1.5px;
     line-height: 1.5;
     @media (max-width: 768px) {
-      font-size: 12px;
+      ${Paragraph16}
     }
   }
 `;

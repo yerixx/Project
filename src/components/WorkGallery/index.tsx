@@ -13,14 +13,13 @@ const WorkGallery = ({
     <Wrapper>
       <PersonalProject
         style={{
-          opacity: handleScrollY > 700 ? "0" : "1",
-          background: handleScrollY > 700 ? "#000" : "#fff",
+          opacity: handleScrollY > getScrollThreshold() ? "0" : "1",
+          background: handleScrollY > getScrollThreshold() ? "#000" : "#fff",
         }}
       />
       <TeamProject
         style={{
-          // background: handleScrollY > 700 ? "#000" : "#fff",
-          opacity: handleScrollY > 700 ? "1" : "0",
+          opacity: handleScrollY > getScrollThreshold() ? "1" : "0",
         }}
       />
     </Wrapper>

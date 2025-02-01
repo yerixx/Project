@@ -7,6 +7,7 @@ import {
   Title30,
   Desc20,
   Paragraph14,
+  Paragraph16,
 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -16,6 +17,9 @@ export const Wrapper = styled.main`
   width: 100%;
   height: 100vh;
   transition: all 1s;
+  @media (max-width: 768px) {
+    margin-bottom: 50%;
+  }
 `;
 
 export const Inner = styled.section`
@@ -23,13 +27,12 @@ export const Inner = styled.section`
   height: 100vh;
   .swiper-pagination {
     bottom: var(--swiper-pagination-bottom, 20px);
+    @media (max-width: 768px) {
+      bottom: var(--swiper-pagination-bottom, 20px);
+    }
   }
   .swiper-pagination-bullet-active {
     background: #000;
-  }
-  @media (max-width: 768px) {
-    /* border: 1px solid pink; */
-    /* height: 150vh; */
   }
 `;
 export const SwiperBox = styled(Swiper)``;
@@ -44,6 +47,7 @@ export const TeamProjectTitleBox = styled.section`
   opacity: 0;
   @media (max-width: 768px) {
     padding: 0 10px;
+    margin-bottom: 0px;
   }
 `;
 export const TeamProjectTitle = styled.article`
@@ -51,7 +55,6 @@ export const TeamProjectTitle = styled.article`
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* padding-top: 80px; */
 `;
 export const Title = styled.article`
   ${Title42}
@@ -59,6 +62,7 @@ export const Title = styled.article`
   @media (max-width: 768px) {
     font-size: 30px;
     margin-bottom: 10px;
+    font-weight: bold;
   }
 `;
 export const Desc = styled.article`
@@ -78,13 +82,17 @@ export const TeamProjectBox = styled(SwiperSlide)`
   border-radius: 40px;
   padding: 45px;
   @media (max-width: 768px) {
-    padding: 10px;
     width: 100%;
-    height: 150vh;
-    border-radius: 0px;
-    background: inherit;
+    height: auto;
+    min-height: 690px;
+    max-height: 930px;
+    margin-top: 20px;
+    padding: 10px 14px 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
     color: ${(props) => props.theme.subColor};
-    /* border: 1px solid yellow; */
+    overflow: hidden;
+    z-index: 1;
   }
 `;
 
@@ -102,7 +110,8 @@ export const TopContent = styled.section`
   justify-content: space-between;
   margin-bottom: 20px;
   @media (max-width: 768px) {
-    gap: 30px;
+    flex-direction: column;
+    gap: 16px;
   }
 `;
 export const InnerTitle = styled.article`
@@ -119,6 +128,7 @@ export const InnerTitle = styled.article`
   @media (max-width: 768px) {
     margin-top: 10px;
     ${Title30}
+    font-weight:normal;
   }
 `;
 export const LinkBtnBox = styled.article`
@@ -128,9 +138,11 @@ export const LinkBtnBox = styled.article`
   gap: 10px;
   align-items: center;
   justify-content: end;
+  @media (max-width: 768px) {
+    justify-content: start;
+  }
 `;
 export const LinkBtn = styled.article`
-  /* width: 60px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,8 +178,12 @@ export const LinkText = styled.article`
   padding: 12px 20px;
   border-radius: 20px;
   text-align: center;
-  color: #fff;
-  background: #000;
+  color: ${({ theme }) => theme.subColor};
+  background: ${({ theme }) => theme.mainColor};
+  @media (max-width: 768px) {
+    color: ${({ theme }) => theme.mainColor};
+    background: ${({ theme }) => theme.subColor};
+  }
 `;
 
 export const BottomContent = styled.section`
@@ -175,7 +191,8 @@ export const BottomContent = styled.section`
   gap: 30px;
   padding-bottom: 10px;
   @media (max-width: 768px) {
-    gap: 30px;
+    flex-direction: column;
+    gap: 0px;
   }
 `;
 export const BottomLeft = styled.section`
@@ -190,9 +207,12 @@ export const InnerDesc = styled.article`
   white-space: break-spaces;
   padding-bottom: 10px;
   @media (max-width: 768px) {
+    ${Paragraph16}
+    height:210px;
     max-height: 400px;
+    color: ${({ theme }) => theme.subColor};
     padding: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition: all 0.3s;
     &.active {
       max-height: 0px;
@@ -214,7 +234,7 @@ export const SubTitle = styled.b`
   }
   @media (max-width: 768px) {
     ${Title30}
-    margin-top: 10px;
+    margin-top: 20px;
     font-weight: normal;
   }
 `;
@@ -224,6 +244,8 @@ export const SubDesc = styled.article`
   line-height: 1.6;
   white-space: break-spaces;
   @media (max-width: 768px) {
+    ${Paragraph16}
+    color: ${({ theme }) => theme.subColor};
     max-height: 0;
     padding: 0;
     overflow: hidden;
@@ -249,6 +271,7 @@ export const InnerImgView = styled(Swiper)`
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.05);
   @media (max-width: 768px) {
+    height: fit-content;
   }
 `;
 export const InnerImgBox = styled.article`
@@ -309,6 +332,9 @@ export const TeamProjectTabBox = styled.ul`
   display: flex;
   gap: 6px;
   padding-top: 6px;
+  @media (max-width: 768px) {
+    padding-top: 14px;
+  }
 `;
 export const Tab = styled.li`
   ${Paragraph14}
@@ -320,7 +346,7 @@ export const Tab = styled.li`
   border-radius: 8px;
   @media (max-width: 768px) {
     ${Paragraph14}
-    background: ${({ theme }) => theme.subColor};
-    color: ${({ theme }) => theme.mainColor};
+    background: ${({ theme }) => theme.mainColor};
+    color: ${({ theme }) => theme.subColor};
   }
 `;

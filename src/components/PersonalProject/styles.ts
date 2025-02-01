@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import {
   Title42,
-  Paragraph18,
   Title40,
   Title22,
   Desc20,
+  Paragraph18,
   Paragraph14,
+  Paragraph16,
 } from "../../styles/fontStyle";
 
 export const ContentsWrapper = styled.article`
@@ -26,13 +27,12 @@ export const Wrapper = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* height: 100vh; */
   padding: 5% 0;
   border-radius: 40px 40px 0 0;
   background: inherit;
-  /* background: ${(props) => props.theme.subColor}; */
   @media (max-width: 768px) {
     height: fit-content;
+    padding: 20px 5px;
   }
 `;
 export const Inner = styled.section`
@@ -71,6 +71,8 @@ export const WorkTabBox = styled.section`
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid #999;
+  @media (max-width: 768px) {
+  }
 `;
 
 export const WorkTabs = styled.article`
@@ -81,7 +83,7 @@ export const WorkTabs = styled.article`
   gap: 10px;
   cursor: pointer;
   @media (max-width: 768px) {
-    ${Paragraph14}
+    ${Paragraph16}
   }
   .workTab {
     padding: 2px 20px;

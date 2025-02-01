@@ -19,7 +19,7 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { IoArrowUp } from "react-icons/io5";
 
 const AboutMe = () => {
-  const [isCard, setIsCard] = useState(true);
+  const [isCard, setIsCard] = useState(false);
 
   const handleCard = () => {
     setIsCard((prev) => !prev);

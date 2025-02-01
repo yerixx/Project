@@ -38,6 +38,11 @@ const Capabilities = ({ style }: CapabilitiesProps) => {
           spaceBetween={30}
           loop={true}
           modules={[Pagination, Navigation, Autoplay]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1.2,
+            },
+          }}
         >
           <SwiperSlide>
             <CapabilitiesWrapper id="frontend" className="capability-tag">

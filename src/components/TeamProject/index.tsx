@@ -62,9 +62,6 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
     setSelectedId(null);
   };
   const handleClick = () => {
-    setDescView((prev) => !prev);
-  };
-  const handleClickSub = () => {
     setSubDescView((prev) => !prev);
   };
 
@@ -82,7 +79,6 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
       <Inner>
         <TeamProjectTitleBox className="capability-tag">
           <TeamProjectTitle>
-            {/* <Title>Pioneering My Path</Title> */}
             <Title>Team Project</Title>
           </TeamProjectTitle>
           <Desc>도전과 창의로 함께 이끌어낸 의미 있는 경험</Desc>
@@ -102,12 +98,7 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
               <TeamProjectBox key={data.id}>
                 <TeamContainer>
                   <TopContent>
-                    <InnerTitle>
-                      {data.title}
-                      {mobile && (
-                        <GoPlus className="icon" onClick={handleClick} />
-                      )}
-                    </InnerTitle>
+                    <InnerTitle>{data.title}</InnerTitle>
                     <LinkBtnBox>
                       <LinkBtn>
                         <Links
@@ -142,7 +133,7 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
                       <SubTitle>
                         KeyFeatures
                         {mobile && (
-                          <GoPlus className="icon" onClick={handleClickSub} />
+                          <GoPlus className="icon" onClick={handleClick} />
                         )}
                       </SubTitle>
                       <SubDesc className={subDescView ? "subActive" : ""}>
