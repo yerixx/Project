@@ -5,7 +5,6 @@ import {
   Title22,
   Desc20,
   Paragraph18,
-  Paragraph14,
   Paragraph16,
 } from "../../styles/fontStyle";
 

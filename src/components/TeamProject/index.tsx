@@ -51,10 +51,22 @@ interface TeamProjectProps {
 
 const TeamProjectView = ({ style }: TeamProjectProps) => {
   const [mobile, setMobile] = useState(window.innerWidth <= 768);
-  const [descView, setDescView] = useState(false);
   const [subDescView, setSubDescView] = useState(false);
 
   const [selectedId, setSelectedId] = useState<number | null>(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
   const handlemodal = (id: number | undefined) => {
     setSelectedId(id !== undefined ? id : null);
   };
@@ -127,9 +139,7 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
                   </TopContent>
                   <BottomContent>
                     <BottomLeft>
-                      <InnerDesc className={descView ? "active" : ""}>
-                        {data.desc}
-                      </InnerDesc>
+                      <InnerDesc>{data.desc}</InnerDesc>
                       <SubTitle>
                         KeyFeatures
                         {mobile && (
