@@ -1,18 +1,11 @@
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 
 interface TitleBoxProps {
   active?: boolean;
 }
 
-import {
-  Title60,
-  Title42,
-  Title26,
-  Paragraph16,
-  Title30,
-  Title22,
-} from "../../styles/fontStyle";
+import { Title42, Paragraph16, Title30 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.section`
   display: flex;
@@ -22,7 +15,6 @@ export const Wrapper = styled.section`
   height: 100vh;
   transition: all 1s;
   background: ${(props) => props.theme.mainColor};
-  margin-bottom: 25%;
   @media (max-width: 768px) {
     margin-top: 20%;
   }
@@ -30,6 +22,10 @@ export const Wrapper = styled.section`
 export const Inner = styled.section`
   width: 90%;
   height: 100vh;
+  .swiper-slide {
+    height: 300px;
+    justify-content: start;
+  }
 `;
 
 export const CapabilitiesTitleBox = styled.section`
@@ -57,98 +53,66 @@ export const Title = styled.article`
 export const Desc = styled.article`
   color: ${(props) => props.theme.grayColor};
 `;
-export const CapabilitiesWrapper = styled.section`
+
+export const CapabilitiesWrapper = styled(SwiperSlide)`
   display: flex;
   flex-direction: column;
-  opacity: 0;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 28px;
+  border-radius: 25px;
+  background: #333;
   color: ${(props) => props.theme.subColor};
+  transition: transform 0.5s ease-in-out;
 `;
+
 export const TitleBox = styled.article<TitleBoxProps>`
   display: flex;
   justify-content: space-between;
   ${Title30}
   padding-bottom:30px;
   transition: all 0.3s;
-  border-bottom: 1px solid
-    ${(props) => (props.active ? props.theme.subColor : "#555")};
-  div {
-    cursor: pointer;
-    transition: all 0.3s;
-    color: #555;
-  }
-  .active {
-    transform: rotate(45deg);
-    color: ${(props) => props.theme.subColor};
-  }
 `;
+
 export const SkillTitle = styled.article<TitleBoxProps>`
   ${Title30}
-  color:${(props) => (props.active ? props.theme.subColor : "#555")};
-`;
-export const CapabilitiesContBox = styled.div`
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  height: 50vh;
-  border-radius: 40px;
-  padding: 60px 40px;
-  background: ${(props) => props.theme.subColor};
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-  h1 {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 16px 0 22px;
-    ${Title60}
-    font-weight: 500;
-    @media (max-width: 768px) {
-      font-size: 30px;
-    }
-  }
-  p {
-    ${Paragraph16}
-    font-weight: 400;
-    line-height: 1.8;
-    @media (max-width: 768px) {
-      font-size: 14px;
-    }
-  }
-`;
-
-export const CapabilitiesBox = styled(Swiper)`
-  width: 100%;
-  display: flex;
-  margin-bottom: 50px;
+  font-weight:bold;
   color: ${(props) => props.theme.subColor};
 `;
-export const CapabilitiesStackBox = styled(SwiperSlide)<TitleBoxProps>`
-  ${Title26}
+
+export const StackBoxes = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  width: 25%;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: ${(props) => props.theme.subColor};
+  overflow: scroll;
+`;
+
+export const StackIcon = styled.div<TitleBoxProps>`
+  display: flex;
+  align-items: center;
   gap: 20px;
-  padding-top: 40px;
   color: #d2d2d2;
-  height: ${(props) => (props.active ? "250px" : "0px")};
   transition: all 0.3s;
-  .stackText {
+  border: 1px solid transparent;
+  border-radius: 50px;
+  .stackIcon {
     display: flex;
     align-items: center;
-    gap: 10px;
+    padding: 12px 30px;
+    gap: 8px;
+    border-radius: 50px;
+    opacity: 0.7;
+    background: #3f3f3f;
     .stackTitle {
-      ${Title22}
+      ${Paragraph16}
     }
   }
-  .stackDesc {
-    ${Paragraph16}
-    padding: 20px 0;
-    color: #999;
-    transition: all 0.5s;
-
-    &:hover {
-      color: ${({ theme }) => theme.subColor};
-    }
+  &:hover {
+    border: 0.8px solid #fff;
+    border-radius: 50px;
+    color: #fff;
   }
 `;

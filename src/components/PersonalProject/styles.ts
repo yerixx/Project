@@ -15,10 +15,10 @@ export const ContentsWrapper = styled.article`
   flex-direction: column;
   margin: 0 auto;
   width: 80%;
-  z-index: 2;
   background: #fff;
   transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
   border-radius: 40px 40px 0 0;
+  z-index: 2;
 `;
 
 export const Wrapper = styled.main`

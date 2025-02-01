@@ -19,7 +19,7 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { IoArrowUp } from "react-icons/io5";
 
 const AboutMe = () => {
-  const [isCard, setIsCard] = useState(false);
+  const [isCard, setIsCard] = useState(true);
 
   const handleCard = () => {
     setIsCard((prev) => !prev);
@@ -139,9 +139,9 @@ const AboutMe = () => {
                             <AiFillInstagram />
                           </a>
                         </li>
-                        <div className="followHoverMessage">
+                        <li className="followHoverMessage">
                           아이콘을 클릭하면 해당 페이지로 이동합니다
-                        </div>
+                        </li>
                       </ul>
                     </div>
                     <div className="contactBox">
@@ -151,29 +151,21 @@ const AboutMe = () => {
                           className="contactIcon"
                           onClick={() => handleCopy("01055081689")}
                         >
-                          <div>
+                          <li>
                             <IoCall />
-                          </div>
+                          </li>
                         </li>
                         <li
                           className="contactIcon"
                           onClick={() => handleCopy("yerixxz@gmail.com")}
                         >
-                          <div>
+                          <li>
                             <LuMail />
-                          </div>
+                          </li>
                         </li>
-                        {/* <li
-                          className="contactIcon"
-                          onClick={() => handleCopy("yerixxz@gmail.com")}
-                        >
-                          <div>
-                            <RiKakaoTalkFill />
-                          </div>
-                        </li> */}
-                        <div className="followHoverMessage">
+                        <li className="followHoverMessage">
                           아이콘을 클릭하면 컨텐츠가 복사됩니다.
-                        </div>
+                        </li>
                       </ul>
                     </div>
                   </div>

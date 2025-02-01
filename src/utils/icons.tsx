@@ -7,6 +7,10 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { IoLogoFirebase } from "react-icons/io5";
 import { SiNetlify } from "react-icons/si";
 import { GoBook } from "react-icons/go";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiAdobeillustrator } from "react-icons/si";
+import { SiSketchup } from "react-icons/si";
+import { SiAutocad } from "react-icons/si";
 
 export const iconGroups = {
   SiNextdotjs: SiNextdotjs,
@@ -23,4 +27,8 @@ export const iconGroups = {
   FaGithub: FaGithub,
   FaFigma: FaFigma,
   GoBook: GoBook,
+  SiAdobephotoshop: SiAdobephotoshop,
+  SiAdobeillustrator: SiAdobeillustrator,
+  SiSketchup: SiSketchup,
+  SiAutocad: SiAutocad,
 };

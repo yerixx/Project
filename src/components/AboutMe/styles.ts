@@ -5,7 +5,7 @@ import {
   Paragraph18,
   Title22,
   Title26,
-  Title70,
+  Title42,
 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -32,7 +32,7 @@ export const Inner = styled.section`
 `;
 
 export const AboutMeTitle = styled.section`
-  ${Title70}
+  ${Title42}
   width: 100%;
   margin-bottom: 30px;
   @media (max-width: 768px) {
@@ -50,7 +50,7 @@ export const AboutMeContTop = styled.article`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 30px;
+  gap: 20px;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -62,22 +62,23 @@ export const AboutMeTextBox = styled.ul`
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   @media (max-width: 768px) {
     width: 100%;
   }
   .AboutMeText {
     width: 100%;
+    overflow-y: hidden;
     background: #333;
-    padding: 30px;
+    padding: 20px 28px;
     border-radius: 30px;
-
     .AboutMeTitle {
       ${Title22}
       font-weight: bold;
     }
     .AboutMeDesc {
-      padding-top: 20px;
+      height: 100%;
+      padding-top: 10px;
       ${Paragraph16}
       line-height: 1.6;
       color: ${(props) => props.theme.grayColor};
@@ -156,15 +157,14 @@ export const AboutMeCardContainer = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 10%;
-      gap: 50px;
+      padding: 20px;
+      gap: 10px;
       .aboutMeName {
         display: flex;
         flex-direction: column;
         gap: 20px;
         ${Title26}
         font-weight:bold;
-        margin-bottom: -20px;
         .backarrow {
           font-size: 40px;
           cursor: pointer;
@@ -180,24 +180,16 @@ export const AboutMeCardContainer = styled.div`
         font-weight:300;
       }
       .contactBox {
+        position: relative;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         ${Paragraph18}
         .contactIcons {
-          position: relative;
           display: flex;
-          gap: 20px;
-          .followHoverMessage {
-            position: absolute;
-            top: -79%;
-            left: 24%;
-            font-size: 14px;
-            padding-left: 10px;
-            color: #999;
-            opacity: 0;
-            transition: opacity 0.3s;
-          }
+          gap: 8px;
+          padding-top: 5px;
+          overflow: scroll;
           .contactIcon {
             font-size: 24px;
             display: flex;
@@ -209,16 +201,31 @@ export const AboutMeCardContainer = styled.div`
             border: 1px solid ${({ theme }) => theme.mainColor};
             cursor: pointer;
             transition: all 0.3s;
-            & > div,
-            & > a {
-              padding-top: 6px;
+            position: relative;
+            li,
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 60px;
+              height: 60px;
             }
+
             &:hover {
               transform: translateY(-5px);
             }
             &:hover ~ .followHoverMessage {
               opacity: 1;
             }
+          }
+          .followHoverMessage {
+            position: absolute;
+            top: 22px;
+            left: 2px;
+            font-size: 12px;
+            color: #999;
+            opacity: 0;
+            transition: opacity 0.3s;
           }
         }
       }

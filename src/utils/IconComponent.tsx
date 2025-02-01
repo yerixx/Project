@@ -8,14 +8,14 @@ const IconComponent = ({ iconName }: IconComponentProps) => {
   return (
     <div
       style={{
-        width: 40,
-        height: 40,
+        width: 30,
+        height: 30,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Icon size={34} style={{ width: 34, height: 34 }} />
+      <Icon size={28} style={{ width: 28, height: 28 }} />
     </div>
   );
 };

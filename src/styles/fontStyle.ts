@@ -18,7 +18,7 @@ export const Title70 = css`
   letter-spacing: -1px;
 `;
 export const Title60 = css`
-  font-size: 3.75rem;
+  font-size: 3.125vw;
   letter-spacing: -1px;
 `;
 export const Title50 = css`

@@ -16,29 +16,29 @@ import {
   Tab,
   InnerTitle,
   InnerDesc,
-  InnerTextBox,
   InnerImg,
-  InnerContent,
-  InnerContents,
   LinkBtnBox,
   LinkBtn,
   Links,
   LinkText,
   SwiperBox,
   InnerImgView,
-  MoreTag,
   NavArrows,
   InnerImgBox,
   SubTitle,
-  Duration,
   SubDesc,
+  TopContent,
+  BottomContent,
+  TeamContainer,
+  BottomLeft,
+  BottomRight,
 } from "./styles";
 
 import { BsLink45Deg } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import { AiOutlineFullscreen } from "react-icons/ai";
+import { GoPlus } from "react-icons/go";
 
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -82,7 +82,8 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
       <Inner>
         <TeamProjectTitleBox className="capability-tag">
           <TeamProjectTitle>
-            <Title>Pioneering My Path</Title>
+            {/* <Title>Pioneering My Path</Title> */}
+            <Title>Team Project</Title>
           </TeamProjectTitle>
           <Desc>도전과 창의로 함께 이끌어낸 의미 있는 경험</Desc>
         </TeamProjectTitleBox>
@@ -99,30 +100,14 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
           {teamProjectData.map((data) => (
             <TeamProjectWrapper className="capability-tag">
               <TeamProjectBox key={data.id}>
-                <TeamProjectTabBox>
-                  <Tab>{data.projectDetails.teamOrIndividual}</Tab>
-                  <Tab>{data.projectDetails.projectType}</Tab>
-                  <Tab>{data.projectDetails.responsive}</Tab>
-                </TeamProjectTabBox>
-                <InnerContents>
-                  <InnerContent>
-                    <InnerTextBox>
-                      <Duration>{data.about.duration}</Duration>
-                      <InnerTitle>
-                        {data.title}
-                        {mobile && <div onClick={handleClick}>+</div>}
-                      </InnerTitle>
-                      <InnerDesc className={descView ? "active" : ""}>
-                        {data.desc}
-                      </InnerDesc>
-                      <SubTitle>
-                        KeyFeatures
-                        {mobile && <div onClick={handleClickSub}>+</div>}
-                      </SubTitle>
-                      <SubDesc className={subDescView ? "subActive" : ""}>
-                        {data.about.keyFeatures}
-                      </SubDesc>
-                    </InnerTextBox>
+                <TeamContainer>
+                  <TopContent>
+                    <InnerTitle>
+                      {data.title}
+                      {mobile && (
+                        <GoPlus className="icon" onClick={handleClick} />
+                      )}
+                    </InnerTitle>
                     <LinkBtnBox>
                       <LinkBtn>
                         <Links
@@ -132,7 +117,6 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
                         >
                           <BsLink45Deg />
                         </Links>
-                        <LinkText>배포 링크</LinkText>
                       </LinkBtn>
                       <LinkBtn>
                         <Links
@@ -142,44 +126,65 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
                         >
                           <FaGithub />
                         </Links>
-                        <LinkText>GitHub</LinkText>
                       </LinkBtn>
                       <LinkBtn>
-                        <MoreTag onClick={() => handlemodal(data.id)}>
-                          <AiOutlineFullscreen />
-                        </MoreTag>
-                        <LinkText>자세히보기</LinkText>
+                        <LinkText onClick={() => handlemodal(data.id)}>
+                          작업상세보기
+                        </LinkText>
                       </LinkBtn>
                     </LinkBtnBox>
-                  </InnerContent>
-                  <InnerImgView
-                    className="mySwiper"
-                    slidesPerView={"auto"}
-                    centeredSlides={true}
-                    spaceBetween={30}
-                    modules={[Pagination, Navigation]}
-                    navigation={{
-                      prevEl: ".img-prev-button",
-                      nextEl: ".img-next-button",
-                    }}
-                  >
-                    <InnerImgBox>
-                      <InnerImg>
-                        <img src={data.imgBox?.imgA} />
-                      </InnerImg>
-                      <InnerImg>
-                        <img src={data.imgBox?.imgB} />
-                      </InnerImg>
-                      <InnerImg>
-                        <img src={data.imgBox?.imgC} />
-                      </InnerImg>
-                    </InnerImgBox>
-                    <NavArrows>
-                      <IoIosArrowBack className="img-prev-button" />
-                      <IoIosArrowForward className="img-next-button" />
-                    </NavArrows>
-                  </InnerImgView>
-                </InnerContents>
+                  </TopContent>
+                  <BottomContent>
+                    <BottomLeft>
+                      <InnerDesc className={descView ? "active" : ""}>
+                        {data.desc}
+                      </InnerDesc>
+                      <SubTitle>
+                        KeyFeatures
+                        {mobile && (
+                          <GoPlus className="icon" onClick={handleClickSub} />
+                        )}
+                      </SubTitle>
+                      <SubDesc className={subDescView ? "subActive" : ""}>
+                        {data.about.keyFeatures}
+                      </SubDesc>
+                    </BottomLeft>
+                    <BottomRight>
+                      <InnerImgView
+                        className="mySwiper"
+                        slidesPerView={"auto"}
+                        centeredSlides={true}
+                        spaceBetween={30}
+                        modules={[Pagination, Navigation]}
+                        navigation={{
+                          prevEl: ".img-prev-button",
+                          nextEl: ".img-next-button",
+                        }}
+                      >
+                        <InnerImgBox>
+                          <InnerImg>
+                            <img src={data.imgBox?.imgA} />
+                          </InnerImg>
+                          <InnerImg>
+                            <img src={data.imgBox?.imgB} />
+                          </InnerImg>
+                          <InnerImg>
+                            <img src={data.imgBox?.imgC} />
+                          </InnerImg>
+                        </InnerImgBox>
+                        <NavArrows>
+                          <IoIosArrowBack className="img-prev-button" />
+                          <IoIosArrowForward className="img-next-button" />
+                        </NavArrows>
+                      </InnerImgView>
+                      <TeamProjectTabBox>
+                        <Tab>{data.projectDetails.teamOrIndividual}</Tab>
+                        <Tab>{data.projectDetails.responsive}</Tab>
+                        <Tab>{data.projectDetails.projectType}</Tab>
+                      </TeamProjectTabBox>
+                    </BottomRight>
+                  </BottomContent>
+                </TeamContainer>
               </TeamProjectBox>
             </TeamProjectWrapper>
           ))}

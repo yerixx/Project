@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 const globalStyles = createGlobalStyle`
+html{
+    overflow-x:hidden;
+
+}
   * {
     margin: 0;
     padding: 0;
@@ -22,6 +26,7 @@ const globalStyles = createGlobalStyle`
     /* font-family: "Neue Haas Grotesk",sans-serif; */
     background: ${(props) => props.theme.mainColor};
     transition: all 1s;
+
   }
   :root {
    /* Border Radius */

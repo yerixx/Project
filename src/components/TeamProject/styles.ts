@@ -4,11 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Title60,
   Title42,
-  Desc20,
-  Paragraph16,
-  Paragraph14,
-  Title26,
   Title30,
+  Desc20,
+  Paragraph14,
 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -16,21 +14,24 @@ export const Wrapper = styled.main`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100vh;
   transition: all 1s;
-  margin-bottom: 15%;
 `;
 
 export const Inner = styled.section`
   width: 90%;
   height: 100vh;
   .swiper-pagination {
-    bottom: var(--swiper-pagination-bottom, 30px);
+    bottom: var(--swiper-pagination-bottom, 20px);
   }
   .swiper-pagination-bullet-active {
     background: #000;
   }
+  @media (max-width: 768px) {
+    /* border: 1px solid pink; */
+    /* height: 150vh; */
+  }
 `;
-
 export const SwiperBox = styled(Swiper)``;
 export const TeamProjectTitleBox = styled.section`
   display: flex;
@@ -47,9 +48,10 @@ export const TeamProjectTitleBox = styled.section`
 `;
 export const TeamProjectTitle = styled.article`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 `;
 export const Title = styled.article`
   ${Title42}
@@ -64,6 +66,7 @@ export const Desc = styled.article`
 `;
 export const TeamProjectWrapper = styled.section`
   display: flex;
+  height: 100%;
   gap: 60px;
   opacity: 0;
 `;
@@ -71,137 +74,63 @@ export const TeamProjectBox = styled(SwiperSlide)`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 80vh;
   background: ${({ theme }) => theme.subColor};
   border-radius: 40px;
-  padding: 50px;
+  padding: 45px;
   @media (max-width: 768px) {
     padding: 10px;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     border-radius: 0px;
-    background: ${({ theme }) => theme.mainColor};
+    background: inherit;
     color: ${(props) => props.theme.subColor};
-  }
-`;
-export const TeamProjectTabBox = styled.ul`
-  display: flex;
-  gap: 6px;
-  cursor: pointer;
-`;
-export const Tab = styled.li`
-  width: fit-content;
-  height: fit-content;
-  padding: 7px 12px;
-  background: ${({ theme }) => theme.mainColor};
-  color: ${({ theme }) => theme.subColor};
-  border-radius: 40px;
-  @media (max-width: 768px) {
-    ${Paragraph14}
-    background: ${({ theme }) => theme.subColor};
-    color: ${({ theme }) => theme.mainColor};
+    /* border: 1px solid yellow; */
   }
 `;
 
-export const InnerContents = styled.section`
+export const TeamContainer = styled.section`
   width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 30px;
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+    height: fit-content;
   }
 `;
-export const InnerContent = styled.section`
+
+export const TopContent = styled.section`
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 20px;
   @media (max-width: 768px) {
     gap: 30px;
   }
 `;
-
-export const InnerTextBox = styled.article`
-  width: 100%;
-  height: 100%;
-  max-height: 550px;
-`;
-
-export const Duration = styled.article`
-  ${Paragraph14}
-  padding-top:10px;
-  @media (max-width: 768px) {
-    ${Paragraph16}
-  }
-`;
 export const InnerTitle = styled.article`
   ${Title60}
+  font-weight:bold;
   display: flex;
+  flex: 1;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
+  .icon {
+    font-size: 24px;
+  }
   @media (max-width: 768px) {
     margin-top: 10px;
     ${Title30}
   }
 `;
-
-export const InnerDesc = styled.article`
-  ${Paragraph16}
-  line-height: 1.7;
-  white-space: break-spaces;
-  padding: 10px 0 30px;
-  @media (max-width: 768px) {
-    max-height: 400px;
-    padding: 0;
-    overflow: hidden;
-    transition: all 0.3s;
-    &.active {
-      max-height: 0px;
-      display: block;
-    }
-  }
-`;
-
-export const SubTitle = styled.b`
-  ${Title26}
-  white-space: break-spaces;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: 768px) {
-    ${Title30}
-    margin-top: 10px;
-
-    font-weight: normal;
-  }
-`;
-
-export const SubDesc = styled.article`
-  ${Paragraph16}
-  line-height: 1.7;
-  white-space: break-spaces;
-  padding: 10px 0 30px;
-  @media (max-width: 768px) {
-    max-height: 0;
-    padding: 0;
-    overflow: hidden;
-    transition: all 0.3s;
-    &.subActive {
-      max-height: 400px;
-      display: block;
-    }
-  }
-`;
-
 export const LinkBtnBox = styled.article`
   display: flex;
+  flex: 1;
+  width: 100%;
   gap: 10px;
+  align-items: center;
+  justify-content: end;
 `;
-
 export const LinkBtn = styled.article`
-  width: 60px;
+  /* width: 60px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,67 +157,114 @@ export const Links = styled.a`
     border: 1px solid #d2d2d2;
   }
 `;
-export const MoreTag = styled.article`
+export const LinkText = styled.article`
+  ${Paragraph14}
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
+  width: fit-content;
   height: 40px;
-  line-height: 40px;
+  padding: 12px 20px;
+  border-radius: 20px;
   text-align: center;
-  color: #333;
-  background: #fff;
-  border: 1px solid #d2d2d2;
-  border-radius: 50%;
-  ${Desc20}
-  animation: blink-shadow 1.5s infinite;
-  @keyframes blink-shadow {
-    0%,
-    100% {
-      box-shadow: 0 0 0 transparent;
-      scale: 1;
-    }
-    50% {
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-      scale: 1.1;
+  color: #fff;
+  background: #000;
+`;
+
+export const BottomContent = styled.section`
+  display: flex;
+  gap: 30px;
+  padding-bottom: 10px;
+  @media (max-width: 768px) {
+    gap: 30px;
+  }
+`;
+export const BottomLeft = styled.section`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+export const InnerDesc = styled.article`
+  ${Paragraph14}
+  color:#333;
+  line-height: 1.6;
+  white-space: break-spaces;
+  padding-bottom: 10px;
+  @media (max-width: 768px) {
+    max-height: 400px;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    &.active {
+      max-height: 0px;
+      display: block;
     }
   }
+`;
+export const SubTitle = styled.b`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  white-space: break-spaces;
+  font-size: 20px;
+  font-weight: 500;
+  .icon {
+    font-size: 24px;
+  }
   @media (max-width: 768px) {
-    border: 1px solid #d2d2d2;
+    ${Title30}
+    margin-top: 10px;
+    font-weight: normal;
+  }
+`;
+export const SubDesc = styled.article`
+  ${Paragraph14}
+  color:#333;
+  line-height: 1.6;
+  white-space: break-spaces;
+  @media (max-width: 768px) {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    &.subActive {
+      max-height: 400px;
+      display: block;
+    }
   }
 `;
 
-export const LinkText = styled.article`
-  font-size: 13px;
-  @media (max-width: 768px) {
-    display: none;
-  }
+export const BottomRight = styled.section`
+  display: flex;
+  flex-direction: column;
+  flex: 1.4;
 `;
 
 export const InnerImgView = styled(Swiper)`
+  /* aspect-ratio: 1.52/1; */
   width: 100%;
-  height: fit-content;
-  margin: auto 0;
-  border-radius: 40px;
+  height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   @media (max-width: 768px) {
   }
 `;
 export const InnerImgBox = styled.article`
-  border-radius: 40px;
+  width: 100%;
+  height: 100%;
 `;
 export const InnerImg = styled(SwiperSlide)`
   width: 100%;
-  height: 600px;
-  border-radius: 40px;
+  height: 100%;
   img {
     width: 100%;
-    height: 550px;
-    border-radius: 40px;
+    height: 100%;
     object-fit: cover;
     object-position: top;
   }
   @media (max-width: 768px) {
-    /* border: 1px solid #f00; */
     border-radius: 0px;
     width: 100%;
     height: 200px;
@@ -329,19 +305,22 @@ export const NavArrows = styled.article`
   @media (max-width: 768px) {
   }
 `;
-export const Trigger = styled.ul`
-  margin-top: 30px;
+export const TeamProjectTabBox = styled.ul`
   display: flex;
-  justify-content: center;
-  gap: 4px;
-  cursor: pointer;
+  gap: 6px;
+  padding-top: 6px;
 `;
-export const Dot = styled.li`
-  width: 10px;
-  height: 10px;
-  background: #333;
-  border-radius: 50%;
+export const Tab = styled.li`
+  ${Paragraph14}
+  width: fit-content;
+  height: fit-content;
+  padding: 4px 12px;
+  color: #777;
+  background: ${({ theme }) => theme.lightGrayColor};
+  border-radius: 8px;
   @media (max-width: 768px) {
+    ${Paragraph14}
     background: ${({ theme }) => theme.subColor};
+    color: ${({ theme }) => theme.mainColor};
   }
 `;
