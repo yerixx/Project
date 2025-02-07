@@ -15,6 +15,7 @@ export const Wrapper = styled.section`
   height: 100vh;
   transition: all 1s;
   background: ${(props) => props.theme.mainColor};
+  margin-bottom:10%;
   @media (max-width: 768px) {
     margin-top: 20%;
   }
@@ -23,7 +24,8 @@ export const Inner = styled.section`
   width: 90%;
   height: 100vh;
   .swiper-slide {
-    height: 300px;
+    // height: 300px;
+    height:70vh;
     justify-content: start;
     @media (max-width: 768px) {
       height: 520px;
@@ -100,7 +102,6 @@ export const StackBoxes = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   color: ${(props) => props.theme.subColor};
-  overflow: scroll;
 `;
 
 export const StackIcon = styled.div<TitleBoxProps>`

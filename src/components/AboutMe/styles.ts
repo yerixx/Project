@@ -7,6 +7,7 @@ import {
   Desc20,
   Paragraph18,
   Paragraph16,
+  Paragraph14,
 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -20,11 +21,12 @@ export const Inner = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  // height: 100%;
   padding: 0px 5%;
   color: ${(props) => props.theme.subColor};
   @media (max-width: 768px) {
     padding: 0px 16px;
+    // margin-top:200%;
   }
 `;
 
@@ -41,15 +43,16 @@ export const AboutContainer = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   @media (max-width: 768px) {
-    height: 200vh;
+    height: 100vh;
   }
 `;
 export const AboutMeContTop = styled.article`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height:70vh;
   gap: 20px;
   @media (max-width: 768px) {
     flex-direction: column;
@@ -68,6 +71,7 @@ export const AboutMeTextBox = styled.ul`
   }
   .AboutMeText {
     width: 100%;
+    flex:1;
     overflow-y: hidden;
     background: #333;
     padding: 20px 28px;
@@ -77,14 +81,19 @@ export const AboutMeTextBox = styled.ul`
       font-weight: bold;
     }
     .AboutMeDesc {
-      height: 100%;
-      padding-top: 10px;
+      height: 80%;
+      padding-top: 16px;
       ${Paragraph16}
       line-height: 1.6;
       color: ${(props) => props.theme.grayColor};
       transition: all 0.3s;
       &:hover {
         color: ${(props) => props.theme.subColor};
+      }
+     @media (max-width: 768px) {
+      ${Paragraph14}
+       padding-top: 6px;
+      overflow-y:scroll;
       }
     }
   }
@@ -162,7 +171,7 @@ export const AboutMeCardContainer = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 20px;
+      padding: 20px 30px;
       gap: 10px;
       .aboutMeName {
         display: flex;
@@ -188,13 +197,13 @@ export const AboutMeCardContainer = styled.div`
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 18px;
         ${Paragraph18}
         .contactIcons {
           display: flex;
           gap: 8px;
           padding-top: 5px;
-          overflow: scroll;
+          // overflow: scroll;
           .contactIcon {
             font-size: 24px;
             display: flex;

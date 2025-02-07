@@ -13,6 +13,7 @@ export const Wrapper = styled.main`
 
   @media (max-width: 768px) {
     align-items: center;
+    overflow-x:hidden;
   }
 `;
 
