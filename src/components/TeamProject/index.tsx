@@ -105,8 +105,8 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
           }}
           modules={[Pagination, Navigation]}
         >
-          {teamProjectData.map((data) => (
-            <TeamProjectWrapper className="capability-tag">
+          {teamProjectData.map((data, index) => (
+            <TeamProjectWrapper key={index} className="capability-tag">
               <TeamProjectBox key={data.id}>
                 <TeamContainer>
                   <TopContent>

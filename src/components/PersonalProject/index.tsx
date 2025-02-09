@@ -45,8 +45,9 @@ const PersonalProjectContainer: React.FC<MainProjectProps> = ({
               All
             </div>
             {[...new Set(personalProjectData.map((data) => data.stack))].map(
-              (stack) => (
+              (stack, index) => (
                 <div
+                  key={index}
                   className={`workTab ${selectedStack === stack ? "on" : ""}`}
                   onClick={() => setSelectedStack(stack)}
                 >

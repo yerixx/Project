@@ -1,10 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 const globalStyles = createGlobalStyle`
-html{
-    overflow-x:hidden;
-
-}
+  html{
+    overflow-x: hidden;
+    scrollbar-width: none;
+  }
+  /* html::-webkit-scrollbar {
+    display: none !important;
+  } */
   * {
     margin: 0;
     padding: 0;

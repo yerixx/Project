@@ -15,7 +15,6 @@ export const Wrapper = styled.section`
   height: 100vh;
   transition: all 1s;
   background: ${(props) => props.theme.mainColor};
-  margin-bottom:10%;
   @media (max-width: 768px) {
     margin-top: 20%;
   }
@@ -24,8 +23,7 @@ export const Inner = styled.section`
   width: 90%;
   height: 100vh;
   .swiper-slide {
-    // height: 300px;
-    height:70vh;
+    height: 300px;
     justify-content: start;
     @media (max-width: 768px) {
       height: 520px;

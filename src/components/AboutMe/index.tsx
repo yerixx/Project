@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import {
   Wrapper,
   Inner,
@@ -21,9 +21,9 @@ import { IoArrowUp } from "react-icons/io5";
 const AboutMe = () => {
   const [isCard, setIsCard] = useState(false);
 
-  const handleCard = () => {
+  const handleCard = useCallback(() => {
     setIsCard((prev) => !prev);
-  };
+  }, []);
 
   const handleGoToTop = () => {
     window.scrollTo({
@@ -35,8 +35,10 @@ const AboutMe = () => {
   const handleCopy = (text: string) => {
     navigator.clipboard
       .writeText(text)
-      .then(() => alert(`복사되었습니다:) 연락기다리겠습니다 감사합니다!`))
-      .catch((err) => console.error("복사실패:", err));
+      .then(() => {
+        alert(`복사되었습니다:) 연락기다리겠습니다 감사합니다!`);
+      })
+      .catch((err) => console.error("복사 실패:", err));
   };
 
   return (
@@ -151,17 +153,17 @@ const AboutMe = () => {
                           className="contactIcon"
                           onClick={() => handleCopy("01055081689")}
                         >
-                          <li>
+                          <span>
                             <IoCall />
-                          </li>
+                          </span>
                         </li>
                         <li
                           className="contactIcon"
                           onClick={() => handleCopy("yerixxz@gmail.com")}
                         >
-                          <li>
+                          <span>
                             <LuMail />
-                          </li>
+                          </span>
                         </li>
                         <li className="followHoverMessage">
                           아이콘을 클릭하면 컨텐츠가 복사됩니다.

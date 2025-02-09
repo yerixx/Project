@@ -126,7 +126,7 @@ export const WorkContainer = styled.article`
   overflow-y: scroll;
 `;
 
-export const OverviewBox = styled.article`
+export const OverviewBox = styled.ul`
   ${Paragraph14}
   width:100%;
   padding: 20px 0 60px;
@@ -134,6 +134,7 @@ export const OverviewBox = styled.article`
   justify-content: space-between;
   @media (max-width: 768px) {
     display: flow-root;
+    padding: 20px 0;
   }
   ul {
     flex-direction: column;
@@ -152,7 +153,8 @@ export const OverviewBox = styled.article`
       text-transform: uppercase;
       @media (max-width: 768px) {
         padding-bottom: 0px;
-        font-weight: 500;
+        /* color: #f00; */
+        font-weight: bold;
       }
     }
   }
@@ -166,11 +168,14 @@ export const PdfView = styled.article`
     min-height: min-content;
   }
   .react-pdf__Page__canvas {
-    padding-right: 20px;
     margin: 0 auto;
-
-    max-width: 1300px;
+    max-width: 100%;
     max-height: fit-content;
+    @media (max-width: 768px) {
+      max-width: 100%;
+      padding-right: 0px;
+      max-height: fit-content;
+    }
   }
   .react-pdf__Page__textContent,
   .textLayer,
@@ -406,6 +411,7 @@ export const Highlights = styled.div`
   border-top: 1px solid #000;
   @media (max-width: 768px) {
     margin-top: 0;
+    padding: 20px 0;
   }
   .highlightsTitle {
     width: fit-content;
@@ -415,6 +421,9 @@ export const Highlights = styled.div`
     color: #fff;
     border-radius: 50px;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+      ${Paragraph18}
+    }
   }
   .highlightsCont {
     padding: 60px 0;
@@ -450,13 +459,17 @@ export const Highlights = styled.div`
       gap: 14px;
       div:nth-of-type(1) {
         ${Title26}
+        @media (max-width: 768px) {
+          ${Desc20}
+        }
       }
       div:nth-of-type(2) {
         ${Paragraph16}
-        line-height:180%;
-        color: #555;
         width: 90%;
+        line-height: 180%;
+        color: #555;
         @media (max-width: 768px) {
+          width: 100%;
           font-size: 14px;
           line-height: 150%;
           color: #555;
