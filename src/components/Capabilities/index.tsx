@@ -33,9 +33,9 @@ const Capabilities = ({ style }: CapabilitiesProps) => {
 
         <Swiper
           className="capabilitiesSwiper"
-          slidesPerView={1.8}
+          slidesPerView={1.5}
           centeredSlides={false}
-          spaceBetween={30}
+          spaceBetween={50}
           loop={true}
           modules={[Pagination, Navigation, Autoplay]}
           breakpoints={{

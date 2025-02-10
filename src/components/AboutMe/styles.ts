@@ -13,7 +13,7 @@ export const Wrapper = styled.main`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background: ${(props) => props.theme.mainColor};
 `;
 export const Inner = styled.section`

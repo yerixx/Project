@@ -27,7 +27,7 @@ import {
   ContentBottom,
   Highlights,
   PdfView,
-} from "./styls";
+} from "./styles";
 
 import { WorkModalProps } from "../../styles/common";
 

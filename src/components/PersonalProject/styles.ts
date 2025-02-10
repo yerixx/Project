@@ -9,7 +9,6 @@ import {
 } from "../../styles/fontStyle";
 
 export const ContentsWrapper = styled.article`
-  position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -17,8 +16,9 @@ export const ContentsWrapper = styled.article`
   width: 80%;
   background: #fff;
   transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
-  border-radius: 40px 40px 0 0;
-  z-index: 2;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-bottom: 10%;
 `;
 
 export const Wrapper = styled.main`

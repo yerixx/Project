@@ -8,6 +8,7 @@ import {
   Desc20,
   Paragraph14,
   Paragraph16,
+  Title22,
 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -17,6 +18,7 @@ export const Wrapper = styled.main`
   width: 100%;
   height: 100vh;
   transition: all 1s;
+
   @media (max-width: 768px) {
     margin: 10% 0px;
   }
@@ -78,6 +80,7 @@ export const TeamProjectBox = styled(SwiperSlide)`
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 76vh;
   background: ${({ theme }) => theme.subColor};
   border-radius: 40px;
   padding: 45px;
@@ -201,11 +204,11 @@ export const BottomLeft = styled.section`
   flex: 1;
 `;
 export const InnerDesc = styled.article`
-  ${Paragraph14}
+  ${Paragraph16}
   color:#333;
   line-height: 1.6;
   white-space: break-spaces;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   @media (max-width: 768px) {
     ${Paragraph16}
     height:210px;
@@ -221,14 +224,14 @@ export const InnerDesc = styled.article`
   }
 `;
 export const SubTitle = styled.b`
+  ${Title22}
+  font-weight: 500;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
   white-space: break-spaces;
-  font-size: 20px;
-  font-weight: 500;
   .icon {
     font-size: 24px;
   }
@@ -239,7 +242,7 @@ export const SubTitle = styled.b`
   }
 `;
 export const SubDesc = styled.article`
-  ${Paragraph14}
+  ${Paragraph16}
   color:#333;
   line-height: 1.6;
   white-space: break-spaces;
@@ -266,7 +269,7 @@ export const BottomRight = styled.section`
 export const InnerImgView = styled(Swiper)`
   /* aspect-ratio: 1.52/1; */
   width: 100%;
-  height: 380px;
+  height: 73%;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -280,7 +283,7 @@ export const InnerImgBox = styled.article`
 `;
 export const InnerImg = styled(SwiperSlide)`
   width: 100%;
-  height: 100%;
+  height: 67vh;
   img {
     width: 100%;
     height: 100%;

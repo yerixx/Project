@@ -51,10 +51,11 @@ const PersonalProjectContent = ({
 
   useEffect(() => {
     if (selectedId) {
-      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
     }
     return () => {
-      document.body.style.overflow = "auto";
+      document.documentElement.style.overflowX = "hidden";
+      document.documentElement.style.overflowY = "auto";
     };
   }, [selectedId]);
 

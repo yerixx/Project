@@ -51,13 +51,13 @@ export const GalleryBox = styled(SwiperSlide)`
 `;
 
 export const GallerySmallBox = styled.article`
-  width: 36vw;
+  width: 40vw;
   @media (max-width: 768px) {
     width: 100%;
   }
   .gallerySmall {
     width: 100%;
-    height: 33vh;
+    height: 40vh;
     border-radius: 20px;
     object-fit: cover;
     @media (max-width: 768px) {
@@ -67,7 +67,7 @@ export const GallerySmallBox = styled.article`
   }
 `;
 export const GalleryLargeBox = styled.article`
-  width: 50vw;
+  width: 48vw;
   @media (max-width: 768px) {
     width: 100%;
   }

@@ -12,7 +12,9 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
+  margin: 5% 0;
+
   transition: all 1s;
   background: ${(props) => props.theme.mainColor};
   @media (max-width: 768px) {

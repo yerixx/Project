@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MainIntro from "./components/MainIntro/index";
+
 import Header from "./pages/Header/index";
+import MainIntro from "./components/MainIntro/index";
+import PersonalProject from "./components/PersonalProject/index";
+import TeamProject from "./components/TeamProject/index";
+import Capabilities from "./components/Capabilities";
+import AboutMe from "./components/AboutMe";
+
 import GlobalStyles from "./styles/globalStyles";
 import { ContentsWrapper } from "./components/PersonalProject/styles";
-import Contents from "./pages/Contents/index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,9 +74,10 @@ const Root: React.FC = () => {
     );
   }, []);
 
-  const getScrollThreshold = () => {
-    return window.innerWidth <= 768 ? 600 : 700;
-  };
+  // const getScrollThreshold = () => {
+  //   return window.innerWidth <= 768 ? 600 : 700;
+  // };
+
   return (
     <>
       <GlobalStyles />
@@ -80,14 +87,13 @@ const Root: React.FC = () => {
         style={{
           marginTop: handleScrollY > 80 ? `-67vh` : "-16%",
           width: handleScrollY > 80 ? "100%" : "80%",
-          background: handleScrollY > getScrollThreshold() ? "#000" : "#fff",
         }}
       >
-        <Contents
-          handleScrollY={handleScrollY}
-          getScrollThreshold={getScrollThreshold}
-        />
+        <PersonalProject />
       </ContentsWrapper>
+      <TeamProject />
+      <Capabilities />
+      <AboutMe />
     </>
   );
 };
