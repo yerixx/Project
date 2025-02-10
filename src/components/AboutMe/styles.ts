@@ -13,7 +13,7 @@ export const Wrapper = styled.main`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   background: ${(props) => props.theme.mainColor};
 `;
 export const Inner = styled.section`
@@ -59,7 +59,7 @@ export const AboutMeContTop = styled.article`
 export const AboutMeTextBox = styled.article`
   flex: 3;
   width: 100%;
-  height: 100%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -67,18 +67,20 @@ export const AboutMeTextBox = styled.article`
     width: 100%;
   }
   .AboutMeText {
+    flex: 1;
     width: 100%;
     overflow-y: hidden;
     background: #333;
-    padding: 20px 28px;
+    padding: 28px;
     border-radius: 30px;
     .AboutMeTitle {
-      ${Title22}
+      ${Title26}
       font-weight: bold;
     }
     .AboutMeDesc {
-      height: 100%;
+      height: 80%;
       padding-top: 10px;
+      /* overflow-y: scroll; */
       ${Paragraph16}
       line-height: 1.6;
       color: ${(props) => props.theme.grayColor};
@@ -162,8 +164,8 @@ export const AboutMeCardContainer = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 20px;
-      gap: 10px;
+      padding: 20px 40px;
+      gap: 30px;
       .aboutMeName {
         display: flex;
         flex-direction: column;
