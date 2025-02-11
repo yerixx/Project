@@ -3,10 +3,11 @@ import {
   Title42,
   Title30,
   Title26,
-  Title22,
   Desc20,
   Paragraph18,
   Paragraph16,
+  Title22,
+  Paragraph14,
 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -42,9 +43,6 @@ export const AboutContainer = styled.section`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  @media (max-width: 768px) {
-    height: 200vh;
-  }
 `;
 export const AboutMeContTop = styled.article`
   display: flex;
@@ -76,15 +74,22 @@ export const AboutMeTextBox = styled.article`
     .AboutMeTitle {
       ${Title26}
       font-weight: bold;
+      @media (max-width: 768px) {
+        ${Title22}
+      }
     }
     .AboutMeDesc {
       height: 80%;
-      padding-top: 10px;
-      /* overflow-y: scroll; */
       ${Paragraph16}
       line-height: 1.6;
       color: ${(props) => props.theme.grayColor};
       transition: all 0.3s;
+      overflow-y: scroll;
+      @media (max-width: 768px) {
+        margin-top: 4px;
+        ${Paragraph14}
+        min-height: 80%;
+      }
       &:hover {
         color: ${(props) => props.theme.subColor};
       }
@@ -105,7 +110,6 @@ export const AboutMeCardContainer = styled.div`
     transform-style: preserve-3d;
     transition: transform 0.6s;
     @media (max-width: 768px) {
-      /* margin-top: 100px; */
       width: 100%;
       height: auto;
       min-height: 550px;
@@ -164,7 +168,7 @@ export const AboutMeCardContainer = styled.div`
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 20px 40px;
+      padding: 20px;
       gap: 30px;
       .aboutMeName {
         display: flex;
@@ -247,7 +251,7 @@ export const AboutContBottom = styled.article`
   justify-content: space-between;
   padding: 30px 0;
   @media (max-width: 768px) {
-    margin-top: 550px;
+    display: none;
   }
   .gototop {
     display: flex;

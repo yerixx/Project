@@ -10,7 +10,7 @@ export const Wrapper = styled.main`
   background: ${(props) => props.theme.mainColor};
   z-index: -1;
   margin-bottom: 9%;
-
+  overflow-x: hidden;
   @media (max-width: 768px) {
     align-items: center;
   }

@@ -117,7 +117,13 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
               <WorkContont>
                 <ContontImg>
                   {projectData.modalMainImg?.endsWith(".mp4") ? (
-                    <video autoPlay muted loop src={projectData.modalMainImg} />
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      src={projectData.modalMainImg}
+                      playsInline
+                    />
                   ) : (
                     <img
                       src={projectData.modalMainImg}
@@ -164,6 +170,7 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                       loop
                       muted
                       autoPlay
+                      playsInline
                     />
                   ) : null}
                 </ContImg>
@@ -179,6 +186,7 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                         loop
                         muted
                         autoPlay
+                        playsInline
                       />
                     ) : null}
                     <Desc>
@@ -193,6 +201,7 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                         loop
                         muted
                         autoPlay
+                        playsInline
                       />
                     ) : null}
                     <Desc>
