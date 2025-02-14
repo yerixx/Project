@@ -24,7 +24,7 @@ interface CapabilitiesProps {
 
 const Capabilities = ({ style }: CapabilitiesProps) => {
   return (
-    <Wrapper id="capabilities" style={style}>
+    <Wrapper id="Capabilities" style={style}>
       <Inner>
         <CapabilitiesTitleBox className="capability-tag">
           <Title>Skills, Experience, and Growth</Title>
@@ -36,7 +36,7 @@ const Capabilities = ({ style }: CapabilitiesProps) => {
           slidesPerView={1.5}
           centeredSlides={false}
           spaceBetween={50}
-          loop={true}
+          loop={false}
           modules={[Pagination, Navigation, Autoplay]}
           breakpoints={{
             0: {

@@ -36,7 +36,22 @@ export const MainTitle = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 10px;
-    font-size: 50px;
+    font-size: 40px;
+    /* text-align: start; */
+    /* margin: 0 25%; */
+    line-height: 1%;
+    text-transform: lowercase;
+    font-family: "noto sans kr";
+    animation: lineHeightChange 1.5s ease-in-out forwards 1s;
+  }
+
+  @keyframes lineHeightChange {
+    from {
+      line-height: 1%;
+    }
+    to {
+      line-height: 150%;
+    }
   }
 `;
 export const SubTextBox = styled.article`

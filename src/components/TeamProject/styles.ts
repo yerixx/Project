@@ -80,7 +80,7 @@ export const TeamProjectBox = styled(SwiperSlide)`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 76vh;
+  height: 80vh;
   background: ${({ theme }) => theme.subColor};
   border-radius: 40px;
   padding: 45px;
@@ -232,13 +232,19 @@ export const SubTitle = styled.b`
   justify-content: space-between;
   margin-bottom: 10px;
   white-space: break-spaces;
-  .icon {
-    font-size: 24px;
-  }
+
   @media (max-width: 768px) {
     ${Title30}
     margin-top: 20px;
     font-weight: normal;
+    .icon {
+      font-size: 24px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .icon.rotated {
+      transform: rotate(45deg);
+    }
   }
 `;
 export const SubDesc = styled.article`

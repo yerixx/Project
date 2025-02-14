@@ -63,6 +63,7 @@ export const AboutMeTextBox = styled.article`
   gap: 20px;
   @media (max-width: 768px) {
     width: 100%;
+    height: 80vh;
   }
   .AboutMeText {
     flex: 1;
@@ -74,21 +75,27 @@ export const AboutMeTextBox = styled.article`
     .AboutMeTitle {
       ${Title26}
       font-weight: bold;
+      padding-bottom: 4px;
       @media (max-width: 768px) {
         ${Title22}
       }
     }
     .AboutMeDesc {
-      height: 80%;
+      min-height: 80px;
+      max-height: 80%;
       ${Paragraph16}
       line-height: 1.6;
       color: ${(props) => props.theme.grayColor};
       transition: all 0.3s;
-      overflow-y: scroll;
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .AboutMeDesc::-webkit-scrollbar {
+      display: none;
       @media (max-width: 768px) {
-        margin-top: 4px;
         ${Paragraph14}
-        min-height: 80%;
+        margin: 4px 0;
       }
       &:hover {
         color: ${(props) => props.theme.subColor};

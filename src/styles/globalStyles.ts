@@ -4,11 +4,15 @@ const globalStyles = createGlobalStyle`
   html{
     overflow-x: hidden;
     scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   /* html::-webkit-scrollbar {
     display: none !important;
   } */
   * {
+    overflow-x: hidden;
+    scrollbar-width: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

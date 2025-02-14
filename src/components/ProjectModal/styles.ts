@@ -52,15 +52,16 @@ const slideDown = keyframes`
   }
 `;
 
-export const ModalWrapper = styled.section<{ isClosing: boolean }>`
+export const ModalWrapper = styled.section<{ $isClosing?: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
-  z-index: 555;
-  animation: ${(props) => (props.isClosing ? fadeOut : fadeIn)} 0.3s ease-in-out;
+  z-index: 9999;
+  animation: ${(props) => (props.$isClosing ? fadeOut : fadeIn)} 0.3s
+    ease-in-out;
   overflow-x: hidden;
 `;
 
@@ -70,17 +71,18 @@ export const ModalContainer = styled.section`
   padding-bottom: 50px;
 `;
 
-export const ModalContent = styled.article<{ isClosing: boolean }>`
+export const ModalContent = styled.article<{ $isClosing?: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 85%;
   height: 100vh;
-  margin: 80px auto 0;
-  padding: 46px;
+  margin: 50px auto 0;
+  padding: 60px 70px;
   border-radius: 40px 40px 0 0;
   background: ${({ theme }) => theme.subColor};
-  animation: ${(props) => (props.isClosing ? slideDown : slideUp)} 0.4s ease-out;
+  animation: ${(props) => (props.$isClosing ? slideDown : slideUp)} 0.4s
+    ease-out;
   @media (max-width: 768px) {
     width: 100%;
     margin: 0 auto;
@@ -219,6 +221,8 @@ export const ContontImg = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
+    border: none;
+    border-radius: 8px;
   }
 `;
 
@@ -226,6 +230,7 @@ export const About = styled.div`
   margin: 40px 0 120px;
   @media (max-width: 768px) {
     padding: 0;
+    margin: 40px 0;
   }
   .aboutTitle {
     display: flex;
@@ -327,10 +332,14 @@ export const ContImg = styled.div`
     overflow: hidden;
     /* box-shadow: var(--box-shadow); */
     border-radius: 40px;
+    @media (max-width: 768px) {
+      border-radius: 8px;
+    }
   }
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
+    border-radius: 8px;
   }
 `;
 
@@ -381,6 +390,7 @@ export const ContentBottom = styled.div`
       @media (max-width: 768px) {
         width: 100%;
         height: 200px;
+        border-radius: 8px;
       }
     }
   }
@@ -393,6 +403,8 @@ export const ContentBottom = styled.div`
     flex-direction: column;
     @media (max-width: 768px) {
       width: 100%;
+      min-height: 100px;
+      max-height: 100%;
     }
     video {
       width: 100%;
@@ -405,6 +417,7 @@ export const ContentBottom = styled.div`
         margin: 0 auto;
         width: 50%;
         height: 100%;
+        border-radius: 8px;
       }
     }
   }
@@ -421,22 +434,11 @@ export const Highlights = styled.div`
     margin-top: 0;
     padding: 20px 0;
   }
-  .highlightsTitle {
-    width: fit-content;
-    ${Title22}
-    padding:8px 18px;
-    background: #000;
-    color: #fff;
-    border-radius: 50px;
-    text-transform: uppercase;
-    @media (max-width: 768px) {
-      ${Paragraph18}
-    }
-  }
+
   .highlightsCont {
-    padding: 60px 0;
+    padding: 20px 0;
     display: flex;
-    gap: 40px;
+    gap: 30px;
     @media (max-width: 768px) {
       flex-direction: column;
       padding: 0;
@@ -445,9 +447,8 @@ export const Highlights = styled.div`
     .highlightsLeft {
       flex: 1;
       img {
-        width: 100%;
-        min-height: 230px;
-        height: 260px;
+        aspect-ratio: 16 / 9;
+        height: 200px;
         border-radius: 20px;
         box-shadow: var(--box-shadow);
         object-fit: cover;
@@ -455,6 +456,8 @@ export const Highlights = styled.div`
         @media (max-width: 768px) {
           width: 100%;
           height: 100%;
+          box-shadow: none;
+          border-radius: 8px;
         }
       }
       & > div {
@@ -469,7 +472,7 @@ export const Highlights = styled.div`
       justify-content: center;
       gap: 14px;
       div:nth-of-type(1) {
-        ${Title26}
+        ${Title22}
         @media (max-width: 768px) {
           ${Desc20}
         }

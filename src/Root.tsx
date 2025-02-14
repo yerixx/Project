@@ -42,7 +42,7 @@ const Root: React.FC = () => {
         duration: 2,
         stagger: 0.3,
         scrollTrigger: {
-          trigger: "#MainProject",
+          trigger: "#capabilities",
           start: "top bottom",
           end: "center 100%",
           scrub: 1,
@@ -73,10 +73,6 @@ const Root: React.FC = () => {
       }
     );
   }, []);
-
-  // const getScrollThreshold = () => {
-  //   return window.innerWidth <= 768 ? 600 : 700;
-  // };
 
   return (
     <>

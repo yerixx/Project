@@ -52,7 +52,7 @@ interface TeamProjectProps {
 const TeamProjectView = ({ style }: TeamProjectProps) => {
   const [mobile, setMobile] = useState(window.innerWidth <= 768);
   const [subDescView, setSubDescView] = useState(false);
-
+  const [isRotated, setIsRotated] = useState(false);
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   useEffect(() => {
@@ -75,6 +75,7 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
   };
   const handleClick = () => {
     setSubDescView((prev) => !prev);
+    setIsRotated((prev) => !prev);
   };
 
   useEffect(() => {
@@ -143,7 +144,10 @@ const TeamProjectView = ({ style }: TeamProjectProps) => {
                       <SubTitle>
                         KeyFeatures
                         {mobile && (
-                          <GoPlus className="icon" onClick={handleClick} />
+                          <GoPlus
+                            className={`icon ${isRotated ? "rotated" : ""}`}
+                            onClick={handleClick}
+                          />
                         )}
                       </SubTitle>
                       <SubDesc className={subDescView ? "subActive" : ""}>

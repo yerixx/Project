@@ -14,7 +14,6 @@ export const Wrapper = styled.section`
   width: 100%;
   height: 70vh;
   margin: 5% 0;
-
   transition: all 1s;
   background: ${(props) => props.theme.mainColor};
   @media (max-width: 768px) {
@@ -50,7 +49,7 @@ export const CapabilitiesTitleBox = styled.section`
 
 export const Title = styled.article`
   ${Title42}
-  margin: 100px 0 16px;
+  /* margin: 100px 0 16px; */
   @media (max-width: 768px) {
     ${Title30}
     margin: 0px 0 10px;

@@ -3,6 +3,9 @@ import { personalProjectData } from "../../data/personalProjectData.json";
 import { teamProjectData } from "../../data/teamProjectData.json";
 
 import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url
@@ -54,14 +57,14 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
   }
 
   return (
-    <ModalWrapper isClosing={isClosing}>
+    <ModalWrapper $isClosing={isClosing}>
       <ModalContainer>
         <ModalButton
           onClose={handleClose}
           projectData={projectData}
           projectId={projectId}
         />
-        <ModalContent isClosing={isClosing}>
+        <ModalContent $isClosing={isClosing}>
           <WorkContainer>
             <Title>{projectData.title}</Title>
             <Tags>
@@ -213,7 +216,6 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
               </WorkContont>
             )}
             <Highlights>
-              <div className="highlightsTitle">Highlights</div>
               <div className="highlightsCont">
                 <div className="highlightsLeft">
                   <img
