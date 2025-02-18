@@ -2,6 +2,79 @@
   "teamProjectData": [
     {
       "id": 100,
+      "title": "recba",
+      "desc": "recba는 수련회 참가자 및 운영진을 위한 통합 관리 애플리케이션입니다. 100명 이하의 실제 사용자들이 활용했으며, 참가자 등록부터 일정 관리,익명 기도톡방, 가이드북, 수련회비 납부 확인,  실시간 방송 송출까지 수련회 운영을 효율적으로 돕습니다.",
+      "about": {
+        "duration": "2024.05 - 현재 진행중",
+        "Contribution": "기여도 20%",
+        "intro": "기존 수련회 운영 방식의 비효율성을 개선하고, 참가자들에게 원활한 정보 공유 및 소통 기능을 제공하는 것을 목표로 개발되었습니다. 이 앱을 통해 참가자는 등록부터 일정 확인, 실시간 방송 시청까지 하나의 플랫폼에서 편리하게 이용할 수 있으며, 운영진은 참가자 정보를 효율적으로 관리하고 원활한 행사 진행을 도울 수 있습니다.",
+        "keyFeatures": "• 참가자 등록 설문조사를 통해 정보를 자동 수집 및 정리합니다. \n• 차량 운행 관리 기능을 제공하여 참가자 이동 경로 및 일정을 안내합니다. \n• 실시간 스케줄 관리를 통해 참가자가 현재 및 예정된 일정을 손쉽게 확인할 수 있습니다. \n• 유튜브 API를 연동하여 실시간 방송 송출이 가능합니다. \n• 수련회 운영진이 참가자 및 일정을 효율적으로 관리할 수 있는 프로그램을 제공합니다.",
+        "impact": "recba는 실제 100명 이하의 사용자들에게 활용되었으며, 참가자와 운영진의 수련회 경험을 획기적으로 개선했습니다. 참가자들은 일정을 실시간으로 확인하고, 공지사항을 빠르게 전달받으며, 소통할 수 있는 기능을 통해 수련회에 더 집중할 수 있었습니다. 운영진은 참가자 등록, 차량 운행 관리, 실시간 일정 공유 등의 기능을 통해 업무 부담을 줄이고 효율성을 극대화할 수 있었습니다. 또한, YouTube API를 연동한 실시간 방송 송출 기능으로 참가자들이 어디서든 원활하게 프로그램을 시청할 수 있도록 지원했습니다."
+      },
+      "imgBox": {
+        "imgA": "/img/recba1.png",
+        "imgB": "/img/recba2.png",
+        "imgC": "/img/recba3.png"
+      },
+      "stack": "(typescript)",
+      "projectDetails": {
+        "teamOrIndividual": "Team",
+        "responsive": "어플리케이션",
+        "projectType": "서비스 개발",
+        "apiUsage": "YouTube API"
+      },
+      "frontend": {
+        "html": "HTML5",
+        "styling": "Styled Components",
+        "javascript": "TypeScript",
+        "framework": "React",
+        "library": "React",
+        "stateManagement": "Recoil",
+        "apiIntegration": "Axios"
+      },
+      "backend": {
+        "language": "",
+        "framework": "Express",
+        "database": "MySQL",
+        "authentication": "JWT"
+      },
+      "devTools": {
+        "buildTool": "Webpack",
+        "packageManager": "npm",
+        "versionControl": "Git"
+      },
+      "cloud": {
+        "hosting": "Firebase"
+      },
+      "link": {
+        "deploy": "https://recba.me/",
+        "github": "https://github.com/dpcomm/recba_app",
+        "github-was": "https://github.com/dpcomm/recba_was"
+      },
+      "modalMainImg": null,
+      "keyTechs": {
+        "keyTechA": {
+          "mp4": "/img/recba2.mp4",
+          "title": null,
+          "desc": null
+        },
+        "keyTechB": {
+          "mp4": "/img/recba3.mp4",
+          "title": null,
+          "desc": null
+        },
+        "keyTechC": {
+          "mp4": "/img/recba4.mp4",
+          "title": null,
+          "desc": null
+        }
+      },
+      "highlights": {
+        "img": "/img/recba3.png"
+      }
+    },
+    {
+      "id": 200,
       "title": "Facebook",
       "desc": "소셜 커머스가 주도하는 디지털 환경 변화 속에서 2030 소비자들을 타겟으로 커머스와 개인화 비중을 높이는 전략을 구현한 클론 코딩 프로젝트입니다. 소셜 미디어와 이커머스의 융합을 통해 개인화된 소비 경험과 커뮤니티 기반 소비를 강화하며, 신뢰 형성의 새로운 패턴을 만들어가는 방법을 탐구했습니다.",
       "about": {
@@ -72,7 +145,7 @@
       }
     },
     {
-      "id": 200,
+      "id": 300,
       "title": "Moving",
       "desc": "사용자 친화적인 인터페이스와 강력한 검색 기능을 제공하여 영화와 TV 프로그램을 한곳에서 탐색하고, 검색하며, 리뷰를 확인할 수 있는 통합 콘텐츠 플랫폼으로, 기존 OTT 플랫폼(TVING)의 문제점을 분석하여 주요 개선 사항을 정리하고 이를 반영한 서비스를 기획했습니다. ",
       "about": {
@@ -143,7 +216,7 @@
       }
     },
     {
-      "id": 300,
+      "id": 400,
       "title": "AliExpress",
       "desc": "글로벌 커머스 사이트의 복잡한 UI를 개선하고, 한국 사용자에게 친숙한 디자인을 적용하였습니다. 주요 컨셉인 빠른 로그인 기능을 구현하고, 직관적이고 편리한 쇼핑 경험을 제공하고자 하였습니다. 이 프로젝트를 통해 HTML5, CSS, JavaScript 등 웹 개발 기술을 실무와 유사한 환경에서 익히고, UI/UX 개선을 통해 실무와 유사한 환경에서 웹 개발 기술을 학습하고 협업 능력을 강화했습니다.",
       "about": {

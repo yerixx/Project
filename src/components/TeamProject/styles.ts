@@ -81,6 +81,7 @@ export const TeamProjectBox = styled(SwiperSlide)`
   flex-direction: column;
   width: 100%;
   height: 80vh;
+
   background: ${({ theme }) => theme.subColor};
   border-radius: 40px;
   padding: 45px;
@@ -101,6 +102,8 @@ export const TeamProjectBox = styled(SwiperSlide)`
 
 export const TeamContainer = styled.section`
   width: 100%;
+  overflow-y: hidden;
+
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;

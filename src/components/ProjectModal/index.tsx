@@ -30,6 +30,7 @@ import {
   ContentBottom,
   Highlights,
   PdfView,
+  DescR,
 } from "./styles";
 
 import { WorkModalProps } from "../../styles/common";
@@ -105,7 +106,8 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                 <li>UX Writing</li>
               </ul>
             </OverviewBox>
-            {projectData.projectDetails.teamOrIndividual === "Team" ? (
+            {projectData.projectDetails.teamOrIndividual === "Team" &&
+            projectData.modalMainImg ? (
               <PdfView>
                 <Document
                   file={projectData.modalMainImg}
@@ -129,7 +131,7 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                     />
                   ) : (
                     <img
-                      src={projectData.modalMainImg}
+                      src={projectData.modalMainImg ?? ""}
                       alt={projectData.title}
                     />
                   )}
@@ -166,22 +168,25 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                     </div>
                   </div>
                 </About>
-                <ContImg>
-                  {projectData.keyTechs?.keyTechA?.mp4 ? (
-                    <video
-                      src={projectData.keyTechs.keyTechA.mp4}
-                      loop
-                      muted
-                      autoPlay
-                      playsInline
-                    />
-                  ) : null}
-                </ContImg>
-                <Desc>
-                  <h2>{projectData.keyTechs?.keyTechA?.title}</h2>
-                  <p>{projectData.keyTechs?.keyTechA?.desc}</p>
-                </Desc>
+
                 <ContentBottom>
+                  <div className="topCont">
+                    <ContImg>
+                      {projectData.keyTechs?.keyTechA?.mp4 ? (
+                        <video
+                          src={projectData.keyTechs.keyTechA.mp4}
+                          loop
+                          muted
+                          autoPlay
+                          playsInline
+                        />
+                      ) : null}
+                    </ContImg>
+                    <Desc>
+                      <h2>{projectData.keyTechs?.keyTechA?.title}</h2>
+                      <p>{projectData.keyTechs?.keyTechA?.desc}</p>
+                    </Desc>
+                  </div>
                   <div className="leftCont">
                     {projectData.keyTechs?.keyTechB?.mp4 ? (
                       <video
@@ -198,6 +203,10 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                     </Desc>
                   </div>
                   <div className="rightCont">
+                    <DescR>
+                      <h2>{projectData.keyTechs?.keyTechC.title}</h2>
+                      <p>{projectData.keyTechs?.keyTechC.desc}</p>
+                    </DescR>
                     {projectData.keyTechs?.keyTechC?.mp4 ? (
                       <video
                         src={projectData.keyTechs.keyTechC.mp4}
@@ -207,10 +216,6 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                         playsInline
                       />
                     ) : null}
-                    <Desc>
-                      <h2>{projectData.keyTechs?.keyTechC.title}</h2>
-                      <p>{projectData.keyTechs?.keyTechC.desc}</p>
-                    </Desc>
                   </div>
                 </ContentBottom>
               </WorkContont>

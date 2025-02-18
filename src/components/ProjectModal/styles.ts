@@ -198,11 +198,11 @@ export const WorkContont = styled.article`
 `;
 
 export const ContontImg = styled.div`
-  width: 90%;
+  width: 100%;
   height: 76vh;
   margin: 0 auto;
   object-fit: contain;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
   border-radius: 20px;
   overflow: hidden;
   video {
@@ -227,7 +227,7 @@ export const ContontImg = styled.div`
 `;
 
 export const About = styled.div`
-  margin: 40px 0 120px;
+  margin: 40px 0;
   @media (max-width: 768px) {
     padding: 0;
     margin: 40px 0;
@@ -323,15 +323,16 @@ export const About = styled.div`
 export const ContImg = styled.div`
   width: 100%;
   height: 100%;
-  border-radius: 40px;
+  border-radius: 20px;
   video,
   img {
     width: 100%;
-    height: 100%;
+    height: 70vh;
     object-fit: cover;
+    object-position: top;
     overflow: hidden;
     /* box-shadow: var(--box-shadow); */
-    border-radius: 40px;
+    border-radius: 20px;
     @media (max-width: 768px) {
       border-radius: 8px;
     }
@@ -344,9 +345,9 @@ export const ContImg = styled.div`
 `;
 
 export const Desc = styled.div`
-  margin: 30px 0 60px;
+  /* margin: 30px 0 60px; */
   h2 {
-    ${Title30}
+    ${Title26}
     padding: 18px 0;
     font-weight: 400;
     @media (max-width: 768px) {
@@ -365,26 +366,27 @@ export const Desc = styled.div`
 export const ContentBottom = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 15%;
+  gap: 80px;
+  /* margin-bottom: 15%; */
   @media (max-width: 768px) {
     flex-direction: column;
     padding-top: 0;
   }
   .leftCont {
-    flex: 3;
     width: 100%;
-    height: 600px;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    align-items: end;
+    gap: 30px;
     @media (max-width: 768px) {
       width: 100%;
     }
     video {
-      width: 100%;
-      height: 100%;
-      border-radius: 40px;
+      width: 46vw;
+      height: 56vh;
+      border-radius: 20px;
       object-fit: cover;
       box-shadow: var(--box-shadow);
       @media (max-width: 768px) {
@@ -395,24 +397,19 @@ export const ContentBottom = styled.div`
     }
   }
   .rightCont {
-    flex: 1;
     width: 100%;
-    min-height: 600px;
-    max-height: 600px;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
+    gap: 40px;
     @media (max-width: 768px) {
       width: 100%;
       min-height: 100px;
       max-height: 100%;
     }
     video {
-      width: 100%;
-      height: 100%;
-      width: 100%;
-      border-radius: 40px;
-      object-fit: cover;
-      box-shadow: var(--box-shadow);
+      width: 20vw;
+      object-fit: contain;
+      border-radius: 20px;
       @media (max-width: 768px) {
         margin: 0 auto;
         width: 50%;
@@ -423,6 +420,28 @@ export const ContentBottom = styled.div`
   }
 `;
 
+export const DescR = styled.div`
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 20px;
+  h2 {
+    ${Title26}
+    padding: 18px 0;
+    font-weight: 400;
+    @media (max-width: 768px) {
+      font-size: 26px;
+    }
+  }
+  p {
+    ${Paragraph16}
+    @media (max-width: 768px) {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+`;
 export const Highlights = styled.div`
   width: 100%;
   margin-top: 100px;
