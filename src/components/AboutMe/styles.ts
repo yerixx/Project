@@ -70,8 +70,11 @@ export const AboutMeTextBox = styled.article`
     width: 100%;
     overflow-y: hidden;
     background: #333;
-    padding: 28px;
+    padding: 2% 3%;
     border-radius: 30px;
+    @media (max-width: 768px) {
+      padding: 6%;
+    }
     .AboutMeTitle {
       ${Title26}
       font-weight: bold;
@@ -81,8 +84,9 @@ export const AboutMeTextBox = styled.article`
       }
     }
     .AboutMeDesc {
-      min-height: 80px;
+      height: 60%;
       max-height: 80%;
+      min-height: 60%;
       ${Paragraph16}
       line-height: 1.6;
       color: ${(props) => props.theme.grayColor};
@@ -90,6 +94,11 @@ export const AboutMeTextBox = styled.article`
       overflow-y: auto;
       scrollbar-width: none;
       -ms-overflow-style: none;
+      @media (max-width: 768px) {
+        height: fit-content;
+        max-height: 80%;
+        min-height: 30%;
+      }
     }
     .AboutMeDesc::-webkit-scrollbar {
       display: none;

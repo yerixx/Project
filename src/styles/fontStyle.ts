@@ -74,14 +74,15 @@ export const Paragraph16 = css`
   letter-spacing: -1px;
   white-space: break-spaces;
   word-wrap: break-word;
+  word-break: break-all;
   overflow-wrap: break-word;
 `;
 export const Paragraph14 = css`
   font-size: 0.875rem;
   letter-spacing: -1px;
-
-  white-space: normal;
+  white-space: break-spaces;
   word-wrap: break-word;
+  word-break: break-all;
   overflow-wrap: break-word;
   line-height: 1.5;
 `;

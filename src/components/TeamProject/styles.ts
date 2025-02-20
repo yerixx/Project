@@ -292,17 +292,20 @@ export const InnerImgBox = styled.article`
 `;
 export const InnerImg = styled(SwiperSlide)`
   width: 100%;
-  height: 67vh;
+  height: 60vh;
+  min-height: 58vh;
+  max-height: 67vh;
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: top;
   }
   @media (max-width: 768px) {
     border-radius: 0px;
     width: 100%;
     height: 200px;
+    min-height: auto;
     img {
       width: 100%;
       height: 100%;

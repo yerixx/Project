@@ -110,7 +110,7 @@ export const InnerTextBox = styled.div`
   .desc {
     ${Paragraph16}
     color: ${(props) => props.theme.grayColor};
-    white-space: break-spaces;
+    white-space: normal;
     letter-spacing: -1.5px;
     line-height: 1.5;
     @media (max-width: 768px) {

@@ -155,10 +155,9 @@ export const OverviewBox = styled.ul`
       ${Paragraph16}
       padding-bottom: 10px;
       text-transform: uppercase;
+      font-weight: 500;
       @media (max-width: 768px) {
         padding-bottom: 0px;
-        /* color: #f00; */
-        font-weight: bold;
       }
     }
   }
@@ -205,6 +204,12 @@ export const ContontImg = styled.div`
   /* border: 1px solid rgba(0, 0, 0, 0.2); */
   border-radius: 20px;
   overflow: hidden;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+  }
   video {
     width: 100%;
     height: 100%;
@@ -217,12 +222,6 @@ export const ContontImg = styled.div`
     height: 100%;
     object-fit: cover;
     overflow: hidden;
-  }
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
   }
 `;
 
@@ -324,28 +323,73 @@ export const ContImg = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  video,
-  img {
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
-    object-position: top;
-    overflow: hidden;
-    /* box-shadow: var(--box-shadow); */
-    border-radius: 20px;
-    @media (max-width: 768px) {
-      border-radius: 8px;
-    }
-  }
+  overflow: hidden;
+
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
     border-radius: 8px;
   }
+  video,
+  img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    @media (max-width: 768px) {
+      border-radius: 8px;
+      height: fit-content;
+    }
+  }
 `;
 
 export const Desc = styled.div`
-  /* margin: 30px 0 60px; */
+  h2 {
+    ${Title28}
+    padding: 18px 0;
+    font-weight: 400;
+    @media (max-width: 768px) {
+      font-size: 26px;
+    }
+  }
+  p {
+    ${Paragraph16}
+    @media (max-width: 768px) {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+`;
+export const DescL = styled.div`
+  h2 {
+    ${Title28}
+    padding: 18px 0;
+    font-weight: 400;
+    @media (max-width: 768px) {
+      font-size: 26px;
+    }
+  }
+  p {
+    ${Paragraph16}
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+`;
+
+export const DescR = styled.div`
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 20px;
+  @media (max-width: 768px) {
+    text-align: start;
+  }
   h2 {
     ${Title26}
     padding: 18px 0;
@@ -382,13 +426,15 @@ export const ContentBottom = styled.div`
     gap: 30px;
     @media (max-width: 768px) {
       width: 100%;
+      flex-direction: column;
+      align-items: start;
     }
     video {
-      width: 46vw;
+      min-width: 45vw;
       height: 56vh;
       border-radius: 20px;
       object-fit: cover;
-      box-shadow: var(--box-shadow);
+      /* box-shadow: var(--box-shadow); */
       @media (max-width: 768px) {
         width: 100%;
         height: 200px;
@@ -402,6 +448,7 @@ export const ContentBottom = styled.div`
     justify-content: flex-end;
     gap: 40px;
     @media (max-width: 768px) {
+      flex-direction: column-reverse;
       width: 100%;
       min-height: 100px;
       max-height: 100%;
@@ -409,7 +456,7 @@ export const ContentBottom = styled.div`
     video {
       width: 20vw;
       object-fit: contain;
-      border-radius: 20px;
+      border-radius: 50px;
       @media (max-width: 768px) {
         margin: 0 auto;
         width: 50%;
@@ -420,28 +467,6 @@ export const ContentBottom = styled.div`
   }
 `;
 
-export const DescR = styled.div`
-  text-align: end;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding-bottom: 20px;
-  h2 {
-    ${Title26}
-    padding: 18px 0;
-    font-weight: 400;
-    @media (max-width: 768px) {
-      font-size: 26px;
-    }
-  }
-  p {
-    ${Paragraph16}
-    @media (max-width: 768px) {
-      font-size: 14px;
-      color: #555;
-    }
-  }
-`;
 export const Highlights = styled.div`
   width: 100%;
   margin-top: 100px;
@@ -469,7 +494,7 @@ export const Highlights = styled.div`
         aspect-ratio: 16 / 9;
         height: 200px;
         border-radius: 20px;
-        box-shadow: var(--box-shadow);
+        /* box-shadow: var(--box-shadow); */
         object-fit: cover;
         object-position: top;
         @media (max-width: 768px) {
@@ -493,7 +518,7 @@ export const Highlights = styled.div`
       div:nth-of-type(1) {
         ${Title22}
         @media (max-width: 768px) {
-          ${Desc20}
+          font-size: 32px;
         }
       }
       div:nth-of-type(2) {

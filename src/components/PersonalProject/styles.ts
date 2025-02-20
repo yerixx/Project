@@ -30,7 +30,7 @@ export const Wrapper = styled.main`
   border-radius: 40px 40px 0 0;
   background: inherit;
   @media (max-width: 768px) {
-    height: fit-content;
+    height: 90vh;
     padding: 20px 5px;
   }
 `;
@@ -83,6 +83,7 @@ export const WorkTabs = styled.article`
   cursor: pointer;
   @media (max-width: 768px) {
     ${Paragraph16}
+    word-break:normal;
   }
   .workTab {
     padding: 2px 20px;

@@ -48,29 +48,29 @@
       },
       "link": {
         "deploy": "https://recba.me/",
-        "github": "https://github.com/dpcomm/recba_app",
-        "github-was": "https://github.com/dpcomm/recba_was"
+        "github": "https://github.com/dpcomm/cba_app",
+        "github-was": "https://github.com/dpcomm/cba_was"
       },
       "modalMainImg": null,
       "keyTechs": {
         "keyTechA": {
           "mp4": "/img/recba2.mp4",
-          "title": null,
-          "desc": null
+          "title": "My recba Profile",
+          "desc": "• 회원 정보 수정이 가능하며, 이전 수련회에 대한 정보를 확인할 수 있습니다."
         },
         "keyTechB": {
           "mp4": "/img/recba3.mp4",
-          "title": null,
-          "desc": null
+          "title": "recba Dashboard",
+          "desc": "• 익명 기도 톡방 참여 가능 \n• 수련회장 위치 확인 및 주소 복사가능 \n• 유튜브를 통한 수련회 실황 시청\n• 수련회 참가비 납부 내역 확인가능"
         },
         "keyTechC": {
           "mp4": "/img/recba4.mp4",
-          "title": null,
-          "desc": null
+          "title": "Hollyday Pass",
+          "desc": "• 패스권 컨셉의 수련회 신청 페이지 제작 \n• 프로그래스 바를 통해 진행률 실시간 표시\n• 단계별 질문 응답을 통해 선택형 & 주관식 지원, 동적 UX 구현 \n• 패스권 발급 및 서버 연동을 통해 참가 정보 및 기도 제목 저장, 리딩자 여부 반영"
         }
       },
       "highlights": {
-        "img": "/img/recba3.png"
+        "img": "/img/recba1.png"
       }
     },
     {

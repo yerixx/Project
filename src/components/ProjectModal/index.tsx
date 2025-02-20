@@ -31,6 +31,7 @@ import {
   Highlights,
   PdfView,
   DescR,
+  DescL,
 } from "./styles";
 
 import { WorkModalProps } from "../../styles/common";
@@ -131,7 +132,9 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                     />
                   ) : (
                     <img
-                      src={projectData.modalMainImg ?? ""}
+                      src={
+                        projectData.modalMainImg ?? projectData.highlights.img
+                      }
                       alt={projectData.title}
                     />
                   )}
@@ -197,10 +200,10 @@ const ProjectModal = ({ onClose, projectId }: WorkModalProps) => {
                         playsInline
                       />
                     ) : null}
-                    <Desc>
+                    <DescL>
                       <h2>{projectData.keyTechs?.keyTechB?.title}</h2>
                       <p>{projectData.keyTechs?.keyTechB.desc}</p>
-                    </Desc>
+                    </DescL>
                   </div>
                   <div className="rightCont">
                     <DescR>
