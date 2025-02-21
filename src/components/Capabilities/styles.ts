@@ -17,7 +17,7 @@ export const Wrapper = styled.section`
   transition: all 1s;
   background: ${(props) => props.theme.mainColor};
   @media (max-width: 768px) {
-    margin: 30% 0 50%;
+    margin: 0 0 50%;
   }
 `;
 export const Inner = styled.section`

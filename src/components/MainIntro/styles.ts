@@ -39,7 +39,7 @@ export const MainTitle = styled.div`
     font-size: 40px;
     /* text-align: start; */
     /* margin: 0 25%; */
-    line-height: 1%;
+    /* line-height: 10%;*/
     text-transform: lowercase;
     font-family: "noto sans kr";
     animation: lineHeightChange 1.5s ease-in-out forwards 1s;
@@ -47,7 +47,7 @@ export const MainTitle = styled.div`
 
   @keyframes lineHeightChange {
     from {
-      line-height: 1%;
+      line-height: 50%;
     }
     to {
       line-height: 150%;

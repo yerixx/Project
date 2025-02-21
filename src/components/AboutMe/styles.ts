@@ -7,7 +7,6 @@ import {
   Paragraph18,
   Paragraph16,
   Title22,
-  Paragraph14,
 } from "../../styles/fontStyle";
 
 export const Wrapper = styled.main`
@@ -63,7 +62,7 @@ export const AboutMeTextBox = styled.article`
   gap: 20px;
   @media (max-width: 768px) {
     width: 100%;
-    height: 80vh;
+    height: fit-content;
   }
   .AboutMeText {
     flex: 1;
@@ -73,6 +72,7 @@ export const AboutMeTextBox = styled.article`
     padding: 2% 3%;
     border-radius: 30px;
     @media (max-width: 768px) {
+      flex: auto;
       padding: 6%;
     }
     .AboutMeTitle {
@@ -96,18 +96,8 @@ export const AboutMeTextBox = styled.article`
       -ms-overflow-style: none;
       @media (max-width: 768px) {
         height: fit-content;
-        max-height: 80%;
-        min-height: 30%;
-      }
-    }
-    .AboutMeDesc::-webkit-scrollbar {
-      display: none;
-      @media (max-width: 768px) {
-        ${Paragraph14}
-        margin: 4px 0;
-      }
-      &:hover {
-        color: ${(props) => props.theme.subColor};
+        max-height: auto;
+        min-height: auto;
       }
     }
   }

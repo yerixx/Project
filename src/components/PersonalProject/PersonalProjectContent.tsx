@@ -91,6 +91,7 @@ const PersonalProjectContent = ({
                         <p className="stact">{data.stack}</p>
                       </div>
                       <div className="desc">{data.desc}</div>
+                      <p className="clickbox">자세히보기</p>
                     </InnerTextBox>
                   </GallerySmallBox>
                 </div>
@@ -107,6 +108,7 @@ const PersonalProjectContent = ({
                         <p className="stact">{pair[0].stack}</p>
                       </div>
                       <div className="desc">{pair[0].about.intro}</div>
+                      <p className="clickbox">자세히보기</p>
                     </InnerTextBox>
                   </GallerySmallBox>
                 </div>
@@ -116,10 +118,13 @@ const PersonalProjectContent = ({
                       <img className="galleryLarge" src={pair[1]?.mainImg} />
                       <InnerTextBox>
                         <div className="textBox">
-                          <p className="title">{pair[1].title}</p>
+                          <div className="titleBox">
+                            <p className="title">{pair[1].title}</p>
+                          </div>
                           <p className="stact">{pair[1].stack}</p>
                         </div>
                         <div className="desc">{pair[1].about.intro}</div>
+                        <p className="clickbox">자세히보기</p>
                       </InnerTextBox>
                     </GalleryLargeBox>
                   </div>

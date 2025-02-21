@@ -25,6 +25,7 @@ export const NavBox = styled.article`
     display: flex;
     gap: 10px;
     scale: 1.1;
+    cursor: pointer;
     .custom-prev-button {
       top: 20px;
       color: #000;
@@ -85,25 +86,28 @@ export const GalleryLargeBox = styled.article`
 export const InnerTextBox = styled.div`
   width: 100%;
   padding: 0 6px;
+
   .textBox {
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 768px) {
-    }
-    .title {
-      ${Paragraph18}
-      font-weight:bold;
-      @media (max-width: 768px) {
-        ${Desc20}
+    .titleBox {
+      display: flex;
+      gap: 10px;
+      .title {
+        ${Paragraph18}
+        font-weight:bold;
+        @media (max-width: 768px) {
+          ${Desc20}
+        }
       }
-    }
-    .stact {
-      ${Paragraph14}
-      color: ${(props) => props.theme.grayColor};
-      @media (max-width: 768px) {
+      .stact {
         ${Paragraph14}
+        color: ${(props) => props.theme.grayColor};
+        @media (max-width: 768px) {
+          ${Paragraph14}
+        }
       }
     }
   }
@@ -113,8 +117,32 @@ export const InnerTextBox = styled.div`
     white-space: normal;
     letter-spacing: -1.5px;
     line-height: 1.5;
+
     @media (max-width: 768px) {
       ${Paragraph16}
+    }
+  }
+  .clickbox {
+    width: fit-content;
+    padding: 4px 14px;
+    font-size: 12px;
+    border: 1px solid #999;
+    color: #999;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.3s;
+    margin-top: 20px;
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      display: block;
+      width: 100%;
+      padding: 8px 14px;
+      border-radius: 16px;
     }
   }
 `;

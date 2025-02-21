@@ -18,9 +18,9 @@ export const Wrapper = styled.main`
   width: 100%;
   height: 100vh;
   transition: all 1s;
-
   @media (max-width: 768px) {
     margin: 10% 0px;
+    height: 140vh;
   }
 `;
 
@@ -81,7 +81,6 @@ export const TeamProjectBox = styled(SwiperSlide)`
   flex-direction: column;
   width: 100%;
   height: 80vh;
-
   background: ${({ theme }) => theme.subColor};
   border-radius: 40px;
   padding: 45px;
@@ -89,7 +88,7 @@ export const TeamProjectBox = styled(SwiperSlide)`
     width: 100%;
     height: auto;
     min-height: 690px;
-    max-height: 930px;
+    max-height: 950px;
     margin-top: 20px;
     padding: 10px 14px 40px;
     border-radius: 20px;
